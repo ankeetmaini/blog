@@ -3,7 +3,7 @@ module.exports = {
     title: `Under Engineered`,
     author: `Ankeet Maini`,
     description: `My journey with code and bugs`,
-    siteUrl: `https://ankeetmaini.netlify.com/`,
+    siteUrl: `https://under-engineered.netlify.com/`,
     social: {
       twitter: `ankeetmaini`,
     },
