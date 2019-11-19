@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-theme-mdx-deck`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
