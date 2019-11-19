@@ -9,7 +9,6 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-theme-mdx-deck`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -74,6 +73,17 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
+    {
+      resolve: 'gatsby-theme-mdx-deck',
+      options: {
+        // enable or disable gatsby-plugin-mdx
+        mdx: false,
+        // source directory
+        contentPath: `${__dirname}/decks`,
+        // base path for routes generate by this theme
+        basePath: '/slides/'
+      }
     },
   ],
 }
