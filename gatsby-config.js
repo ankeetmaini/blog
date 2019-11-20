@@ -81,7 +81,7 @@ module.exports = {
         mdx: true,
         contentPath: 'decks',
         // base path for routes generate by this theme
-        basePath: 'decks/',
+        basePath: '/decks',
       },
     },
   ],
