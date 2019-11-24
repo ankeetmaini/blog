@@ -39,6 +39,7 @@
     "eslint": "^6.6.0",
     "eslint-plugin-react": "^7.11.1",
     "gatsby-theme-mdx-deck": "^3.0.13",
+    "mdx-deck": "^3.0.13",
     "prettier": "^1.14.2"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",

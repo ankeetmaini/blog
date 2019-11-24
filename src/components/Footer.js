@@ -33,6 +33,10 @@ class Footer extends React.Component {
           rel="noopener noreferrer"
         >
           instagram
+        </a>{' '}
+        &bull;{' '}
+        <a href="/decks" target="_blank" rel="noopener noreferrer">
+          presentations
         </a>
       </footer>
     )
