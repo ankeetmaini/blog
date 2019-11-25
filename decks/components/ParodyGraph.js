@@ -5,7 +5,7 @@ const horizontal = {
   left: 40,
   right: 50,
   height: 5,
-  background: "black"
+  background: "#fff"
 };
 
 const horizontalTriangle = {
@@ -15,7 +15,7 @@ const horizontalTriangle = {
   right: 30,
   borderTop: "20px solid transparent",
   borderBottom: "20px solid transparent",
-  borderLeft: "20px solid black"
+  borderLeft: "20px solid #fff"
 };
 
 const vertical = {
@@ -24,7 +24,7 @@ const vertical = {
   bottom: 20,
   width: 5,
   left: 40,
-  background: "black"
+  background: "#fff"
 };
 
 const verticalTriangle = {
@@ -35,7 +35,7 @@ const verticalTriangle = {
   left: 22,
   borderLeft: "20px solid transparent",
   borderRight: "20px solid transparent",
-  borderBottom: "20px solid black"
+  borderBottom: "20px solid #fff"
 };
 
 const centerLeftStyles = {

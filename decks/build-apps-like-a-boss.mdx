@@ -3,17 +3,21 @@ import Text from './components/Text.js'
 import Graph from './components/ParodyGraph.js'
 import Giphy from './components/Giphy'
 
-export const theme = themes.book
+export const theme = {
+  ...themes.book,
+  colors: themes.dark.colors
+}
 
 [**build app(s) plural - like a boss!**]()
 
 👋 friends! I'm <Text>**Ankeet Maini**</Text>
 
 <Appear>
- <li>frontend engineer @Flipkart</li>
- <li><Text>@ankeetmaini</Text> (twitter, github, instagram 🤭)</li>
+  <li>frontend engineer @Flipkart</li>
+  <li>
+    <Text>@ankeetmaini</Text> (twitter, github, instagram 🤭)
+  </li>
 </Appear>
-
 
 ---
 
@@ -21,11 +25,11 @@ Mandatory disclaimer:
 
 <Text>What this talk is not about?</Text>
 <ul>
-<Appear>
-<li>lerna</li>
-<li>yarn workspaces</li>
-<li>lerna with yarn workspaces</li>
-</Appear>
+  <Appear>
+    <li>lerna</li>
+    <li>yarn workspaces</li>
+    <li>lerna with yarn workspaces</li>
+  </Appear>
 </ul>
 
 ---
@@ -33,9 +37,11 @@ Mandatory disclaimer:
 Let's work our way through the usual workflow
 
 <Appear>
-<li>you start creating an app</li>
-<li>done!</li>
-<div><Giphy>https://media.giphy.com/media/Ut6Xbl4kfDcWc/giphy.gif</Giphy></div>
+  <li>you start creating an app</li>
+  <li>done!</li>
+  <div>
+    <Giphy>https://media.giphy.com/media/Ut6Xbl4kfDcWc/giphy.gif</Giphy>
+  </div>
 </Appear>
 
 ---
@@ -45,7 +51,9 @@ Let's work our way through the ~~usual~~ **<Text>real</Text>** workflow
 <Appear>
   <li>create a repository</li>
   <li>start writing code...</li>
-  <div><Giphy>https://media.giphy.com/media/Ut6Xbl4kfDcWc/giphy.gif</Giphy></div>
+  <div>
+    <Giphy>https://media.giphy.com/media/Ut6Xbl4kfDcWc/giphy.gif</Giphy>
+  </div>
 </Appear>
 
 ---
@@ -55,14 +63,19 @@ Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workfl
 <li>✅ create a repository</li>
 <Appear>
   <li>setup ESLint</li>
-  <li>latest research trend on ESLint <Text>(data gathered from Github commits all over the world)</Text><sup>*</sup></li>
+  <li>
+    latest research trend on ESLint{' '}
+    <Text>(data gathered from Github commits all over the world)</Text>
+    <sup>*</sup>
+  </li>
   <li>...in the next slide</li>
 </Appear>
 
 ---
 
 <FullScreenCode>
-  <Graph height={800}
+  <Graph
+    height={800}
     leftText="time taken"
     loser="entire app code"
     winner="ESLint"
@@ -78,10 +91,16 @@ Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workfl
 <li>✅ create a repository</li>
 <li>setup ESLint</li>
 <Appear>
-  <li>and if you use TypeScript</li>    
-  <div><div style={{marginLeft: 100}}>- TSLint</div></div>
-  <div><div style={{marginLeft: 100}}>- @typescript-eslint</div></div>
-  <div><div style={{marginLeft: 100}}>- TSLint -> @typescript-eslint</div></div>  
+  <li>and if you use TypeScript</li>
+  <div>
+    <div style={{ marginLeft: 100 }}>- TSLint</div>
+  </div>
+  <div>
+    <div style={{ marginLeft: 100 }}>- @typescript-eslint</div>
+  </div>
+  <div>
+    <div style={{ marginLeft: 100 }}>- TSLint -> @typescript-eslint</div>
+  </div>
 </Appear>
 
 ---
@@ -103,18 +122,33 @@ Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workfl
 Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workflow
 
 <li>...</li>
+<li>BUILD/BUNDLER setup - Webpack</li>
 <Appear>
-  <li>BUILD/BUNDLER setup - Webpack</li>
-  <div><div style={{marginLeft: 100}}>- babel</div></div>
-  <div><div style={{marginLeft: 100}}>- directly ts-loader/awesome-typescript-loader</div></div>
-  <div><div style={{marginLeft: 100}}>- ts-loader with `babel` and `babel-loader`</div></div>
-  <li>latest research trend on Webpack config <Text>(data gathered from Github commits all over the world)</Text><sup>*</sup></li>
+  <div>
+    <div style={{ marginLeft: 100 }}>- babel</div>
+  </div>
+  <div>
+    <div style={{ marginLeft: 100 }}>
+      - directly ts-loader/awesome-typescript-loader
+    </div>
+  </div>
+  <div>
+    <div style={{ marginLeft: 100 }}>
+      - ts-loader with `babel` and `babel-loader`
+    </div>
+  </div>
+  <li>
+    latest research trend on Webpack config{' '}
+    <Text>(data gathered from Github commits all over the world)</Text>
+    <sup>*</sup>
+  </li>
 </Appear>
 
 ---
 
 <FullScreenCode>
-  <Graph height={800}
+  <Graph
+    height={800}
     leftText="complexity"
     loser="quantum physics"
     winner="Webpack configs"
@@ -124,6 +158,7 @@ Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workfl
 </FullScreenCode>
 
 ---
+
 Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workflow
 
 <li>...</li>
@@ -135,10 +170,19 @@ Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workfl
 </Appear>
 
 ---
-<FullScreenCode>
-  <Giphy>https://media.giphy.com/media/F458eKi7tpSqQ/giphy.gif</Giphy>
-</FullScreenCode>
 
+<Giphy>https://media.giphy.com/media/F458eKi7tpSqQ/giphy.gif</Giphy>
 
+---
 
+And if you think this was enough?
+
+<Appear>
+  <li>server infra</li>
+  <li>deployment machines</li>
+  <li>health checks</li>
+  <li>ELBs/VIPs</li>
+  <li>alerts</li>
+  <li>...</li>
+</Appear>
 
