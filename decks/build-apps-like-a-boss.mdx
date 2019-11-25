@@ -2,10 +2,12 @@ import { themes, Appear, SplitRight, FullScreenCode } from 'mdx-deck'
 import Text from './components/Text.js'
 import Graph from './components/ParodyGraph.js'
 import Giphy from './components/Giphy'
+import Progress from './components/Progress'
 
 export const theme = {
   ...themes.book,
-  colors: themes.dark.colors
+  colors: themes.dark.colors,
+  Provider: Progress
 }
 
 [**build app(s) plural - like a boss!**]()
