@@ -3,7 +3,7 @@ import { useDeck } from 'mdx-deck'
 
 const main = {
   width: '100%',
-  background: '#fff',
+  background: '#000',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -30,7 +30,7 @@ export default function Progress({ children }) {
       }}
     >
       {children}
-      <div style={{ position: 'fixed', left: '15%', right: '15%', bottom: 10 }}>
+      <div style={{ position: 'fixed', left: '5%', right: '5%', bottom: 10 }}>
         <div style={{ height, ...main }}>
           <div
             style={{ ...progress, height, transform: `scaleX(${translate})` }}
