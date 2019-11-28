@@ -1,9 +1,10 @@
-import { themes, Appear, SplitRight, FullScreenCode } from 'mdx-deck'
+import { themes, Appear, SplitRight, FullScreenCode, Image } from 'mdx-deck'
 import Text from './components/Text.js'
 import Graph from './components/ParodyGraph.js'
 import Giphy from './components/Giphy'
 import Progress from './components/Progress'
 import Center from './components/CenterInline'
+
 
 export const theme = {
   ...themes.book,
@@ -63,7 +64,7 @@ Let's work our way through the ~~usual~~ **<Text>real</Text>** workflow
 
 Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workflow
 
-<li>✅ create a repository</li>
+<li>create a repository</li>
 <Appear>
   <li>setup ESLint</li>
   <li>
@@ -91,7 +92,7 @@ Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workfl
 
 Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workflow
 
-<li>✅ create a repository</li>
+<li>create a repository</li>
 <li>setup ESLint</li>
 <Appear>
   <li>and if you use TypeScript</li>
@@ -110,13 +111,13 @@ Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workfl
 
 Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workflow
 
-<li>✅ create a repository</li>
-<li>✅ setup ESLint</li>
+<li>create a repository</li>
+<li>setup ESLint</li>
 <Appear>
-  <li>✅ setup Prettier</li>
-  <li>✅ disable ESLint rules which collide with Prettier 🤣🤣</li>
-  <li>✅ configure lint-staged</li>
-  <li>✅ configure TypeScript/Flow</li>
+  <li>setup Prettier</li>
+  <li>disable ESLint rules which collide with Prettier 🤣🤣</li>
+  <li>configure lint-staged</li>
+  <li>configure TypeScript/Flow</li>
   <li>BUILD/BUNDLER setup - Webpack</li>
 </Appear>
 
@@ -191,11 +192,37 @@ And if you think this was <Text>**enough**</Text>?
 
 ---
 
+Mandatory digression:
+
+What's your code sharing strategy?
+
+---
+# <Text>I copy-paste whatever I need, wherever I need. #YOLO</Text>
+
+<Appear>
+  <div>
+    <Giphy width={800}>https://media.giphy.com/media/iNJmdpZ8gp5sI/giphy.gif</Giphy>
+  </div>
+</Appear>
+
+---
+<div><img style={{height: 200}} src="https://i.imgur.com/ZigwdOa.png"/></div>
+
+<Appear>
+  <li><Text>npm publish everything</Text></li>
+  <div><img src="https://i.imgur.com/LwSA6oe.png"/></div>
+</Appear>
+
+---
+
+Back on track now :P
+
 # My point?
 
 <Appear>
   <li>non-trivial amount of effort for every new app</li>
   <li>new apps keep happening...</li>
+  <li>difficult/tedious code sharing</li>
   <li>can it be made simpler</li>
   <li>using the tools we already use?</li>
 </Appear>
@@ -206,7 +233,7 @@ And if you think this was <Text>**enough**</Text>?
 
 ---
 
-1. Cram everything into a single repo
+Cram everything into a single repo
 <Appear>  
   <div><Giphy width={800}>https://media.giphy.com/media/VR4Xdxj5MXDna/giphy.gif</Giphy></div>
   <div><Center><Text>Not like this friends 🤪</Text></Center></div>
@@ -214,9 +241,8 @@ And if you think this was <Text>**enough**</Text>?
 
 ---
 
-<li>have any clear simple folder structure decided amongst your team</li>
+<li>have a clear simple folder structure which your team can converge on</li>
 <Appear>
-  <li>have a common entry file</li>
-  <li>apps are divided by sep parent routes (enter react-router)</li>
+  <li>divide apps by different routes</li>
   <li><Text>What can go wrong??</Text></li>
 </Appear> 
