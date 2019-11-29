@@ -1,4 +1,4 @@
-import { themes, Appear, SplitRight, FullScreenCode, Image } from 'mdx-deck'
+import { themes, Appear, Split, FullScreenCode, Image } from 'mdx-deck'
 import Text from './components/Text.js'
 import Graph from './components/ParodyGraph.js'
 import Giphy from './components/Giphy'
@@ -171,6 +171,7 @@ Let's work our way through the ~~usual~~ ~~real~~ **<Text>actual</Text>** workfl
   <li>e2e test setup - cypress/testcafe</li>
   <li>jenkins job pipelines</li>
   <li>deploy scripts</li>
+  <li>💆‍♂</li>
 </Appear>
 
 ---
@@ -197,7 +198,7 @@ Mandatory digression:
 What's your code sharing strategy?
 
 ---
-# <Text>I copy-paste whatever I need, wherever I need. #YOLO</Text>
+<Text>I copy-paste whatever I need, wherever I need. #YOLO</Text>
 
 <Appear>
   <div>
@@ -206,12 +207,13 @@ What's your code sharing strategy?
 </Appear>
 
 ---
-<div><img style={{height: 200}} src="https://i.imgur.com/ZigwdOa.png"/></div>
-
-<Appear>
-  <li><Text>npm publish everything</Text></li>
-  <div><img src="https://i.imgur.com/LwSA6oe.png"/></div>
-</Appear>
+<FullScreenCode>
+  <Text>npm publish everything</Text>
+  <Appear>
+    <div><img src="https://i.imgur.com/ZigwdOa.png"/></div>
+    <div><img src="https://i.imgur.com/LwSA6oe.png"/></div>
+  </Appear>
+</FullScreenCode>
 
 ---
 
@@ -223,7 +225,7 @@ Back on track now :P
   <li>non-trivial amount of effort for every new app</li>
   <li>new apps keep happening...</li>
   <li>difficult/tedious code sharing</li>
-  <li>can it be made simpler</li>
+  <li>can it be done once and reused for all new apps?</li>
   <li>using the tools we already use?</li>
 </Appear>
 
@@ -245,4 +247,52 @@ Cram everything into a single repo
 <Appear>
   <li>divide apps by different routes</li>
   <li><Text>What can go wrong??</Text></li>
-</Appear> 
+</Appear>
+
+---
+
+<Text>Everything crammed together.</Text>
+
+- works fine for 1 app
+- works fine for 2 apps
+- works fine for 10 apps
+- it works until...you start seeing things :P
+
+---
+
+# <Text>Problems:</Text> Everything crammed together.
+
+# one single bundle <Text>(easy-peasy to sove with code-splitting)</Text>
+
+---
+
+# <Text>Problems:</Text> Everything crammed together.
+  
+# change one app, all apps are built (even though individual hashes <Text>may</Text> remain unchanged)
+  
+<Giphy width={700}>https://media.giphy.com/media/LmeqXB5857G0E1vwDq/giphy.gif</Giphy>
+<Center>Webpack and remaining <Text>989,545,432,563 packages in node_modules</Text></Center>
+
+---
+
+<FullScreenCode>
+  Can't I create multiple entry points in webpack??? <Text>Duh!</Text>
+  <Appear>
+    <div>
+      you won't be able to do cool stuff like this :P
+      <Giphy>https://i.imgur.com/mk0n8L1.png</Giphy>    
+    </div>
+  </Appear>
+</FullScreenCode>
+
+---
+
+# I wish there was a way to do this 💭💭💭
+
+<Appear>
+  <div><Center>roses are red</Center></div>
+  <div><Center>violets are blue</Center></div>
+  <div><Center>isn't there a ...</Center></div>
+  <div><Center>Webpack plugin which would do!</Center></div>
+  <h1><Text><Center>Nooooooooooo! 😭😭😭</Center></Text></h1>
+</Appear>
