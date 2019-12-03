@@ -1,26 +1,30 @@
 import { themes, Appear, Split, FullScreenCode, Image } from 'mdx-deck'
-import Text from './components/Text.js'
-import Graph from './components/ParodyGraph.js'
+import Text from './components/Text'
+import Graph from './components/ParodyGraph'
 import Giphy from './components/Giphy'
 import Progress from './components/Progress'
 import Center from './components/CenterInline'
+import Reveal from './components/Reveal'
 
-export const theme = themes.book;
+export const theme = themes.book
 
 # animations
 
 <Appear>
   <div>in</div>
-  <div><h1>react native</h1></div>
+  <div>
+    <h1>react native</h1>
+  </div>
 </Appear>
 
 ---
- 
+
 # why? oh why? oh why why?
 
 ---
 
 # why? oh why? oh why why?
+
 - wasn't switching to native <Text>(from web)</Text> enough?
 
 <Text>add gif</Text>
@@ -28,6 +32,7 @@ export const theme = themes.book;
 ---
 
 # why? oh why? oh why why?
+
 - wasn't testing normal functionality on two platforms enough?
 
 <Text>add gif</Text>
@@ -35,6 +40,7 @@ export const theme = themes.book;
 ---
 
 # why? oh why? oh why why?
+
 - do you know the pain of losing all webpack gyaan (years of random google searches) cuz here you've metro?
 - do you even `metro.config.js`?
 
@@ -43,6 +49,7 @@ export const theme = themes.book;
 ---
 
 # why? oh why? oh why why?
+
 - you can console all your bugs, have you ever done <Text>adb logcat</Text>
 
 add tum kya jano 2 chutki sindoor ki keemat ramesh babu
@@ -58,22 +65,14 @@ add tum kya jano 2 chutki sindoor ki keemat ramesh babu
 # but why did I choose this topic??
 
 - cuz Animations are lit, they enhance user experience, blah blah
-- *shows* some metrics straight out of omniture evar45, evar90....
+- _shows_ some metrics straight out of omniture evar45, evar90....
 - for more motivation and reasons stay-tuned for another presentation on animations :P
 
 ---
 
-# but seriosly why?
+# but seriously why?
 
-- cuz all blogs/videos/tutorials were like this
-<Giphy>https://i.pinimg.com/originals/72/29/5c/72295c2669305944b919e6320d436617.jpg</Giphy>
-
-
-
-
-
-
-
-
-
-
+<Reveal
+  parts={2}
+  url="https://i.pinimg.com/originals/72/29/5c/72295c2669305944b919e6320d436617.jpg"
+/>
