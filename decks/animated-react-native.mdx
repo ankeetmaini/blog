@@ -2,11 +2,13 @@ import { themes, Appear, Split, FullScreenCode, Image } from 'mdx-deck'
 import Text from './components/Text'
 import Graph from './components/ParodyGraph'
 import Giphy from './components/Giphy'
-import Progress from './components/Progress'
 import Center from './components/CenterInline'
 import Reveal from './components/Reveal'
+import FullScreen from './components/FullScreen'
 
 export const theme = themes.book
+
+---
 
 # animations
 
@@ -27,7 +29,9 @@ export const theme = themes.book
 
 - wasn't switching to native <Text>(from web)</Text> enough?
 
-<Text>add gif</Text>
+<Giphy width={600}>
+  https://media.giphy.com/media/dCCrtnc5H8YgUKitoq/giphy.gif
+</Giphy>
 
 ---
 
@@ -35,38 +39,40 @@ export const theme = themes.book
 
 - wasn't testing normal functionality on two platforms enough?
 
-<Text>add gif</Text>
+<Giphy>https://media.giphy.com/media/xUOxf0EniRe3ll2u8U/giphy.gif</Giphy>
 
 ---
 
 # why? oh why? oh why why?
 
-- do you know the pain of losing all webpack gyaan (years of random google searches) cuz here you've metro?
-- do you even `metro.config.js`?
+<Split>
+  <ul style={{textAlign: 'left'}}>
+    <li>do you know the pain of losing your prized webpack config?</li>
+    <li>do you even <Text>metro.config.js?</Text></li>
+  </ul>
 
-<Text>add do you even lift bro meme maybe?</Text>
+  <Giphy width={500}>https://media.giphy.com/media/PVLu8EUVOZlDy/giphy.gif</Giphy>
+</Split>
 
 ---
 
 # why? oh why? oh why why?
 
-- you can console all your bugs, have you ever done <Text>adb logcat</Text>
+- no devtools
 
-add tum kya jano 2 chutki sindoor ki keemat ramesh babu
+<Giphy>https://media.giphy.com/media/3ohhwkwUi4ExrcPD5C/giphy.gif</Giphy>
 
 ---
 
-# don't worry friends! I'm here now :P
+# buttttt don't worry friends!
 
-- add my face cropped with superman and fly from one corner
+<Giphy>https://media.giphy.com/media/NTur7XlVDUdqM/giphy.gif</Giphy>
 
 ---
 
 # but why did I choose this topic??
 
-- cuz Animations are lit, they enhance user experience, blah blah
-- _shows_ some metrics straight out of omniture evar45, evar90....
-- for more motivation and reasons stay-tuned for another presentation on animations :P
+- cuz Animations are lit, they enhance user experience
 
 ---
 

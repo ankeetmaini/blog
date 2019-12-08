@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Text = ({ children }) => (
-<span style={{color: '#e84094'}}>{children}</span>
-);
+  <span style={{ color: '#e84094' }}>{children}</span>
+)
 
-export default Text;
+export default Text
