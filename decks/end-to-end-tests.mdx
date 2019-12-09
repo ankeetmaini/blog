@@ -1,0 +1,112 @@
+import { themes, Appear, Split, FullScreenCode, Image, Invert } from 'mdx-deck'
+import Text from './components/Text.js'
+import Graph from './components/ParodyGraph.js'
+import Giphy from './components/Giphy'
+import Progress from './components/Progress'
+import Center from './components/CenterInline'
+import Reveal from './components/Reveal'
+
+export const theme = {
+  ...themes.book,
+  Provider: Progress,
+}
+
+# e2e tests
+
+---
+
+# why e2e tests are scary?
+
+<Appear>
+  <div>🚫 costlier to write</div>
+  <div>🚫 how do you even debug?</div>
+  <div>🚫 do you know the flow?</div>
+  <div>🚫 so many programming languages...</div>
+  <div>🚫 new devs joining all the time</div>
+</Appear>
+
+---
+
+# How can cucumber help? 🥒🥒🥒
+
+<Appear>
+  <li>written in plain English</li>
+  <li>
+    well defined BDD constructs: <Text>Given, Then, When, And, But</Text>
+  </li>
+  <li>
+    you get <Text>free</Text> upto date documentation of all the flows!
+  </li>
+  <li>
+    no code: so even <Text>Product</Text> can chime in
+  </li>
+</Appear>
+
+---
+
+# solved by Cucumber 🥒🥒🥒
+
+<div>🚫 costlier to write</div>
+<div>🚫 how do you even debug?</div>
+<div>✅ do you know the flow?</div>
+<div>✅ so many programming languages...</div>
+<div>✅ new devs joining all the time</div>
+
+---
+
+# example e2e test in Cucumber
+
+```jsx
+Scenario: Login Success Scenario
+  Given I enter correct username: "916xxxxxx8" and password: "*******"
+  Then I should see the home screen
+```
+
+- demo
+
+---
+
+<Invert>
+  <ul style={{textAlign: 'left'}}>
+    <div>🖥 cypress</div>
+    <div>📱 detox</div>
+  </ul>
+</Invert>
+
+---
+
+# why cypress?
+
+- runs in the browser <Text>(unlike Selenium)</Text>
+- inherent support for debugging (preserves DOM states)
+- uses JavaScript as the only language
+- inherently waits for the elements
+- no <Text>thread.sleep()</Text> or magic <Text>waitUntill()</Text> in your code
+- not all flaky! and HUGEEE community!
+
+---
+
+# why detox?
+
+- <Text>gray box testing</Text> - uses espresso internally
+- in-built react-native support
+- no explicit wait needed
+- Provides JavaScript as the first class interface
+- very active community support
+
+---
+
+# <Text>solved by Cucumber 🥒🥒🥒, Cypress and Detox</Text>
+
+<div>✅ costlier to write</div>
+<div>✅ how do you even debug?</div>
+<div>✅ do you know the flow?</div>
+<div>✅ so many programming languages...</div>
+<div>✅ new devs joining all the time</div>
+
+---
+
+# open points
+
+- data seeding approach
+- environments and process
