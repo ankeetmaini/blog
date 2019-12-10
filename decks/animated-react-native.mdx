@@ -1,4 +1,6 @@
-import { themes, Appear, Split, FullScreenCode, Image } from 'mdx-deck'
+import { themes, Appear, Split, FullScreenCode, Image, Notes } from 'mdx-deck'
+import {CodeSurfer, CodeSurferColumns, Step} from 'code-surfer'
+import { nightOwl, github, oceanicNext, vsDark, shadesOfPurple } from "@code-surfer/themes";
 import Text from './components/Text'
 import Graph from './components/ParodyGraph'
 import Giphy from './components/Giphy'
@@ -6,7 +8,17 @@ import Center from './components/CenterInline'
 import Reveal from './components/Reveal'
 import FullScreen from './components/FullScreen'
 
-export const theme = themes.book
+export const theme = nightOwl
+
+# intro
+
+<Text>@ankeetmaini (github, twitter, instagram)</Text>
+<Notes>
+
+- ask how many people have worked with react-native how many of them were
+- working on web earlier? not going to ask if you're loving or hating :P
+
+</Notes>
 
 ---
 
@@ -25,9 +37,9 @@ export const theme = themes.book
 
 ---
 
-# why? oh why? oh why why?
+# <Text>why? oh why? oh why why?</Text>
 
-- wasn't switching to native <Text>(from web)</Text> enough?
+wasn't switching to native <Text>(from web)</Text> enough?
 
 <Giphy width={600}>
   https://media.giphy.com/media/dCCrtnc5H8YgUKitoq/giphy.gif
@@ -35,30 +47,17 @@ export const theme = themes.book
 
 ---
 
-# why? oh why? oh why why?
+# <Text>why? oh why? oh why why?</Text>
 
-- wasn't testing normal functionality on two platforms enough?
+wasn't testing normal functionality on two platforms enough?
 
 <Giphy>https://media.giphy.com/media/xUOxf0EniRe3ll2u8U/giphy.gif</Giphy>
 
 ---
 
-# why? oh why? oh why why?
+# <Text>why? oh why? oh why why?</Text>
 
-<Split>
-  <ul style={{textAlign: 'left'}}>
-    <li>do you know the pain of losing your prized webpack config?</li>
-    <li>do you even <Text>metro.config.js?</Text></li>
-  </ul>
-
-  <Giphy width={500}>https://media.giphy.com/media/PVLu8EUVOZlDy/giphy.gif</Giphy>
-</Split>
-
----
-
-# why? oh why? oh why why?
-
-- no devtools
+no devtools
 
 <Giphy>https://media.giphy.com/media/3ohhwkwUi4ExrcPD5C/giphy.gif</Giphy>
 
@@ -72,7 +71,11 @@ export const theme = themes.book
 
 # but why did I choose this topic??
 
-- cuz Animations are lit, they enhance user experience
+<Appear>
+  <div>cuz Animations are lit, they enhance user experience</div>
+  <div><Giphy>https://media.giphy.com/media/tZAyTIfgQFwfC/giphy.gif</Giphy></div>
+</Appear>
+
 
 ---
 
@@ -82,3 +85,47 @@ export const theme = themes.book
   parts={2}
   url="https://i.pinimg.com/originals/72/29/5c/72295c2669305944b919e6320d436617.jpg"
 />
+
+---
+
+# this blew my mind - in a bad way 
+<Giphy>https://media.giphy.com/media/Ny4Ian52lZDz2/giphy.gif</Giphy>
+
+---
+
+# Animated in 4 + 1 steps
+
+<ul style={{textAlign: 'left'}}> 
+  <Appear>
+    <li><Text>declare</Text> - Animated Value</li>
+    <li><Text>change</Text> - Animated value</li>
+    <li><Text>interpolate</Text> - Animated Value</li>
+    <li><Text>use</Text> - Animated Value</li>
+    <li>start()</li>
+  </Appear>
+</ul>
+
+---
+
+
+<CodeSurfer>
+
+```jsx 2 file=./snippets/superman-rotate.js subtitle="import Animated"
+```
+
+```jsx 5 file=./snippets/superman-rotate.js subtitle="declare - Animated Value" title="step 1"
+```
+
+```jsx 14:18 file=./snippets/superman-rotate.js subtitle="change - Animated Value" title="step 2"
+```
+
+```jsx 22:25 file=./snippets/superman-rotate.js subtitle="import Animated" subtitle="interpolate - Animated Value" title="step 3"
+```
+
+```jsx 34:45 file=./snippets/superman-rotate.js subtitle="use - Animated Value" title="step 4"
+```
+
+```jsx 8 file=./snippets/superman-rotate.js subtitle="start" title="step 5"
+```
+
+</CodeSurfer>
