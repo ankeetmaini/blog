@@ -140,10 +140,13 @@ no devtools
 
 # never forget -> <Text>DCIU</Text>
 <Split>
-  
-<Giphy>https://i.imgur.com/e1W4JbW.png</Giphy>
+
+<Appear>
+  <div><Giphy>https://i.imgur.com/e1W4JbW.png</Giphy></div>
+</Appear>
     
 <Appear>
+  <div></div>
   <div><Giphy width={700}>https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif</Giphy></div>
 </Appear>
 
@@ -151,6 +154,25 @@ no devtools
 
 ---
 
+# example 1: Superman 🥵🥵🥵
+
+<div style={{display: 'flex'}}>
+
+<div>
+  <Giphy width={500}>https://i.imgur.com/fPhBiRL.png</Giphy>
+</div>
+<div style={{width: 40}}/>
+<Appear>
+  <div>
+    <Giphy width={500}>https://i.imgur.com/qYKXovH.gif</Giphy>
+  </div>
+</Appear>
+
+</div>
+
+---
+
+# rotating superman 💪💪💪
 
 <CodeSurfer>
 
@@ -160,7 +182,7 @@ no devtools
 ```jsx 5 file=./snippets/superman-rotate.js subtitle="declare - Animated Value" title="step 1"
 ```
 
-```jsx 14:17 file=./snippets/superman-rotate.js subtitle="change - Animated Value" title="step 2"
+```jsx 14:18 file=./snippets/superman-rotate.js subtitle="change - Animated Value" title="step 2"
 ```
 
 ```jsx 22:25 file=./snippets/superman-rotate.js subtitle="import Animated" subtitle="interpolate - Animated Value" title="step 3"
@@ -169,7 +191,7 @@ no devtools
 ```jsx 34:44 file=./snippets/superman-rotate.js subtitle="use - Animated Value" title="step 4"
 ```
 
-```jsx 8 file=./snippets/superman-rotate.js subtitle="start" title="step 5"
+```jsx 7:9 file=./snippets/superman-rotate.js subtitle="start" title="step 5"
 ```
 
 </CodeSurfer>
