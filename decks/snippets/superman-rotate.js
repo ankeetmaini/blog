@@ -38,8 +38,7 @@ export default class App extends Component {
             transform: [{ rotate: spin }],
           }}
           source={{
-            uri:
-              'https://cdn.imgbin.com/1/9/13/imgbin-clark-kent-cartoon-superhero-superman-superman-1u2GU2y0Jd01DnZttsuEdUMjH.jpg',
+            uri: 'https://cdn.imgbin.com/1/9/13/imgbin-clark-kent.jpg',
           }}
         />
       </View>

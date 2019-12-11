@@ -8,7 +8,19 @@ import Center from './components/CenterInline'
 import Reveal from './components/Reveal'
 import FullScreen from './components/FullScreen'
 
-export const theme = nightOwl
+export const theme = {
+  ...nightOwl,
+  styles: {
+    ...nightOwl.styles,
+    CodeSurfer: {
+      ...nightOwl.styles.CodeSurfer,
+      code: {
+        ...nightOwl.styles.CodeSurfer.code,
+        fontSize: "1.4rem"
+      }
+    }
+  }
+}
 
 # intro
 
@@ -93,6 +105,10 @@ no devtools
 
 ---
 
+# todo - add animated slide
+
+---
+
 # Animated in 4 + 1 steps
 
 <ul style={{textAlign: 'left'}}> 
@@ -128,13 +144,13 @@ no devtools
 ```jsx 5 file=./snippets/superman-rotate.js subtitle="declare - Animated Value" title="step 1"
 ```
 
-```jsx 14:18 file=./snippets/superman-rotate.js subtitle="change - Animated Value" title="step 2"
+```jsx 14:17 file=./snippets/superman-rotate.js subtitle="change - Animated Value" title="step 2"
 ```
 
 ```jsx 22:25 file=./snippets/superman-rotate.js subtitle="import Animated" subtitle="interpolate - Animated Value" title="step 3"
 ```
 
-```jsx 34:45 file=./snippets/superman-rotate.js subtitle="use - Animated Value" title="step 4"
+```jsx 34:44 file=./snippets/superman-rotate.js subtitle="use - Animated Value" title="step 4"
 ```
 
 ```jsx 8 file=./snippets/superman-rotate.js subtitle="start" title="step 5"
