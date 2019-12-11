@@ -8,6 +8,7 @@ import Center from './components/CenterInline'
 import Reveal from './components/Reveal'
 import FullScreen from './components/FullScreen'
 import AnimatedExplanation from './components/AnimatedExplanation'
+import CircularInteractive from './components/CircularInteractive'
 
 export const theme = {
   ...nightOwl,
@@ -89,7 +90,6 @@ no devtools
   <div><Giphy>https://media.giphy.com/media/tZAyTIfgQFwfC/giphy.gif</Giphy></div>
 </Appear>
 
-
 ---
 
 # but seriously why?
@@ -99,6 +99,7 @@ no devtools
   url="https://i.pinimg.com/originals/72/29/5c/72295c2669305944b919e6320d436617.jpg"
 />
 
+# Animated API
 ---
 
 # this blew my mind - in a bad way 
@@ -154,7 +155,7 @@ no devtools
 
 ---
 
-# example 1: Superman 🥵🥵🥵
+# exercise 1: Superman 🥵🥵🥵
 
 <div style={{display: 'flex'}}>
 
@@ -197,6 +198,25 @@ no devtools
 </CodeSurfer>
 
 ---
-# example 2: Circular Progress bar 🥵🥵
+# exercise 2: Circular Progress bar 🥵🥵
 
 <Giphy width={500}>https://i.imgur.com/jjbdK5k.gif</Giphy>
+
+---
+
+# todo: circular interactive component
+
+<CircularInteractive />
+
+---
+
+# circular progress bar 💪💪
+
+<CodeSurfer>
+
+```jsx 25:27 file=./snippets/circular-snippet.tsx subtitle="declare animated values"
+```
+
+
+</CodeSurfer>
+
