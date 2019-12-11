@@ -8,6 +8,23 @@ const AbsoluteCenter = Styled.div`
   transform: translateX(-50%) translateY(-50%);
 `
 
+const Row = Styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px dashed rgb(232, 64, 148);
+`
+
+const Legend = Styled.div`
+  width: 20px;
+  display: inline-block;
+  height: 20px;
+  margin: 6px;
+  border: 1px solid #fff;
+  margin-bottom: -6px;
+  background: ${p => p.bg};
+`
+
 const centerStyle = {
   position: 'absolute',
   left: '50%',
@@ -24,6 +41,10 @@ const Circle = Styled.div`
   left: 0;
 `
 
+const Label = Styled.label`
+  display: block;
+`
+
 const Semi = Styled.div`
   height: ${props => props.height || 300}px;
   width: ${props => props.height / 2 || 150}px;
@@ -36,8 +57,12 @@ const Semi = Styled.div`
 
 export default function CircularProgress() {
   const [showFirst, setShowFirst] = useState(true)
+
   const [showMiddle, setShowMiddle] = useState(false)
+  const [middleColor, setMiddleColor] = useState('#011526')
+
   const [showSemi1, setShowSemi1] = useState(false)
+
   const [showSemi2, setShowSemi2] = useState(false)
   return (
     <div
@@ -49,46 +74,56 @@ export default function CircularProgress() {
         fontFamily: 'mono',
       }}
     >
-      <div>
-        <label>
+      <Row>
+        <Label>
           <input
             type="checkbox"
             checked={showFirst}
             onChange={e => setShowFirst(e.target.checked)}
           />
-          outer circle
-        </label>
-      </div>
-      <div>
-        <label>
+          <Legend bg="grey" /> outer circle
+        </Label>
+      </Row>
+      <Row>
+        <Label>
           <input
             type="checkbox"
             checked={showMiddle}
             onChange={e => setShowMiddle(e.target.checked)}
           />
-          middle circle
-        </label>
-      </div>
-      <div>
-        <label>
+          <Legend bg={middleColor} /> middle circle
+        </Label>
+        <Label>
+          <select
+            value={middleColor}
+            onChange={e => setMiddleColor(e.target.value)}
+          >
+            <option value="#011526">dark blue matching with slide theme</option>
+            <option value="hotpink">hotpink</option>
+            <option value="white">white</option>
+          </select>
+        </Label>
+      </Row>
+      <Row>
+        <Label>
           <input
             type="checkbox"
             checked={showSemi1}
             onChange={e => setShowSemi1(e.target.checked)}
           />
-          semi 1
-        </label>
-      </div>
-      <div>
-        <label>
+          <Legend bg="red" /> semi 1
+        </Label>
+      </Row>
+      <Row>
+        <Label>
           <input
             type="checkbox"
             checked={showSemi2}
             onChange={e => setShowSemi2(e.target.checked)}
           />
-          semi 2
-        </label>
-      </div>
+          <Legend bg="green" /> semi 2
+        </Label>
+      </Row>
       <div style={{ position: 'relative' }}>
         <AbsoluteCenter>
           {showFirst && (
@@ -101,7 +136,7 @@ export default function CircularProgress() {
                   style={centerStyle}
                   width={200}
                   height={200}
-                  background="white"
+                  background={middleColor}
                 ></Circle>
               )}
             </Circle>
