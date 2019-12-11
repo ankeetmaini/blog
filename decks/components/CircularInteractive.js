@@ -12,7 +12,8 @@ const Row = Styled.div`
   display: flex;
   justify-content: space-between;
   margin: 10px;
-  border: 1px dashed rgb(232, 64, 148);
+  padding: 10px;
+  border: 1px solid #afafaf;
 `
 
 const Legend = Styled.div`
@@ -108,7 +109,7 @@ export default function CircularProgress() {
             value={middleColor}
             onChange={e => setMiddleColor(e.target.value)}
           >
-            <option value="#011526">dark blue matching with slide theme</option>
+            <option value="#011526">dark blue</option>
             <option value="hotpink">hotpink</option>
             <option value="white">white</option>
           </select>
