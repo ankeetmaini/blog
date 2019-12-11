@@ -1,0 +1,265 @@
+import { themes, Appear, Split, FullScreenCode, Image, Notes } from 'mdx-deck'
+import {CodeSurfer, CodeSurferColumns, Step} from 'code-surfer'
+import { nightOwl, github, oceanicNext, vsDark, shadesOfPurple } from "@code-surfer/themes";
+import Text from './components/Text'
+import Graph from './components/ParodyGraph'
+import Giphy from './components/Giphy'
+import Center from './components/CenterInline'
+import Reveal from './components/Reveal'
+import FullScreen from './components/FullScreen'
+import AnimatedExplanation from './components/AnimatedExplanation'
+import CircularInteractive from './components/CircularInteractive'
+
+export const theme = {
+  ...nightOwl,
+  styles: {
+    ...nightOwl.styles,
+    CodeSurfer: {
+      ...nightOwl.styles.CodeSurfer,
+      code: {
+        ...nightOwl.styles.CodeSurfer.code,
+        fontSize: "1.4rem"
+      }
+    }
+  }
+}
+
+# animation intro
+
+<Text>@ankeetmaini (github, twitter, instagram)</Text>
+<Notes>
+
+- ask how many people have worked with react-native how many of them were
+- working on web earlier? not going to ask if you're loving or hating :P
+
+</Notes>
+
+---
+
+# animations
+
+<Appear>
+  <div>in</div>
+  <div>
+    <h1>react native</h1>
+  </div>
+</Appear>
+
+---
+
+# why? oh why? oh why why?
+
+---
+
+# <Text>why? oh why? oh why why?</Text>
+
+wasn't switching to native <Text>(from web)</Text> enough?
+
+<Giphy width={600}>
+  https://media.giphy.com/media/dCCrtnc5H8YgUKitoq/giphy.gif
+</Giphy>
+
+---
+
+# <Text>why? oh why? oh why why?</Text>
+
+wasn't testing normal functionality on two platforms enough?
+
+<Giphy>https://media.giphy.com/media/xUOxf0EniRe3ll2u8U/giphy.gif</Giphy>
+
+---
+
+# <Text>why? oh why? oh why why?</Text>
+
+no devtools
+
+<Giphy>https://media.giphy.com/media/3ohhwkwUi4ExrcPD5C/giphy.gif</Giphy>
+
+---
+
+# buttttt don't worry friends!
+
+<Giphy>https://media.giphy.com/media/NTur7XlVDUdqM/giphy.gif</Giphy>
+
+---
+
+# but why did I choose this topic??
+
+<Appear>
+  <div>cuz Animations are lit, they enhance user experience</div>
+  <div><Giphy>https://media.giphy.com/media/tZAyTIfgQFwfC/giphy.gif</Giphy></div>
+</Appear>
+
+---
+
+# but seriously why?
+
+<Reveal
+  parts={2}
+  url="https://i.pinimg.com/originals/72/29/5c/72295c2669305944b919e6320d436617.jpg"
+/>
+
+# Animated API
+---
+
+# this blew my mind - in a bad way 
+<Giphy>https://media.giphy.com/media/Ny4Ian52lZDz2/giphy.gif</Giphy>
+
+---
+
+# How <Text>Animated.Value</Text> works?
+
+<AnimatedExplanation />
+
+---
+
+# How <Text>interpolation</Text> works?
+
+<AnimatedExplanation showOpacity/>
+
+---
+
+# How <Text>interpolation</Text> works?
+
+<AnimatedExplanation showOpacity showRotation/>
+
+---
+
+# summarised: Animated in 4 + 1 steps
+
+<ul style={{textAlign: 'left'}}> 
+  <Appear>
+    <li><Text>declare</Text> - Animated Value</li>
+    <li><Text>change</Text> - Animated value</li>
+    <li><Text>interpolate</Text> - Animated Value</li>
+    <li><Text>use</Text> - Animated Value</li>
+    <li>start()</li>
+  </Appear>
+</ul>
+
+---
+
+# never forget -> <Text>DCIU</Text>
+<Split>
+
+<Appear>
+  <div><Giphy>https://i.imgur.com/e1W4JbW.png</Giphy></div>
+</Appear>
+    
+<Appear>
+  <div></div>
+  <div><Giphy width={700}>https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif</Giphy></div>
+</Appear>
+
+</Split>
+
+---
+
+# exercise 1: Superman 🥵🥵🥵
+
+<div style={{display: 'flex'}}>
+
+  <div>
+    <Giphy width={500}>https://i.imgur.com/fPhBiRL.png</Giphy>
+  </div>
+  <div style={{width: 40}}/>
+  <Appear>
+    <div>
+      <Giphy width={500}>https://i.imgur.com/qYKXovH.gif</Giphy>
+    </div>
+  </Appear>
+
+</div>
+
+---
+
+# rotating Superman 💪💪💪
+
+<CodeSurfer>
+
+```jsx 2 file=./snippets/superman-rotate.js subtitle="import Animated"
+```
+
+```jsx 5 file=./snippets/superman-rotate.js subtitle="declare - Animated Value" title="step 1"
+```
+
+```jsx 14:18 file=./snippets/superman-rotate.js subtitle="change - Animated Value" title="step 2"
+```
+
+```jsx 22:25 file=./snippets/superman-rotate.js subtitle="import Animated" subtitle="interpolate - Animated Value" title="step 3"
+```
+
+```jsx 34:44 file=./snippets/superman-rotate.js subtitle="use - Animated Value" title="step 4"
+```
+
+```jsx 7:9 file=./snippets/superman-rotate.js subtitle="start" title="step 5"
+```
+
+</CodeSurfer>
+
+---
+# exercise 2: Circular Progress bar 🥵🥵
+
+<Giphy width={500}>https://i.imgur.com/jjbdK5k.gif</Giphy>
+
+---
+
+# magic reveal
+
+<CircularInteractive />
+
+---
+
+# circular progress bar 💪💪
+
+<CodeSurfer>
+
+```jsx 23:27 file=./snippets/circular-snippet.tsx subtitle="declare animated values"
+```
+
+```jsx 72:78 file=./snippets/circular-snippet.tsx subtitle="decide animation"
+```
+
+```jsx 37:56 file=./snippets/circular-snippet.tsx subtitle="> 50%"
+```
+
+```jsx 61:69 file=./snippets/circular-snippet.tsx subtitle="decide animation"
+```
+
+```jsx 127:131 file=./snippets/circular-snippet.tsx subtitle="render half circle"
+```
+
+```jsx 80:96 file=./snippets/circular-snippet.tsx subtitle="render half circle"
+```
+
+</CodeSurfer>
+
+---
+
+# exercise 3: chrome tab scroller
+
+<div style={{display: 'flex'}}>
+  <div>
+    <video controls height="600" autoplay loop>
+      <source src="https://i.imgur.com/8htcSZd.mp4" type="video/mp4" />
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </div>
+
+  <div style={{width: 80}}/>
+  <Appear>
+    <div>
+      <video controls height="600" loop>
+        <source src="https://i.imgur.com/OUjpPy8.mp4" type="video/mp4" />
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </div>
+  </Appear>
+</div>
+
+---
+
+# thanks thanks!
+
+- # <Text>Slides</Text> [https://under-engineered.netlify.com/decks/animated-react-native](https://under-engineered.netlify.com/decks/animated-react-native)
+- # <Text>Code</Text> [https://github.com/ankeetmaini/animated-talk](https://github.com/ankeetmaini/animated-talk)
