@@ -53,6 +53,8 @@ const Semi = Styled.div`
   border-top-left-radius: ${props => (props.height || 300) * 2}px;
   position: absolute;
   left: 0;
+  transform-origin: right center;
+  transform: rotate(${p => p.rotate || 0}deg);
 `
 
 export default function CircularProgress() {
@@ -62,8 +64,14 @@ export default function CircularProgress() {
   const [middleColor, setMiddleColor] = useState('#011526')
 
   const [showSemi1, setShowSemi1] = useState(false)
+  const [semi1Color, setSemi1Color] = useState('red')
+  const [rotate1, setRotate1] = useState(0)
 
   const [showSemi2, setShowSemi2] = useState(false)
+  const [semi2Color, setSemi2Color] = useState('green')
+  const [rotate2, setRotate2] = useState(0)
+
+  const [showSemi3, setShowSemi3] = useState(false)
   return (
     <div
       style={{
@@ -111,7 +119,26 @@ export default function CircularProgress() {
             checked={showSemi1}
             onChange={e => setShowSemi1(e.target.checked)}
           />
-          <Legend bg="red" /> semi 1
+          <Legend bg={semi1Color} /> semi 1
+        </Label>
+        <Label>
+          <select
+            value={semi1Color}
+            onChange={e => setSemi1Color(e.target.value)}
+          >
+            <option value="red">red</option>
+            <option value="green">green</option>
+          </select>
+        </Label>
+        <Label>
+          <input
+            type="range"
+            step={10}
+            value={rotate1}
+            min={0}
+            max={360}
+            onChange={e => setRotate1(e.target.value)}
+          />
         </Label>
       </Row>
       <Row>
@@ -121,15 +148,46 @@ export default function CircularProgress() {
             checked={showSemi2}
             onChange={e => setShowSemi2(e.target.checked)}
           />
-          <Legend bg="green" /> semi 2
+          <Legend bg={semi2Color} /> semi 2
+        </Label>
+        <Label>
+          <select
+            value={semi2Color}
+            onChange={e => setSemi2Color(e.target.value)}
+          >
+            <option value="green">green</option>
+            <option value="red">red</option>
+            <option value="grey">grey</option>
+          </select>
+        </Label>
+        <Label>
+          <input
+            type="range"
+            step={10}
+            value={rotate2}
+            min={0}
+            max={360}
+            onChange={e => setRotate2(e.target.value)}
+          />
+        </Label>
+      </Row>
+      <Row>
+        <Label>
+          <input
+            type="checkbox"
+            checked={showSemi3}
+            onChange={e => setShowSemi3(e.target.checked)}
+          />
+          <Legend bg="grey" /> semi 3
         </Label>
       </Row>
       <div style={{ position: 'relative' }}>
         <AbsoluteCenter>
           {showFirst && (
             <Circle>
-              {showSemi1 && <Semi background="red" />}
-              {showSemi2 && <Semi background="green" />}
+              {showSemi1 && <Semi rotate={rotate1} background={semi1Color} />}
+              {showSemi2 && <Semi rotate={rotate2} background={semi2Color} />}
+              {showSemi3 && <Semi background="grey" />}
 
               {showMiddle && (
                 <Circle
