@@ -7,6 +7,7 @@ import Giphy from './components/Giphy'
 import Center from './components/CenterInline'
 import Reveal from './components/Reveal'
 import FullScreen from './components/FullScreen'
+import AnimatedExplanation from './components/AnimatedExplanation'
 
 export const theme = {
   ...nightOwl,
@@ -22,7 +23,7 @@ export const theme = {
   }
 }
 
-# intro
+# animation intro
 
 <Text>@ankeetmaini (github, twitter, instagram)</Text>
 <Notes>
@@ -105,11 +106,25 @@ no devtools
 
 ---
 
-# todo - add animated slide
+# How <Text>Animated.Value</Text> works?
+
+<AnimatedExplanation />
 
 ---
 
-# Animated in 4 + 1 steps
+# How <Text>interpolation</Text> works?
+
+<AnimatedExplanation showOpacity/>
+
+---
+
+# How <Text>interpolation</Text> works?
+
+<AnimatedExplanation showOpacity showRotation/>
+
+---
+
+# summarised: Animated in 4 + 1 steps
 
 <ul style={{textAlign: 'left'}}> 
   <Appear>
@@ -122,6 +137,7 @@ no devtools
 </ul>
 
 ---
+
 # never forget -> <Text>DCIU</Text>
 <Split>
   
