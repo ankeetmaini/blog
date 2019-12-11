@@ -181,7 +181,7 @@ export default function CircularProgress() {
           <Legend bg="grey" /> semi 3
         </Label>
       </Row>
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative', left: '-20%', top: '10%' }}>
         <AbsoluteCenter>
           {showFirst && (
             <Circle>
