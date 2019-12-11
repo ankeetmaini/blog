@@ -72,6 +72,8 @@ export default function CircularProgress() {
   const [rotate2, setRotate2] = useState(0)
 
   const [showSemi3, setShowSemi3] = useState(false)
+  const [semi3Color, setSemi3Color] = useState('grey')
+  const [rotate3, setRotate3] = useState(0)
   return (
     <div
       style={{
@@ -178,7 +180,26 @@ export default function CircularProgress() {
             checked={showSemi3}
             onChange={e => setShowSemi3(e.target.checked)}
           />
-          <Legend bg="grey" /> semi 3
+          <Legend bg={semi3Color} /> semi 3
+        </Label>
+        <Label>
+          <select
+            value={semi3Color}
+            onChange={e => setSemi3Color(e.target.value)}
+          >
+            <option value="grey">grey</option>
+            <option value="teal">teal</option>
+          </select>
+        </Label>
+        <Label>
+          <input
+            type="range"
+            step={10}
+            value={rotate3}
+            min={0}
+            max={360}
+            onChange={e => setRotate3(e.target.value)}
+          />
         </Label>
       </Row>
       <div style={{ position: 'relative', left: '-20%', top: '10%' }}>
@@ -187,7 +208,7 @@ export default function CircularProgress() {
             <Circle>
               {showSemi1 && <Semi rotate={rotate1} background={semi1Color} />}
               {showSemi2 && <Semi rotate={rotate2} background={semi2Color} />}
-              {showSemi3 && <Semi background="grey" />}
+              {showSemi3 && <Semi rotate={rotate3} background={semi3Color} />}
 
               {showMiddle && (
                 <Circle
