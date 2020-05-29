@@ -1,0 +1,193 @@
+import { themes, Appear, Split, FullScreenCode, Image } from 'mdx-deck'
+import Text from './components/Text.js'
+import Graph from './components/ParodyGraph.js'
+import Giphy from './components/Giphy'
+import Progress from './components/Progress'
+import Center from './components/CenterInline'
+
+import DockerNetwork from './images/docker-network.svg'
+import AppSetup from './images/app-setup.svg'
+import Concepts from './images/concepts.png'
+
+export const theme = {
+  ...themes.book,
+  colors: themes.dark.colors,
+  Provider: Progress,
+}
+
+# docker essentials
+
+👋 friends!
+
+<img style={{height: 600}} src={Concepts}/>
+
+---
+
+# What's docker?
+
+<Appear>
+  <li>something which containerises your code</li>
+  <li>wow, such a great definition</li>
+</Appear>
+
+---
+
+# Why Docker?
+
+<Appear>
+  <li>you deploy code (app) on a machine</li>
+  <li>there are other apps on the same machine</li>
+  <li>other apps may not play nice</li>
+  <li>all apps share resources like memory, RAM but most importantly libs</li>
+  <li>anything can happen - mostly bad :P</li>
+</Appear>
+
+---
+
+# Why Docker? - contd
+
+<Appear>
+  <li>did you forget your code is running on a VM</li>
+  <li>not a bare-metal</li>
+  <li>what's that now??</li>
+  <li>virtual inside virtual inside virtual... -> deeper you're more slow you get</li>
+</Appear>
+
+---
+
+# But still why Docker?
+
+<Appear>
+  <li>let's see it in action...</li>
+</Appear>
+
+---
+
+# Why Docker?
+
+<Appear>
+  <li>
+    <Text>docker</Text> is shielded by default
+  </li>
+
+</Appear>
+
+---
+
+# container vs images
+
+- images are <Text>[insert-you-answer]</Text>
+- containers on the other hand are <Text>[insert-you-answer]</Text>
+
+---
+
+# Is Docker VM? kinda sorta?
+
+### no, it's just a process which is restricted
+
+> if you're to list all processes you'd see this
+  too from your host, but since docker for mac 
+  runs in a separate VM you'd have to do one small trick
+
+- https://github.com/justincormack/nsenter1
+
+```bash
+docker container run -it --rm --privileged --pid=host justincormack/nsenter1
+```
+
+---
+
+# How do I get in??
+
+- <Text>docker container exec -it [id] [command]</Text>
+
+---
+
+# Docker network
+
+<a href={DockerNetwork}>open link</a>
+
+---
+
+# Dockerfile
+
+<Appear>
+  <li>this is how the docker images are built</li>
+  <li>each line is a step and a different layer</li>
+  <li>these layers are cached - just how docker works</li>
+</Appear>
+
+---
+
+# Dockerfile
+
+- <Text>2 min Dockerfile</Text>
+- https://nodejs.org/fr/docs/guides/nodejs-docker-webapp/
+
+```dockerfile
+
+FROM node:10
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8080
+CMD [ "node", "server.js" ]
+
+```
+
+---
+
+# Dockerfile
+
+- how do you develop it?
+- will your changes be saved?
+- will it scale?
+
+---
+
+# What are the characteristics of ultimate Dockerfile?
+
+- local setup out of the box
+- handle test/build phase of the app
+- doesn't run as root
+- keeps your final image as lean as possible
+
+---
+
+# The Ultimate Dockerfile - well almost :P
+
+https://github.com/ankeetmaini/docker-react-nginx/blob/master/Dockerfile
+
+# Real world app
+
+<a href={AppSetup}>open link</a>
+
+---
+
+# But docker was supposed to ease our life???
+
+- I want to type easy commands which are short and not a good's train
+- I hear you
+
+## docker-compose
+
+> docker-compose up --build
+
+---
+
+# extra mile (homework :P)
+
+- did you see how long does it take to stop node container??
+- https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html
+
+
+
+
+
+
