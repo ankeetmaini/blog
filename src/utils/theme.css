@@ -1,6 +1,6 @@
 /**
  * copied from Dan's repository https://github.com/gaearon/overreacted.io/blob/master/src/utils/theme.css
- * 
+ *
  */
 code[class*='language-'],
 pre[class*='language-'] {
@@ -119,6 +119,16 @@ pre[class*='language-'] ::selection {
 
 .token.property {
   color: rgb(128, 203, 196);
+}
+
+.token.deleted-sign.deleted {
+  color: #fff;
+  background-color: #b31d28;
+}
+
+.token.inserted-sign.inserted {
+  color: #fff;
+  background-color: #22863a;
 }
 
 .token.namespace {
