@@ -9,7 +9,7 @@ It gives you deterministic builds every single time. Guaranteed! No more of _the
 
 > it worked on my machine, really.
 
-## but what is Docker?
+# but what is Docker?
 
 Docker is a way to package your app and run it. With _Docker_
 
@@ -18,7 +18,7 @@ Docker is a way to package your app and run it. With _Docker_
 
 For example say you are working on the latest and greatest app of the year on a mac but your production servers run linux. Such a bummer. You can't say if everything will run as-is on prod cuz you won't know! Anything can go wrong. The dependencies of the app might depend on native libraries, or the os might use _forward slash_ or _backlash_ for paths(windows). So you get the drift; why we need determinism inspite of all the different host/os/environments/ configurations.
 
-## where do I start?
+# where do I start?
 
 Everything starts with a Dockerfile. To start on a more practical note, I'll try to package/dockerise a React Node app but here _react_ doesn't matter and it could be anything {insert-your-fav-framework-please}
 
@@ -34,10 +34,10 @@ The base images for most _(if not all)_ languages/engines/runtimes already exist
 
 Like the official [Node image here](https://hub.docker.com/_/node). You can choose from a variety of versions and flavours. I chose [Node v12 installed on a trimmed Debian OS](https://github.com/nodejs/docker-node/blob/9518f46153d0ab2a3ebb20bc24c28ee0c48af208/12/stretch-slim/Dockerfile)
 
-This would be the very first line of the Dockerfile
+This would be the very first line of the Dockerfile.
 
 ```dockerfile
-FROM node:12-stretch-slim
+FROM node:12-stretch-slim as test
 ```
 
 > _layering_ in docker: every line in the Dockerfile becomes a `layer` which translates to an intermediate image. A docker image is made up of a number of these intermediate image layers.
@@ -50,7 +50,7 @@ Always try to see if the top lines/layers are not changed, as every layer from t
 
 Docker **image size** is of great importance and one should strive to get to the slimmest image possible. It directly improves the time it takes to deploy, saves a lot of storage for you and not to forget the security aspect where the lesser the surface area of your image the less chances of someone finding loopholes in it. And why have something in your prod image that you aren't even using?
 
-_Multi stage_ docker helps in trimming the size of the docker image by giving you the option of removing extra layers in your image and keep only the stuff required. In absence of multi stage docker builds people used multiple Dockerfiles to achieve the same results.
+_Multi stage_ docker helps in trimming the size of the docker image by giving you the option of removing extra layers in your image and keep only the stuff required. In absence of multi stage docker builds people used multiple Dockerfiles to achieve the same results. You can have one single Dockerfile for both prod and dev.
 
 `Multi stage` lets you have multiple `FROM` statements and ability to copy stuff from one stage to another.
 
@@ -68,6 +68,8 @@ This way you can define different stages for
 ## writing the Dockerfile
 
 Switching the focus back to Dockerfile which only has one line specifying the base image. The next thing to do is to define the _working directory_ using the `WORKDIR` command. It creates a directory if it does not exist. It also sets the context of all commands run subsequently with the given directory as the base path.
+
+Also, notice the `as` keyword which is the syntax to name a multi stage build step. This step can now be referenced as `test` from another stage.
 
 ```dockerfile
 FROM node:12-stretch-slim as test
@@ -149,11 +151,11 @@ RUN yarn build
 RUN yarn build:server
 ```
 
-## final stage
+## final stage (well not quite)
 
 At this stage the image is almost ready and can be run as-is. _But, we can do better._
 
-There are a lot of stuff here which we can remove like _node modules_, _source files_, _intermediate image layers_. Let's remove them by taking only the stuff that is needed in a new multi-stage build step.
+There's a lot of stuff here which can be removed like _node modules_, _source files_, _intermediate image layers_. Let's remove them by taking only the stuff that is needed in a new multi-stage build step.
 
 ```dockerfile
 # starting from a clean state
@@ -163,3 +165,132 @@ WORKDIR /docker-react-nginx
 COPY --from=test /docker-react-nginx/build .
 CMD ["node", "server.js"]
 ```
+
+If you notice I ran the `server.js` directly using `node`. No node process managers like `PM2` or `forever`. These process managers are used generally because node is single threaded and to have HA (redundancy), parallelism and making sure one process is always up. Even if a process goes down these process managers spawn a new one. But this is not needed in container world. You can get the same redundancy by spinning multiple docker containers using some federation software be it docker swarm, kubernetes etc. (I may do a separate blog post on it in future)
+
+The Dockerfile at this point works, no doubt but there's a lot more that can be done to take it to the next level.
+
+```dockerfile
+FROM node:12-stretch-slim as test
+
+WORKDIR /docker-react-nginx
+
+COPY  package.json yarn.*lock ./
+RUN yarn install --pure-lockfile
+
+COPY  . .
+# env CI as I'm using create react app
+# and it runs the tests in watch mode
+# untill you make this env true
+ENV CI true
+RUN yarn test
+
+ENV NODE_ENV production
+# build client JS and server
+RUN yarn build
+RUN yarn build:server
+
+FROM node:12-stretch-slim
+WORKDIR /docker-react-nginx
+
+COPY --from=test /docker-react-nginx/build .
+CMD ["node", "server.js"]
+
+```
+
+# improvements
+
+## least privilege user
+
+All the commands now are run with `root` user context. Although `root` inside docker container is not the same as `root` in host machine. But the privilege must be limited and should only be just enough to do the task. This is pretty easy to achieve as `node` docker images ship with a user `NODE` which is a non-root user.
+
+Changing the Dockerfile to use this user instead of root. This needs to be changed at a couple of places.
+
+- first when doing the `WORKDIR` as docker creates the directory using root permissions, but if the directory is already created docker would just `cd` instead of `mkdir` and `cd`
+- adding `USER` directive to enable the specific user's context for all subsequent `CMD`, `RUN` and `ENTRYPOINT` instructions
+
+```diff
++ RUN mkdir -p /docker-react-nginx && chown -R node:node /docker-react-nginx
++ USER node
+
+WORKDIR /docker-react-nginx
+```
+
+- use `NODE` user for copying files from host machine
+
+```diff
+# node_modules install
+- COPY  package.json yarn.*lock ./
++ COPY  --chown=node:node package.json yarn.*lock ./
+
+# source copy step
+- COPY  . .
++ COPY --chown=node:node  . .
+```
+
+## dry out base image in FROM statements
+
+- in both of the multi stage builds the `FROM` statements starts and defines the base image as `node:12-stretch-slim`, such repetition :/
+- this can be DRYed out using another empty stage at the top
+
+```diff
++ FROM node:12-stretch-slim as base
+
+# test stage
+- FROM node:12-stretch-slim as test
++ FROM base as test
+
+# final stage
+- FROM node:12-stretch-slim
++ FROM base
+```
+
+# improved Dockerfile
+
+```dockerfile
+FROM node:12-stretch-slim as base
+
+FROM base as test
+
+# least privilege user
+RUN mkdir -p /docker-react-nginx && chown -R node:node /docker-react-nginx
+USER node
+
+WORKDIR /docker-react-nginx
+
+# node module deps as a separate layer for caching
+COPY  --chown=node:node package.json yarn.*lock ./
+RUN yarn install --pure-lockfile
+
+# copy source code
+COPY --chown=node:node  . .
+
+# run any tests you want to, linting, prettier, unit etc
+ENV CI true
+RUN yarn test
+
+ENV NODE_ENV production
+# after successful test build your JS assets etc
+RUN yarn build
+RUN yarn build:server
+
+FROM base as prod
+# least privilege user
+RUN mkdir -p /docker-react-nginx && chown -R node:node /docker-react-nginx
+USER node
+
+WORKDIR /docker-react-nginx
+
+# only copy needed assets, node_modules
+# etc will be left in test image, super light prod image
+COPY --chown=node:node --from=test /docker-react-nginx/build .
+CMD ["node", "server.js"]
+```
+
+# checklist
+
+- [x] least previlige user
+- [x] DRY base image declarations
+- [x] least previlige user
+- [ ] dev setup
+- [ ] .dockerignore
