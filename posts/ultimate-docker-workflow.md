@@ -287,6 +287,188 @@ COPY --chown=node:node --from=test /docker-react-nginx/build .
 CMD ["node", "server.js"]
 ```
 
+# building the image
+
+To build the image from the above Dockerfile do from the root of the app `docker build . -t docker-react` (output pasted below)
+
+```bash
+$ docker build . -t docker-react
+Sending build context to Docker daemon  1.333MB
+Step 1/19 : FROM node:12-stretch-slim as base
+ ---> 5f9b3855deed
+Step 2/19 : FROM base as test
+ ---> 5f9b3855deed
+Step 3/19 : RUN mkdir -p /docker-react-nginx && chown -R node:node /docker-react-nginx
+ ---> Running in cfca6e721a4e
+Removing intermediate container cfca6e721a4e
+ ---> 40af99c028bd
+Step 4/19 : USER node
+ ---> Running in 66ee62ba1823
+Removing intermediate container 66ee62ba1823
+ ---> 6bfe6580eb2f
+Step 5/19 : WORKDIR /docker-react-nginx
+ ---> Running in 83de3f61b3cb
+Removing intermediate container 83de3f61b3cb
+ ---> 4c42bb1ab0ee
+Step 6/19 : COPY  --chown=node:node package.json yarn.*lock ./
+ ---> 4d55dbfb8eee
+Step 7/19 : RUN yarn install --pure-lockfile
+ ---> Running in c3b31b0a4002
+yarn install v1.22.4
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@2.1.2: The platform "linux" is incompatible with this module.
+info "fsevents@2.1.2" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@1.2.12: The platform "linux" is incompatible with this module.
+info "fsevents@1.2.12" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@2.1.3: The platform "linux" is incompatible with this module.
+info "fsevents@2.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+warning " > @testing-library/user-event@7.2.1" has unmet peer dependency "@testing-library/dom@>=5".
+warning "react-scripts > @typescript-eslint/eslint-plugin > tsutils@3.17.1" has unmet peer dependency "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta".
+[4/4] Building fresh packages...
+Done in 78.54s.
+Removing intermediate container c3b31b0a4002
+ ---> 2f0cbc6bc005
+Step 8/19 : COPY --chown=node:node  . .
+ ---> 92b4fd2b4096
+Step 9/19 : ENV CI true
+ ---> Running in 23675ee3e798
+Removing intermediate container 23675ee3e798
+ ---> dd2d584fe708
+Step 10/19 : RUN yarn test
+ ---> Running in c959170b3c42
+yarn run v1.22.4
+$ react-scripts test
+PASS src/App.test.js
+  ✓ renders learn react link (75ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        3.08s
+Ran all test suites.
+Done in 4.47s.
+Removing intermediate container c959170b3c42
+ ---> 12f9a44ad631
+Step 11/19 : ENV NODE_ENV production
+ ---> Running in 8565262aacd5
+Removing intermediate container 8565262aacd5
+ ---> cf84074c7fcc
+Step 12/19 : RUN yarn build
+ ---> Running in 1011233a4614
+yarn run v1.22.4
+$ react-scripts build
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  39.39 KB  build/static/js/2.6da29292.chunk.js
+  781 B     build/static/js/runtime-main.b96d1615.js
+  654 B     build/static/js/main.cdcd3796.chunk.js
+  556 B     build/static/css/main.d1b05096.chunk.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  yarn global add serve
+  serve -s build
+
+Find out more about deployment here:
+
+  bit.ly/CRA-deploy
+
+Done in 11.42s.
+Removing intermediate container 1011233a4614
+ ---> f7f716b03cc9
+Step 13/19 : RUN yarn build:server
+ ---> Running in 807ba45624b4
+yarn run v1.22.4
+$ parcel build ./server.js -d build --target node --bundle-node-modules
+✨  Built in 8.05s.
+
+build/server.js.map    ⚠️  1.17 MB    166ms
+build/server.js         561.59 KB    7.37s
+Done in 9.30s.
+Removing intermediate container 807ba45624b4
+ ---> 7ec2bcaa380b
+Step 14/19 : FROM base as prod
+ ---> 5f9b3855deed
+Step 15/19 : RUN mkdir -p /docker-react-nginx && chown -R node:node /docker-react-nginx
+ ---> Using cache
+ ---> 40af99c028bd
+Step 16/19 : USER node
+ ---> Using cache
+ ---> 6bfe6580eb2f
+Step 17/19 : WORKDIR /docker-react-nginx
+ ---> Using cache
+ ---> 4c42bb1ab0ee
+Step 18/19 : COPY --chown=node:node --from=test /docker-react-nginx/build .
+ ---> 249865c763d2
+Step 19/19 : CMD ["node", "server.js"]
+ ---> Running in 191238cf82cc
+Removing intermediate container 191238cf82cc
+ ---> 13999baf2bca
+Successfully built 13999baf2bca
+Successfully tagged docker-react:latest
+```
+
+You can validate the layering concept here as each line is converted into a step and is cached in an intermediate container image.
+
+Let's take a look at the size of the image
+
+```bash
+$ docker image ls | grep docker-react
+docker-react  latest  13999baf2bca  22 seconds ago  142MB
+```
+
+**142 MB** is the total size of the image on disk. I wonder what's taking this space, is it my code? Examining it using `docker history <image-tag>`
+
+```bash
+$ docker history docker-react
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+13999baf2bca        6 minutes ago       /bin/sh -c #(nop)  CMD ["node" "server.js"]     0B
+249865c763d2        6 minutes ago       /bin/sh -c #(nop) COPY --chown=node:nodedir:…   2.29MB
+4c42bb1ab0ee        8 minutes ago       /bin/sh -c #(nop) WORKDIR /docker-react-nginx   0B
+6bfe6580eb2f        8 minutes ago       /bin/sh -c #(nop)  USER node                    0B
+40af99c028bd        8 minutes ago       /bin/sh -c mkdir -p /docker-react-nginx && c…   0B
+5f9b3855deed        7 weeks ago         /bin/sh -c #(nop)  CMD ["node"]                 0B
+<missing>           7 weeks ago         /bin/sh -c #(nop)  ENTRYPOINT ["docker-entry…   0B
+<missing>           7 weeks ago         /bin/sh -c #(nop) COPY file:238737301d473041…   116B
+<missing>           7 weeks ago         /bin/sh -c set -ex   && savedAptMark="$(apt-…   9.58MB
+<missing>           7 weeks ago         /bin/sh -c #(nop)  ENV YARN_VERSION=1.22.4      0B
+<missing>           7 weeks ago         /bin/sh -c ARCH= && dpkgArch="$(dpkg --print…   74.9MB
+<missing>           7 weeks ago         /bin/sh -c #(nop)  ENV NODE_VERSION=12.16.3     0B
+<missing>           8 weeks ago         /bin/sh -c groupadd --gid 1000 node   && use…   333kB
+<missing>           8 weeks ago         /bin/sh -c #(nop)  CMD ["bash"]                 0B
+<missing>           8 weeks ago         /bin/sh -c #(nop) ADD file:08ea1ff3fcd4efc24…   55.3MB
+```
+
+If you scroll towards the right and see the sizes of the intermediate layers making up the image you can see the app code's contribution is just **2.29 MB** and rest is the size of the base image.
+
+This can be cut down by choosing a smaller base image like _Alpine_ etc, but there's one more option using **distroless** images that only contain the language runtime and remove the entire OS. The `CMD` of this image just runs `node`. Let's give distroless a try. Removed `mkdir` statements as distroless images don't have a shell and they only contain runtime in this case `node`
+
+```diff
+- FROM base as prod
+- RUN mkdir -p /docker-react-nginx && chown -R node:node /docker-react-nginx
+- USER node
+
++ FROM gcr.io/distroless/nodejs as prod
+```
+
+Checking the image size again
+
+```bash
+$ docker image ls | grep docker-react
+docker-react  latest  863e5570cbc2  About a minute ago  83.5MB
+```
+
+> **83.5 MB** woww! That's almost ~60MB reduction.
+
 # checklist
 
 - [x] least previlige user
