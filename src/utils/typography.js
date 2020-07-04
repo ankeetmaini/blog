@@ -1,7 +1,7 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
+import Alton from 'typography-theme-alton'
 
-Wordpress2016.overrideThemeStyles = () => {
+Alton.overrideThemeStyles = () => {
   return {
     'a.gatsby-resp-image-link': {
       boxShadow: `none`,
@@ -9,9 +9,9 @@ Wordpress2016.overrideThemeStyles = () => {
   }
 }
 
-delete Wordpress2016.googleFonts
+delete Alton.googleFonts
 
-const typography = new Typography(Wordpress2016)
+const typography = new Typography(Alton)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
