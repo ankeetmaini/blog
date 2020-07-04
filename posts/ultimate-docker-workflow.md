@@ -37,7 +37,7 @@ Like the official [Node image here](https://hub.docker.com/_/node). You can choo
 This would be the very first line of the Dockerfile.
 
 ```dockerfile
-FROM node:12-stretch-slim as test
+FROM node:12-stretch-slim
 ```
 
 > _layering_ in docker: every line in the Dockerfile becomes a `layer` which translates to an intermediate image. A docker image is made up of a number of these intermediate image layers.
@@ -124,7 +124,7 @@ The `package.json` is first copied before installing the dependencies as the doc
 
 > Why not copy all the source files and with it `package.json` as well? This could prove detrimental to the time it takes to build the image. Even for commits that don't change the deps the `npm i` would not be cached and would get executed every time.
 
-Doing it separately caches it and Docker runs it only if the checksum of `package.json` or lock file changes. Also note the flag `--pure-lockfile` which will respect the pinned versions and not take the latest semverv matching package as per `~|^` in the package.json
+Doing it separately caches it and Docker runs it only if the checksum of `package.json` or lock file changes. Also note the flag `--pure-lockfile` which will respect the pinned versions and not take the latest semver matching package as per `~|^` in the package.json
 
 ## copy the source files
 
@@ -143,6 +143,10 @@ I only ran unit tests but you can run all sorts of checks which you'd run on a P
 ## building assets
 
 While building assets it's essential certain environment variables are set correctly, e.g. `NODE_ENV=production`. These and others on which your app depends can be set easily using `ENV` directive.
+
+> ENV vs ARG
+
+There are two types of parameters you can use in the whole docker lifecycle. `ENV` can be defined inside the Dockerfile and also passed in while running the docker image, on the other hand `ARG` can be defined in Dockerfile and passed in only at the time of building the image and can no longer be accessed when you run the built docker image.
 
 ```dockerfile
 ENV NODE_ENV production
@@ -168,7 +172,7 @@ CMD ["node", "server.js"]
 
 If you notice I ran the `server.js` directly using `node`. No node process managers like `PM2` or `forever`. These process managers are used generally because node is single threaded and to have HA (redundancy), parallelism and making sure one process is always up. Even if a process goes down these process managers spawn a new one. But this is not needed in container world. You can get the same redundancy by spinning multiple docker containers using some federation software be it docker swarm, kubernetes etc. (I may do a separate blog post on it in future)
 
-The Dockerfile at this point works, no doubt but there's a lot more that can be done to take it to the next level.
+The Dockerfile at this point works.
 
 ```dockerfile
 FROM node:12-stretch-slim as test
@@ -198,6 +202,8 @@ CMD ["node", "server.js"]
 
 ```
 
+But there's a lot more that can be done to take it to the next level.
+
 # improvements
 
 ## least privilege user
@@ -206,7 +212,7 @@ All the commands now are run with `root` user context. Although `root` inside do
 
 Changing the Dockerfile to use this user instead of root. This needs to be changed at a couple of places.
 
-- first when doing the `WORKDIR` as docker creates the directory using root permissions, but if the directory is already created docker would just `cd` instead of `mkdir` and `cd`
+- first when doing the `WORKDIR` as docker creates the directory using root permissions, but if the directory is already created docker would just `cd` instead of `mkdir` + `cd`
 - adding `USER` directive to enable the specific user's context for all subsequent `CMD`, `RUN` and `ENTRYPOINT` instructions
 
 ```diff
