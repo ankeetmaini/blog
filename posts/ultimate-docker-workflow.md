@@ -475,10 +475,165 @@ docker-react  latest  863e5570cbc2  About a minute ago  83.5MB
 
 > **83.5 MB** woww! That's almost ~60MB reduction.
 
-# checklist
+But now the distroless image will run as `root` as the `USER` directive was removed. Nothing to worry as distroless images ship with a non root user called `nonroot`. Also note the `--chown` directive used to copy assets. Updating the Dockerfile below (showing only the last stage)
 
-- [x] least previlige user
-- [x] DRY base image declarations
-- [x] least previlige user
-- [ ] dev setup
-- [ ] .dockerignore
+```dockerfile
+FROM gcr.io/distroless/nodejs as prod
+
+USER nonroot
+WORKDIR /docker-react-nginx
+
+COPY --from=test --chown=nonroot:nonroot /docker-react-nginx/build .
+CMD ["server.js"]
+```
+
+# dev setup
+
+The main highlight of docker is that it decouples the host environment from the final output of your app. Using docker just for producing production builds seems less than optimal. It defies the principle of keeping prod and dev setup as close as possible.
+
+Before we look into how all this will pan out, let's take a moment to revisit the steps one takes while running an app locally
+
+- `yarn install` (if it's the first time)
+- `yarn start` or an equivalent command that starts the server and possibly watches the files
+
+## So how can this be done?
+
+- docker image build and run are two separate steps; can they be combined in one?
+- but isn't docker separate from host and all its contents get destroyed once it's stopped/removed?
+- will it not be time consuming to copy entire assets inside docker everytime I make a change in my source file?
+- how will I preserve the changes on host? do I copy back?
+- how will my instellisense work?
+- can docker build run on watch mode?
+- won't it be such a pain to pass all the envs and ports on the command line by hand?
+
+### What about DX??
+
+All of the above can be solved by a few tools up in Docker's sleeves.
+
+### bind mounts
+
+This is the standard way to bind a directory path from host machine to Docker container. This can be used to mount the entire source code folder into the container. This will make docker think all the files are inside it and all the edits happening will be propagated both ways.
+
+You can edit file on your IDE and docker container gets the changes and vice-versa.
+
+### docker-compose
+
+This command comes built-in with Docker Desktop. This makes building and running images locally super easy. It uses a yaml configuration file to get all the arguments which you want to pass to docker command. It acts as a proxy to actual docker commands and makes DX awesome.
+
+The configuration file is named as `docker-compose.yml`
+
+```yaml
+version: '2.4'
+
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    expose:
+      - 3000
+    volumes:
+      - .:/docker-react-nginx
+      - ~/Library/Caches/Yarn/docker-react-nginx:/usr/local/share/.cache/yarn/v6
+    environment:
+      - NODE_ENV=development
+```
+
+If you notice I added a `target=dev` in the compose file above, which means the compose will only run the `dev` stage of multi-stage Dockerfile
+
+```dockerfile
+FROM node:12-stretch-slim
+WORKDIR /docker-react-nginx
+
+# add node deps to path so that you don't have
+# to do ./node_modules/.bin/something
+ENV PATH=./node_modules/.bin:$PATH
+
+CMD ["yarn", "start"]
+```
+
+So revising the above steps needed for local dev setup, step (2) of `yarn start` is taken care of by specifying it as CMD in the dev target.
+
+It makes adding bind-mounts, passing environment variables so easy which if you're to pass by hand directly to docker gets long and cumbersome.
+
+(a sample of directly specifying arguments to docker run)
+
+```bash
+docker run -d \
+  -it \
+  --name devtest \
+  --mount type=bind,source="$(pwd)"/target,target=/app \
+	-p 3000:3000
+  nginx:latest
+```
+
+### but with `docker-compose` all you've to do is
+
+```
+docker-compose up --build
+```
+
+> for the first run the above command will fail as there would be no node_modules
+
+To fix this you've to install the dependencies manually as you do even now. The only difference is instead of doing `yarn install` from host machine you'll have to get inside the docker container and do it. This is because dependencies also depend on native libraries. So deps downloaded for mac might not work for linux. Always be mindful of this small fact.
+
+`docker-compose` makes sshing into the container super easy. The below command sshes into the container named `app` in the `docker-compose.yml` which is nothing but an alias for the node container. You can use the same command to go inside any container by specifying the service name.
+
+```bash
+docker-compose run app /bin/bash
+root@96524f974891:/docker-react-nginx# yarn install
+```
+
+The finished docker files and docker-compose are [here](https://github.com/ankeetmaini/docker-react-nginx)
+
+# bonus; adding a reverse proxy
+
+If you have a setup which requires a reverse proxy to be setup maybe to serve static assets or reroute api calls to different server, it's extremely easy to add one using the same setup. `docker-compose` really shines when you need to run multiple containers as one atomic unit.
+
+For this example I'm using the following setup to create a two container cluster where all the requests would come to nginx and it'll in turn forward them to node server. I also want to keep my node server inaccessible from the internet.
+
+![](../content/assets/cluster.png)
+
+Adding a new folder in the repo with nginx config.
+
+```conf
+server {
+    listen 80;
+    location / {
+        proxy_pass http://app:3000;
+    }
+}
+
+```
+
+A super simple nginx config which listens on port 80 and proxies everything to `app:3000` which is the node server. See how convenient it is to connect to other containers using `docker-compose` by means of DNS name which is the same as service name defined in `docker-compose.yml`. In absense of this feature it would have been extremely difficult to connect had we needed to depend on actual IP addresses as the IP is assigned after the container is started.
+
+Adding the entry in `docker-compose.yml`
+
+```yaml
+nginx:
+  build:
+    context: ./nginx
+  depends_on:
+    - app
+  ports:
+    - 80:80
+```
+
+I want to expose the port `80` to outside world to access it and hence the entry in `ports` key above. It translates to {port in the outside world}:{port inside the docker}. This is not present in the `app` service as I want to keep the the container accessible only within the docker network. Also note adding `EXPOSE <port number>` directive either inside Dockerfile or compose file will not expose the port it just serves as a documentation guide for devs. `ports` is the only thing which exposes.
+
+```bash
+docker-compose up --build
+```
+
+You should now be able to access the react app at [localhost](http://localhost) which is the nginx port. If you try and access the node server directy at port=3000 you'd not be able to.
+
+## .dockerignore
+
+Lastly please use .dockerignore to keep things getting copied to docker container like node_modules etc. This file can just be an exact replica of .gitignore
+
+# code
+
+All the code used here is present in this repository [docker-react-nginx](https://github.com/ankeetmaini/docker-react-nginx)
+
+## discuss
