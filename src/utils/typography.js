@@ -1,11 +1,11 @@
-import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
+import Typography from "typography"
+import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
-    'a.gatsby-resp-image-link': {
-      boxShadow: `none`,
-    },
+    "a.gatsby-resp-image-link": {
+      boxShadow: `none`
+    }
   }
 }
 

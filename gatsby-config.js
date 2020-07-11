@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Under Engineered`,
-    author: `Ankeet Maini`,
+    author: {
+      name: "Ankeet Maini",
+      summary: "who lives and works in Bengaluru",
+    },
     description: `My journey with code and bugs`,
-    siteUrl: `https://under-engineered.netlify.com/`,
+    siteUrl: `https://ankeetmaini.dev/`,
     social: {
       twitter: `ankeetmaini`,
     },
@@ -75,13 +78,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-theme-mdx-deck',
+      resolve: "gatsby-theme-mdx-deck",
       options: {
         // enable or disable gatsby-plugin-mdx
         mdx: true,
-        contentPath: 'decks',
+        contentPath: "decks",
         // base path for routes generate by this theme
-        basePath: '/decks',
+        basePath: "/decks",
       },
     },
   ],
