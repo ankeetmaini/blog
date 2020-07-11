@@ -10,9 +10,9 @@
   "dependencies": {
     "@code-surfer/themes": "^3.0.0",
     "gatsby": "^2.23.12",
-		"gatsby-image": "^2.4.9",
+    "gatsby-image": "^2.4.9",
     "gatsby-plugin-feed": "^2.5.7",
-		"gatsby-plugin-google-analytics": "^2.3.6",
+    "gatsby-plugin-google-analytics": "^2.3.6",
     "gatsby-plugin-manifest": "^2.4.14",
     "gatsby-plugin-offline": "^3.2.13",
     "gatsby-plugin-react-helmet": "^3.3.6",
@@ -31,6 +31,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
+    "styled-components": "^5.1.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
     "typography": "^0.16.19",
@@ -42,7 +43,7 @@
     "eslint-plugin-react": "^7.11.1",
     "gatsby-theme-mdx-deck": "^3.0.13",
     "mdx-deck": "^3.0.13",
-		"prettier": "2.0.5"
+    "prettier": "2.0.5"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
@@ -61,8 +62,8 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "start": "npm run develop",
-		"build": "gatsby build",
-		"serve": "gatsby serve",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
     "clean": "gatsby clean",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }

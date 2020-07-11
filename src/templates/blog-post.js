@@ -14,16 +14,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
+      <SEO title={post.frontmatter.title} description={post.excerpt} />
       <article>
         <header>
           <h1
             style={{
               marginTop: rhythm(1),
-              marginBottom: 0
+              marginBottom: 0,
             }}
           >
             {post.frontmatter.title}
@@ -32,7 +29,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             style={{
               ...scale(-1 / 5),
               display: `block`,
-              marginBottom: rhythm(1)
+              marginBottom: rhythm(1),
             }}
           >
             {post.frontmatter.date}
@@ -42,12 +39,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: rhythm(1)
+            marginBottom: rhythm(1),
           }}
         />
-        <footer>
-          <Bio />
-        </footer>
+
+        <Bio />
       </article>
 
       <nav>
@@ -57,7 +53,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0
+            padding: 0,
           }}
         >
           <li>
@@ -97,7 +93,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
       }
     }
   }
