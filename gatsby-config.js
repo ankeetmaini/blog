@@ -1,10 +1,15 @@
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-blog`,
-      options: {},
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-61474244-4",
+        head: true,
+      },
     },
-    "gatsby-theme-blog-darkmode",
+    `gatsby-theme-blog`,
+    `gatsby-theme-blog-darkmode`,
+    `gatsby-plugin-offline`,
   ],
   // Customize your site metadata:
   siteMetadata: {
