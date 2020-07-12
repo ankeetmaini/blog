@@ -1,5 +1,16 @@
-// custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+const style = document.createElement("style")
 
-import "./src/utils/theme.css"
+style.innerHTML = `
+html {
+	line-height: 1.6;
+}
+p {
+	margin-bottom: 1.75rem;
+}
+`
+const head = document.head
+if (head.firstChild) {
+  head.insertBefore(style, head.firstChild)
+} else {
+  head.appendChild(style)
+}
