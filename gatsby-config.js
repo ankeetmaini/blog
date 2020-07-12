@@ -1,10 +1,8 @@
 module.exports = {
   plugins: [
-    {
-      resolve: `gatsby-theme-blog`,
-      options: {},
-    },
-    "gatsby-theme-blog-darkmode",
+    `gatsby-theme-blog`,
+    `gatsby-theme-blog-darkmode`,
+    `gatsby-plugin-offline`,
   ],
   // Customize your site metadata:
   siteMetadata: {
