@@ -1,5 +1,12 @@
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-61474244-4",
+        head: true,
+      },
+    },
     `gatsby-theme-blog`,
     `gatsby-theme-blog-darkmode`,
     `gatsby-plugin-offline`,
