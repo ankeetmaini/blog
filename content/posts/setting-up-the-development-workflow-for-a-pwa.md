@@ -1,5 +1,5 @@
 ---
-title: 'Crafting a PWA: Part 1 — Setting up the development workflow'
+title: "Crafting a PWA: Part 1 — Setting up the development workflow"
 date: 2017-09-18
 ---
 
@@ -19,18 +19,18 @@ How do I do that? Using a CI server, like [Travis](http://travis-ci.org). With T
 
 Enable Travis CI for your repository by going to your profile page
 
-![](https://cdn-images-1.medium.com/max/4948/1*z9SeKBEVcQv1DPzO6w7JYQ.png)
+![Imgur](https://i.imgur.com/kSduutGl.png)
 
 Once you enable the switch, you’d then need to add a .travis.yml which will instruct Travis on what to do at different stages of the build.
 
 ```yml
 language: node_js
 node_js:
-  - '7'
+  - "7"
 script: npm run lint
 cache:
   directories:
-    - 'node_modules'
+    - "node_modules"
 ```
 
 Above is a simple .travis.yml which runs lint checks on PR.
@@ -78,7 +78,7 @@ env:
 
 With this setup now Travis will deploy every pull request¹. You can see in the below image that a Staging deployment was done.
 
-![CI checks PR for lint, deploys and audits app performance](https://cdn-images-1.medium.com/max/3644/1*4ASToWVoqCPXkdekrd6x-A.png)_CI checks PR for lint, deploys and audits app performance_
+![CI checks PR for lint, deploys and audits app performance](https://i.imgur.com/pGJEMiBl.png)_CI checks PR for lint, deploys and audits app performance_
 
 ### Step — 3: Integrating Lighthouse
 
@@ -97,11 +97,11 @@ With this setup now Travis will deploy every pull request¹. You can see in the 
 ```js
 #! /usr/bin/env node
 
-const fs = require('fs')
-const argv = require('yargs').argv
-const childProcess = require('child_process')
+const fs = require("fs")
+const argv = require("yargs").argv
+const childProcess = require("child_process")
 
-const path = require('path')
+const path = require("path")
 
 const fileName = argv.file
 
@@ -111,16 +111,16 @@ const nowUrl = fs.readFileSync(file).toString()
 // bail, we did not get the URL
 if (!nowUrl) process.exit(1)
 
-const lighthouseCi = path.resolve(__dirname, 'node_modules', 'lighthouse-ci')
+const lighthouseCi = path.resolve(__dirname, "node_modules", "lighthouse-ci")
 const child = childProcess.fork(lighthouseCi, [
-  '--score',
+  "--score",
   93,
-  '--runner',
-  'wpt',
+  "--runner",
+  "wpt",
   nowUrl,
 ])
 
-child.on('error', err => {
+child.on("error", err => {
   console.error(err)
   process.exit(1)
 })
@@ -130,7 +130,7 @@ child.on('error', err => {
 
    ./run-lighthouse.js --file=now_url
 
-![](https://cdn-images-1.medium.com/max/3296/1*4Jzgvr9vD1YthNj89ws_YQ.png)
+![Imgur](https://i.imgur.com/bQdeKyWl.png)
 
 **Congratulations!**, you’ve successfully setup an awesome workflow. All the code used in the citations [lives here](https://github.com/ankeetmaini/react-hn).
 

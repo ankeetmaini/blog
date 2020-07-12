@@ -39,14 +39,12 @@ You basically do this by using [redux-thunk](https://github.com/reduxjs/redux-th
 // The classic AJAX call - dispatch before the request, and after it comes back
 function myThunkActionCreator(someValue) {
   return (dispatch, getState) => {
-    dispatch({ type: 'REQUEST_STARTED' })
+    dispatch({ type: "REQUEST_STARTED" })
 
-    myAjaxLib
-      .post('/someEndpoint', { data: someValue })
-      .then(
-        response => dispatch({ type: 'REQUEST_SUCCEEDED', payload: response }),
-        error => dispatch({ type: 'REQUEST_FAILED', error: error })
-      )
+    myAjaxLib.post("/someEndpoint", { data: someValue }).then(
+      response => dispatch({ type: "REQUEST_SUCCEEDED", payload: response }),
+      error => dispatch({ type: "REQUEST_FAILED", error: error })
+    )
   }
 }
 ```
@@ -63,12 +61,12 @@ There are two problems with this
 
 As we’ve learnt type is very important in an action, so we’ll create a file and list down all possible action types. You can create multiple files too, I prefer one.
 
-![listing action types for the app](https://cdn-images-1.medium.com/max/3652/1*DJWul6IvW1_7AkxpSa8uGA.png)_listing action types for the app_
+![listing action types for the app](https://i.imgur.com/MZBBW9zl.png)_listing action types for the app_
 
 With types out of the way, we need a solid way to create actions. Doing dispatch({type: ADD_TODO, payload: 'Finish blog post'}) from your components isn’t a great idea, because it’s verbose plus your action can take different shapes, like with type someone can send payload or text — you get the drift. We need to strongly type our action object.
 
 ```typescript
-import { AnyAction } from 'redux'
+import { AnyAction } from "redux"
 
 interface Payload<U, V> {
   readonly req: U
@@ -103,7 +101,7 @@ With this one can easily create actions in one line, without worrying about the 
 
 Moving on to async thunk actions, which will come in handy for API calls. As I talked earlier of splitting the action dispatch logic and the actual API calling, let’s define all API calls in a separate file.
 
-![](https://cdn-images-1.medium.com/max/5248/1*vGzLXH5RaYIzlmyKPIb0HQ.png)
+![Imgur](https://i.imgur.com/qvvYAEAl.png)
 
 We can now use getDoggo API in one/many of our actions.
 
@@ -184,7 +182,7 @@ export function createAsyncAction<
 
 With this out of the way, let’s use this to create Actions. I like to keep the action creators into a separate file of their own like in the screenshot below.
 
-![](https://cdn-images-1.medium.com/max/4524/1*ltOO6ikR2CGnXymTfoV3LQ.png)
+![](https://i.imgur.com/chEbZEWl.png)
 
 This is amazing. We have 4 action creators in the lines of just one thunk that we saw earlier. Neat!
 
@@ -211,15 +209,15 @@ Here, we used infer and conditional types and ReturnType which were recently add
 
 Using them is as easy as this. (See the last line of the file.)
 
-![](https://cdn-images-1.medium.com/max/4560/1*Py6bOTwMIL-9nspcE37hsg.png)
+![Imgur](https://i.imgur.com/4xaoDEvl.png)
 
 If you clearly see the tooltip in the picture the action creators embed the Action type info and instead of duplicating it inside our codebase we could just infer them. If I hover over AppActionObjectTypes it shows a beautiful list of types it inferred.
 
-![action object types automatically inferred](https://cdn-images-1.medium.com/max/3164/1*WlAIjyho4e-D-IylDyftew.png)_action object types automatically inferred_
+![action object types automatically inferred](https://i.imgur.com/Ve8jLzGl.png)_action object types automatically inferred_
 
 Let’s handle them in a reducer. Just to mimic a big app I’ll create two reducers one will hold Todos and another will hold Doggos and will use combineReducers
 
-![](https://cdn-images-1.medium.com/max/4044/1*jeIsPu2rlVCEliZcs9cIDg.png)
+![Imgur](https://i.imgur.com/NKUedRMl.png)
 
 How we get excellent autocomplete on action.type! We also get correct payload types based on the Action Type.
 
@@ -233,15 +231,15 @@ export type GetReducerState<T> = {
 
 And using it is as easy as this.
 
-![see the type extracted by GetReducerState in the tooltip](https://cdn-images-1.medium.com/max/2712/1*_ZWdVs1g41c8HawYHETeJg.png)_see the type extracted by GetReducerState in the tooltip_
+![see the type extracted by GetReducerState in the tooltip](https://i.imgur.com/9QwN0h5l.png)_see the type extracted by GetReducerState in the tooltip_
 
 With actions and reducers in place, time to create our store.
 
 ```typescript
-import reducer, { IAppState } from './reducers'
-import { createStore, applyMiddleware } from 'redux'
-import thunk, { ThunkMiddleware } from 'redux-thunk'
-import { AppActionObjectTypes } from './actions/Actions'
+import reducer, { IAppState } from "./reducers"
+import { createStore, applyMiddleware } from "redux"
+import thunk, { ThunkMiddleware } from "redux-thunk"
+import { AppActionObjectTypes } from "./actions/Actions"
 
 export default createStore(
   reducer,
@@ -349,7 +347,7 @@ Coming back to my promise of not writing any types — we’re still doing great
 
 [The code is at GitHub](https://github.com/ankeetmaini/react-app-redux-ts). And the app looks like below gif, you can see API requests for Dog images and plain actions to add TODOs.
 
-![](https://cdn-images-1.medium.com/max/2000/1*i6YcBCw20mWaZ1wQnYym0Q.gif)
+![Imgur](https://i.imgur.com/1rUN6GU.gif)
 
 I hope you found this approach helpful! In case you want to improve or have more ideas feel free to [create an issue](https://github.com/ankeetmaini/react-app-redux-ts/issues) or hit me up on [Twitter](https://twitter.com/ankeetmaini).
 
