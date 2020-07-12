@@ -1,7 +1,6 @@
 # blog
 
-- it contains my blog posts (so rhetoric) in /posts
-- and my presentation decks in /decks
+- it contains my blog posts (so rhetoric) in /content/posts
 
 # running
 
