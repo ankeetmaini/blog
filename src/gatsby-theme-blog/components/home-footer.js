@@ -8,10 +8,6 @@ const Footer = ({ socialLinks }) => (
       pt: 3,
     })}
   >
-    © {new Date().getFullYear()}, Powered by
-    {` `}
-    lots of procrastination and frequent visits to the fridge
-    {` `}&bull;{` `}
     {socialLinks
       ? socialLinks.map((platform, i, arr) => (
           <Fragment key={platform.url}>
