@@ -14,7 +14,7 @@ module.exports = {
       },
     },
     `gatsby-theme-blog-darkmode`,
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
   ],
   // Customize your site metadata:
   siteMetadata: {
