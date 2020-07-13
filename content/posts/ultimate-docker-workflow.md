@@ -63,7 +63,7 @@ This way you can define different stages for
 - build
 - final where you just copy the built assets
 
-![](../content/assets/steps-for-docker.png)
+![](../assets/steps-for-docker.png)
 
 ## writing the Dockerfile
 
@@ -523,7 +523,7 @@ This command comes built-in with Docker Desktop. This makes building and running
 The configuration file is named as `docker-compose.yml`
 
 ```yaml
-version: '2.4'
+version: "2.4"
 
 services:
   app:
@@ -592,7 +592,7 @@ If you have a setup which requires a reverse proxy to be setup maybe to serve st
 
 For this example I'm using the following setup to create a two container cluster where all the requests would come to nginx and it'll in turn forward them to node server. I also want to keep my node server inaccessible from the internet.
 
-![](../content/assets/cluster.png)
+![](../assets/cluster.png)
 
 Adding a new folder in the repo with nginx config.
 
