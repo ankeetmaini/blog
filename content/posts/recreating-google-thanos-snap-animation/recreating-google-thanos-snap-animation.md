@@ -1,5 +1,5 @@
 ---
-title: 'Re-creating Google Thanos snap animation'
+title: "Re-creating Google Thanos snap animation"
 date: 2019-05-05
 ---
 
@@ -27,7 +27,7 @@ If you haven't seen this animation it's probably better to check it out first.
 </div>
 ```
 
-- add some CSS to pretty things a bit ![](../assets/search-item.png)
+- add some CSS to pretty things a bit ![](./search-item.png)
 - copy/paste the `div` with `class=result` a number of times (later)
 
 ## step - 2: nail the disappearing act
@@ -40,7 +40,7 @@ If you haven't seen this animation it's probably better to check it out first.
   - making the main element hidden
 
 ```js
-const searchElement = document.querySelector('.content')
+const searchElement = document.querySelector(".content")
 const parent = searchElement.parentNode
 const clone1 = searchElement.cloneNode(true)
 const clone2 = searchElement.cloneNode(true)
@@ -71,9 +71,9 @@ const clone2 = searchElement.cloneNode(true)
 > I've also added a `transition` property to class `absolute` so as to animate them using `transforms`
 
 ```js
-parent.classList.add('relative')
-clone1.classList.add('absolute')
-clone2.classList.add('absolute')
+parent.classList.add("relative")
+clone1.classList.add("absolute")
+clone2.classList.add("absolute")
 // finally append to parent
 parent.append(clone1, clone2)
 ```
@@ -97,12 +97,12 @@ parent.append(clone1, clone2)
 - then slide the clones
 
 ```js
-searchElement.classList.add('fade')
+searchElement.classList.add("fade")
 
 // slide the clones in the next frame
 setTimeout(() => {
-  clone1.classList.add('slide-left', 'fade')
-  clone2.classList.add('slide-right', 'fade')
+  clone1.classList.add("slide-left", "fade")
+  clone2.classList.add("slide-right", "fade")
 }, 0)
 ```
 
@@ -113,7 +113,7 @@ setTimeout(() => {
 
 ```js
 const removeNode = node => {
-  node.addEventListener('transitionend', () => {
+  node.addEventListener("transitionend", () => {
     node.remove()
   })
 }
@@ -136,9 +136,9 @@ removeNode(clone2)
 - then animate and make the node vanish
 
 ```js
-const snapButton = document.querySelector('.big-button')
-snapButton.addEventListener('click', () => {
-  const allSearchElements = [...document.querySelectorAll('.content')]
+const snapButton = document.querySelector(".big-button")
+snapButton.addEventListener("click", () => {
+  const allSearchElements = [...document.querySelectorAll(".content")]
 
   // randomize returns random results array with half the length of original one
   const half = randomize(allSearchElements)
@@ -155,4 +155,4 @@ snapButton.addEventListener('click', () => {
 - see the code at [Github](https://github.com/ankeetmaini/css-challenges/tree/master/src/thanos-snap)
 - or this [codepen](https://codepen.io/ankeetmaini/pen/QRLXEK)
 
-![](../assets/thanos.gif)
+![](./thanos.gif)
