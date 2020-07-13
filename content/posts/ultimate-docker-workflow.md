@@ -487,6 +487,39 @@ COPY --from=test --chown=nonroot:nonroot /docker-react-nginx/build .
 CMD ["server.js"]
 ```
 
+# graceful shutdown of containers
+
+This is a very important aspect to keep in mind when building containerised apps. The containers are managed by a federation tool in production environment. These tools like Kubernetes, Swarm perform rolling updates to the cluster. During the entire lifecycle of a container it receives various events from the kernel, out of which one of the most important is `SIGTERM`. This is the signal that gets sent when the federation tool or kernel wants to shutdown the container.
+
+If you do `docker container stop <id>`, you send the same `SIGTERM` event to your container. This event means that the container is shutting down and this is the last chance to gracefully close resources/open connections for DB, or file descriptors etc before the container gets killed abruptly with `SIGKILL`. If the container doesn’t shutdown after `SIGTERM` automatically then the parent kills it forcefully by sending `SIGKILL` after the grace period of 10 seconds.
+One way to handle this is using the `http`’s inbuilt functionality [server.close([callback])](https://nodejs.org/api/http.html#http_server_close_callback) which tells the server to stop accepting new connections and give the opportunity to other active containers to serve this request.
+
+```js
+process.on("SIGTERM", () => {
+  server.close(err => {
+    if (err) {
+      // if there's an error
+      // exit with a non-zero code
+      // which signifies failure
+      process.exit(1)
+    }
+    process.exit()
+  })
+})
+```
+
+The above code listens for the `SIGTERM` event and closes the server for any new requests. Right now I am not handling the existing connection requests and just exiting the node process using `process.exit`.
+
+> `SIGINT`
+
+You could go the extra mile and handle `SIGINT` too, this is sent when you try to close the program by hitting `Ctrl+C`. This also comes very handy when you're running a local docker container and want to stop it by pressing `Ctrl+C`. If this is not handled and no external [tini](https://github.com/krallin/tini) added the container won't exit and you'd have to do a `docker container stop id` by opening a different terminal as the one running the container would be unresponsive as mentioned above.
+
+```js
+process.on("SIGINT", () => {
+  server.close(() => process.exit(0))
+})
+```
+
 # dev setup
 
 The main highlight of docker is that it decouples the host environment from the final output of your app. Using docker just for producing production builds seems less than optimal. It defies the principle of keeping prod and dev setup as close as possible.
