@@ -3,6 +3,10 @@ title: Ultimate Docker workflow for frontend development
 date: 2020-06-18
 ---
 
+```js
+const va = "34"
+```
+
 Docker is amazing. It is the gateway for all amazing things you can do in devops. Once you get the hang of it, you can never go back.
 
 It gives you deterministic builds every single time. Guaranteed! No more of _these_ replies to your Manager :P

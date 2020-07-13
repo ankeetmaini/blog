@@ -7,7 +7,12 @@ module.exports = {
         head: true,
       },
     },
-    `gatsby-theme-blog`,
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        prismPreset: "prism-okaidia",
+      },
+    },
     `gatsby-theme-blog-darkmode`,
     `gatsby-plugin-offline`,
   ],
@@ -28,10 +33,6 @@ module.exports = {
       {
         name: `instagram`,
         url: `https://instagram.com/ankeetmaini`,
-      },
-      {
-        name: `decks`,
-        url: `/decks`,
       },
     ],
   },
