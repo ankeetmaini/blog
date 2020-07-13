@@ -15,6 +15,7 @@ import "prismjs/components/prism-tsx"
 import "prismjs/components/prism-typescript"
 import "prismjs/components/prism-diff"
 import "prismjs/components/prism-nginx"
+import "prismjs/components/prism-css"
 
 // from https://octicons.github.com/icon/link/
 const LinkIcon = props => (
