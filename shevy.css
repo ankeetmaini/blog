@@ -1,0 +1,144 @@
+h1 {
+  font-size: 3em;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-bottom: 0.6em;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1.125;
+  margin-bottom: 0.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+h5 {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+p,
+ol,
+ul,
+pre {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-size: 2.074rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.36rem;
+}
+
+h2 {
+  font-size: 1.728rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.36rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin-bottom: 1.36rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-bottom: 1.36rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: 1.36rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: 1.36rem;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+p,
+ol,
+ul,
+pre {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.36rem;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 4.3978rem;
+    line-height: 4.4rem;
+    margin-bottom: 1.496rem;
+  }
+  h2 {
+    font-size: 3.1097rem;
+    line-height: 3.52rem;
+    margin-bottom: 1.496rem;
+  }
+  h3 {
+    font-size: 2.1989rem;
+    line-height: 2.64rem;
+    margin-bottom: 1.496rem;
+  }
+  h4 {
+    font-size: 1.5554rem;
+    line-height: 1.76rem;
+    margin-bottom: 1.496rem;
+  }
+  h5 {
+    font-size: 1.1rem;
+    line-height: 1.76rem;
+    margin-bottom: 1.496rem;
+  }
+  h6 {
+    font-size: 1.1rem;
+    line-height: 1.76rem;
+    margin-bottom: 1.496rem;
+  }
+  body {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  p,
+  ol,
+  ul,
+  pre {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.496rem;
+  }
+}
