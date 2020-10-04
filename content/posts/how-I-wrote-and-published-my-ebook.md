@@ -1,6 +1,6 @@
 ---
 title: "How I wrote and self-published my ebook!"
-date: 2017-09-18
+date: 2020-10-04
 ---
 
 I recently wrote my first e-book [Building JavaScript A+ Promises in 10 steps](https://www.amazon.in/Building-JavaScript-Promises-steps-know-ebook/dp/B08H8TXPYG/ref=sr_1_2?dchild=1&keywords=js+promises&qid=1601798406&s=digital-text&sr=1-2) and self-published it on both [Gumroad](https://gumroad.com/l/aplus) and [Amazon](https://www.amazon.in/Building-JavaScript-Promises-steps-know-ebook/dp/B08H8TXPYG/ref=sr_1_2?dchild=1&keywords=js+promises&qid=1601798406&s=digital-text&sr=1-2).
@@ -74,7 +74,7 @@ pandoc index.md -o "Building A+ Promises.pdf" --from markdown --template eisvoge
 
 ### epub
 
-This is needed for ebook readers, I tested my Mac's `Books.app` to test.
+This is needed for ebook readers, I used my Mac's `Books.app` to test.
 
 The procedure is almost same but a different way of configuration. The `metadata` is removed from the top of the file and added separately in a `yaml` file. I also removed the `\newpage` tags as it was only for the pdf template.
 
@@ -121,6 +121,8 @@ date: 2020-08-29
 
 This was the easiest to do. I logged into Amazon's Kindle Self Publishing portal. I uploaded the above generated `epub` and it converted it to a compatible `mobi` file.
 
-That's all for this one, if you've read my book reviews would be amazing :) Post it on Amazon listing or send me direct feedback and I'll be happy to hear.
+That's all for this one, if you've read my book reviews would be amazing :)
+
+Please post it on Amazon listing or send me direct feedback and I'll be happy to hear.
 
 Thanks!
