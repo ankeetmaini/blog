@@ -1,6 +1,7 @@
 ---
 title: "How I wrote and self-published my ebook!"
 date: 2020-10-04
+image: ../assets/cover.png
 ---
 
 I recently wrote my first e-book [Building JavaScript A+ Promises in 10 steps](https://www.amazon.in/Building-JavaScript-Promises-steps-know-ebook/dp/B08H8TXPYG/ref=sr_1_2?dchild=1&keywords=js+promises&qid=1601798406&s=digital-text&sr=1-2) and self-published it on both [Gumroad](https://gumroad.com/l/aplus) and [Amazon](https://www.amazon.in/Building-JavaScript-Promises-steps-know-ebook/dp/B08H8TXPYG/ref=sr_1_2?dchild=1&keywords=js+promises&qid=1601798406&s=digital-text&sr=1-2).
