@@ -1,6 +1,8 @@
 ---
 title: Type Redux with TypeScript without writing any types*!
+description: This is a post on using redux in a fun way!
 date: 2019-01-12
+layout: layouts/post.njk
 ---
 
 Don’t believe me??
@@ -143,8 +145,8 @@ export function createAsyncAction(actions, api) {
 
 The typed version would look something like this.
 
-```typescript
-type API<U, V> = (args?: U) => Promise<V>
+```ts
+type API<U, V> = (args?: U) => Promise<V>;
 export function createAsyncAction<
   A extends string,
   B extends string,

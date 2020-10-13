@@ -1,7 +1,8 @@
 ---
-title: "How I wrote and self-published my ebook!"
+title: How I wrote and self-published my ebook!
+description: This post goes into the specifics of publishing ebooks
 date: 2020-10-04
-image: ../assets/cover.png
+layout: layouts/post.njk
 ---
 
 I recently wrote my first e-book [Building JavaScript A+ Promises in 10 steps](https://www.amazon.in/Building-JavaScript-Promises-steps-know-ebook/dp/B08H8TXPYG/ref=sr_1_2?dchild=1&keywords=js+promises&qid=1601798406&s=digital-text&sr=1-2) and self-published it on both [Gumroad](https://gumroad.com/l/aplus) and [Amazon](https://www.amazon.in/Building-JavaScript-Promises-steps-know-ebook/dp/B08H8TXPYG/ref=sr_1_2?dchild=1&keywords=js+promises&qid=1601798406&s=digital-text&sr=1-2).
@@ -44,7 +45,7 @@ Using plain `pandoc` wasn't giving me what I wanted. So I used the amazing [Eisv
 
 To make it work, I needed to add a bit of metadata at the top of my source manuscript markdown file. Note the triple dots at the end, they are intended.
 
-```
+```yaml
 ---
 titlepage: true
 titlepage-rule-height: 0
@@ -69,7 +70,7 @@ Top-level heading means the following
 
 The command to generate the final `pdf`
 
-```
+```bash
 pandoc index.md -o "Building A+ Promises.pdf" --from markdown --template eisvogel --listings --pdf-engine=/Library/TeX/texbin/pdflatex --toc --toc-depth 2 -N
 ```
 
@@ -81,7 +82,7 @@ The procedure is almost same but a different way of configuration. The `metadata
 
 The command to build epub file that I used
 
-```
+```bash
 pandoc index.md -o "Building A+ Promises.epub" --from gfm --listings  --toc --toc-depth 2 -N  --metadata-file metadata.txt --css syles.css --epub-cover-image=cover.png
 
 ```
@@ -107,7 +108,7 @@ I only wanted to add a slight highlight to the code snippets which the plain `pa
 
 The `metadata.txt` looked like this
 
-```
+```yaml
 title:
 - type: main
   text: Building JavaScript A+ Promises in 10 steps!

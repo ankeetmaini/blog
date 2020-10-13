@@ -1,6 +1,8 @@
 ---
 title: "Re-creating Google Thanos snap animation"
+description: This is a post on setting up the perfect development workflow
 date: 2019-05-05
+layout: layouts/post.njk
 ---
 
 If you haven't seen this animation it's probably better to check it out first.

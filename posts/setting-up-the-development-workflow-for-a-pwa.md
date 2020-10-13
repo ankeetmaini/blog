@@ -1,6 +1,8 @@
 ---
 title: "Crafting a PWA: Part 1 — Setting up the development workflow"
+description: This is a post on setting up the perfect development workflow
 date: 2017-09-18
+layout: layouts/post.njk
 ---
 
 PWAs have been gaining popularity for quite sometime now. Crafting a good, performant experience is continuous journey.
