@@ -1,23 +1,35 @@
 {
-  "name": "blog",
-  "private": true,
-  "version": "0.0.1",
+  "name": "eleventy-base-blog",
+  "version": "5.0.2",
+  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "clean": "gatsby clean"
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
   },
-  "license": "0BSD",
-  "dependencies": {
-    "gatsby": "^2.23.12",
-    "gatsby-plugin-google-analytics": "^2.3.11",
-    "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-theme-blog": "^2.0.0",
-    "gatsby-theme-blog-darkmode": "^2.0.0",
-    "prismjs": "^1.20.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "theme-ui": "0.4.0-alpha.3"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/11ty/eleventy-base-blog.git"
+  },
+  "author": {
+    "name": "Zach Leatherman",
+    "email": "zachleatherman@gmail.com",
+    "url": "https://zachleat.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/11ty/eleventy-base-blog/issues"
+  },
+  "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "luxon": "^1.21.3",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.2.5"
   }
 }
