@@ -5,7 +5,7 @@
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --watch",
-    "serve": "eleventy --serve",
+    "serve": "ELEVENTY_ENV=true eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=* eleventy"
   },
