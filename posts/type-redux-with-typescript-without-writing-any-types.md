@@ -2,6 +2,9 @@
 title: Type Redux with TypeScript without writing any types*!
 description: This is a post on using redux in a fun way!
 date: 2019-01-12
+tags:
+  - redux
+  - typescript
 layout: layouts/post.njk
 ---
 

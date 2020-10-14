@@ -3,6 +3,8 @@ title: How I wrote and self-published my ebook!
 description: This post goes into the specifics of publishing ebooks
 date: 2020-10-04
 layout: layouts/post.njk
+tags:
+  - pandoc
 ---
 
 I recently wrote my first e-book [Building JavaScript A+ Promises in 10 steps](https://www.amazon.in/Building-JavaScript-Promises-steps-know-ebook/dp/B08H8TXPYG/ref=sr_1_2?dchild=1&keywords=js+promises&qid=1601798406&s=digital-text&sr=1-2) and self-published it on both [Gumroad](https://gumroad.com/l/aplus) and [Amazon](https://www.amazon.in/Building-JavaScript-Promises-steps-know-ebook/dp/B08H8TXPYG/ref=sr_1_2?dchild=1&keywords=js+promises&qid=1601798406&s=digital-text&sr=1-2).
@@ -52,7 +54,6 @@ titlepage-rule-height: 0
 titlepage-background: "cover.png"
 toc-own-page: true
 listings-disable-line-numbers: true
-...
 ```
 
 This created `table-of-contents` into a separate page and added a cover pic which I self-designed on [Canva](https://www.canva.com)
@@ -110,11 +111,11 @@ The `metadata.txt` looked like this
 
 ```yaml
 title:
-- type: main
-  text: Building JavaScript A+ Promises in 10 steps!
+  - type: main
+    text: Building JavaScript A+ Promises in 10 steps!
 creator:
-- role: author
-  text: Ankeet Maini
+  - role: author
+    text: Ankeet Maini
 identifier:
 date: 2020-08-29
 ```
