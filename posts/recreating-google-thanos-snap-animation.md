@@ -97,7 +97,7 @@ parent.append(clone1, clone2);
 }
 ```
 
-- first, make the orginal element's opacity 0 - to get it out of the way
+- first, make the original element's opacity 0 - to get it out of the way
 - then slide the clones
 
 ```js

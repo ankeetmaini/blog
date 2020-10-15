@@ -47,13 +47,14 @@ Using plain `pandoc` wasn't giving me what I wanted. So I used the amazing [Eisv
 
 To make it work, I needed to add a bit of metadata at the top of my source manuscript markdown file. Note the triple dots at the end, they are intended.
 
-```yaml
+```js/1
 ---
 titlepage: true
 titlepage-rule-height: 0
 titlepage-background: "cover.png"
 toc-own-page: true
 listings-disable-line-numbers: true
+...
 ```
 
 This created `table-of-contents` into a separate page and added a cover pic which I self-designed on [Canva](https://www.canva.com)
