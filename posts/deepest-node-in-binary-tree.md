@@ -12,7 +12,7 @@ I came across today's `Daily Coding Problem #622` and since it was tagged easy I
 
 The problem was about finding the deepest node given a binary tree.
 
-```
+```text
     a
    / \
   b   c
@@ -22,7 +22,7 @@ d
 
 Each node can be described to have a structure like this
 
-```
+```text
 type node = {
   val: some-value,
   left?: node,
@@ -34,7 +34,7 @@ The `left` and `right` values can be empty or null.
 
 In the above example, it's clear by looking that the deepest node is `d`.
 
-```
+```text
     a       0th level
    / \
   b   c     1st level
@@ -91,7 +91,7 @@ We can just return these two once the function runs over.
 
 Here's the final solution.
 
-``` js/20/
+```js/20/
 const findDeepest = (root) => {
   let maxLevel = 0;
   let deepest = root;
