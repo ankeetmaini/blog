@@ -158,6 +158,10 @@ pre {
 }
 .postlist-item {
   counter-increment: start-from -1;
+  display: flex;
+  align-items: baseline;
+  flex-flow: wrap;
+  margin-bottom: 1.2em;
 }
 .postlist-item:before {
   display: inline-block;
@@ -175,7 +179,8 @@ pre {
   word-spacing: -0.5px;
 }
 .postlist-link {
-  display: inline-block;
+  /* display: inline-block; */
+  flex: 1;
   padding: 0.25em 0.1875em; /* 4px 3px /16 */
 }
 .postlist-item-active .postlist-link {
@@ -229,4 +234,9 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+.full {
+  width: 100%;
+  margin-left: 24px;
 }
