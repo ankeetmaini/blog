@@ -1,7 +1,7 @@
 ---
 title: Group-by (SQL) in Google sheets
 description: group by in google sheet, query, sum, sql, manipulate data
-date: 2020-10-15
+date: 2020-10-18
 layout: layouts/post.njk
 tags:
   - google-sheets
