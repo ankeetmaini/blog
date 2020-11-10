@@ -5,9 +5,9 @@ date: 2020-11-10
 layout: layouts/post.njk
 ---
 
-I routinely (almost every month) see my Mac's disk space getting filled notifications.
+I routinely (almost every month) see my Mac's disk space getting filled and the pesky notifications.
 
-Mostly it's just `node_modules` eating your hard disk up. In the era of trying out stuff by `npm i` leaves a heavy residue on your system.
+Mostly it's just `node_modules` eating your hard disk up. In the era of trying out all those cool projects by doing `npm i` leaves a heavy residue on your system.
 
 > Use `npx npkill`
 
