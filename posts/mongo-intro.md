@@ -3,7 +3,7 @@ title: "Part 1 - Going deeper into MongoDB"
 description: overview of MongoDB, collections and documents, docker
 date: 2020-12-13
 layout: layouts/post.njk
-tags: mongo
+tags: mongodb
 ---
 
 I've been using `MongoDB` for quite some time on and off but I always resort to Google every time I've to use it. I now have a use-case where just the basics won't get me far and I'll have to understand the underlying tech to take advantage of it.
@@ -34,7 +34,7 @@ Before we dive into the shell and try commands, lets take a brief look into what
 
 ## NoSQL database
 
-`MongoDB` is a nosql database. That means that there's no tables, rows or foreign key relationships in the same manner they have in the relational databases like `MySQL` etc.
+`MongoDB` is a nosql database. That means that there're no tables, rows or foreign key relationships in quite the same manner they are in relational databases like `MySQL` etc.
 
 It's a document store, which means you can store documents inside it directly. A `document` doesn't mean a literal file here. It means a `JSON` object.
 
@@ -44,9 +44,9 @@ It's a document store, which means you can store documents inside it directly. A
 
 Above is an example of a document.
 
-In a SQL database data is stored in a `table` and a table is made of `rows`. Each row has a fixed number of columns.
+In a SQL database, data is stored in a `table` and a table is made of `rows`. Each row has a fixed number of columns.
 
-Similarly, in NoSQL the data is stored in `collections`, where each collection is made of a number of `documents`. There's no restriction that each document should contain the same attributes or columns as in relational database.
+Similarly, in NoSQL database, the data is stored in `collections`, where each collection is made of `documents`. There's no restriction that each document should contain the same attributes or columns as in a relational database.
 
 So this can be done in a NoSQL DB like MongoDB
 
