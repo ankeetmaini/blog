@@ -64,7 +64,7 @@ The benefit of this is in future if your data model changes, you can change the 
 
 ## mongo shell
 
-As [shown above](#Tryingitandinstalling) the shell of MongoDB isn't just like a regular database shell. It can even run JavaScript inside it.
+As [shown above](#trying-it-and-installing) the shell of MongoDB isn't just like a regular database shell. It can even run JavaScript inside it.
 
 ```bash
 
@@ -86,3 +86,137 @@ test
 ```
 
 You can access all the collections, documents from the keyword `db`. It holds the currently selected database.
+
+## Operations (CRUD)
+
+### create
+
+Since the database is empty, I'll start by adding something to it.
+
+- create a collection (empty)
+- add a document inside it using `insertOne`
+- done!
+
+```bash
+
+# create an empty collection - food
+> db.food
+test.food
+
+# create a document inside the food collection
+# db.food makes sure the document is
+# added inside the `food` collection
+> db.food.insertOne({name: 'Croissant'})
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("5fd64dabed36a5727cf5a243")
+}
+
+```
+
+There's another method `insertMany` which as you correctly guessed inserts multiple documents in one go.
+
+```bash
+
+> db.food.insertMany([{name: "Samosa"}, {name: "Jalebi"}])
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("5fd64f09016e04b26b6fbfa9"),
+		ObjectId("5fd64f09016e04b26b6fbfaa")
+	]
+}
+>
+```
+
+### read
+
+There are two methods to read.
+
+- findOne
+- find (for finding all documents)
+
+```bash
+
+> db.food.findOne()
+{ "_id" : ObjectId("5fd64dabed36a5727cf5a243"), "name" : "Croissant" }
+> db.food.findMany()
+uncaught exception: TypeError: db.food.findMany is not a function :
+@(shell):1:1
+> db.food.find()
+{ "_id" : ObjectId("5fd64dabed36a5727cf5a243"), "name" : "Croissant" }
+{ "_id" : ObjectId("5fd64f09016e04b26b6fbfa9"), "name" : "Samosa" }
+{ "_id" : ObjectId("5fd64f09016e04b26b6fbfaa"), "name" : "Jalebi" }
+>
+```
+
+I can also pass a search criteria to find a particular document too.
+
+```bash
+
+> db.food.find({ name: "Samosa" })
+{ "_id" : ObjectId("5fd64f09016e04b26b6fbfa9"), "name" : "Samosa" }
+```
+
+### update
+
+This will be covered in part 2, something for you to comeback and subscribe.
+
+> _genius skills for making you subscribe and bookmark :P_
+
+### delete
+
+Again, there are two ways you can delete
+
+- deleteOne
+- deleteMany
+
+You can pass a matching criteria and all the records will get deleted that fit the criteria with `deleteMany`
+
+```bash
+
+> db.food.deleteMany({name: "Samosa"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+```
+
+You don't believe me?
+
+```bash
+
+> db.food.find()
+{ "_id" : ObjectId("5fd64dabed36a5727cf5a243"), "name" : "Croissant" }
+{ "_id" : ObjectId("5fd64f09016e04b26b6fbfaa"), "name" : "Jalebi" }
+```
+
+I told you!
+
+## Bonus
+
+- If you'd have noticed, I'm sure you'd have that a special attribute `_id` gets added to each record. If you pass it yourself, it'll be honoured else Mongo will create one for you. No two records can have the same `_id`. I think that was obvious and I could've saved those free extra keystrokes, but I'm nice :P
+- Since all is JavaScript, you can just write the name of the function to see what it does
+
+```bash
+
+> db.food.insertOne
+function(document, options) {
+    var opts = Object.extend({}, options || {});
+
+    // Add _id ObjectId if needed
+    document = this.addIdIfNeeded(document);
+
+    // Get the write concern
+    var writeConcern = this._createWriteConcern(opts);
+
+    // Result
+    var result = {acknowledged: (writeConcern && writeConcern.w == 0) ? false : true};
+
+    // Use bulk operation API already in the shell
+    var bulk = this.initializeOrderedBulkOp();
+    bulk.insert(document);
+
+    # removed rest for brevity
+```
+
+> OMG! I know right!
+
+See you in the next part. Kbye
