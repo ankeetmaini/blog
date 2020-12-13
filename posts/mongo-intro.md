@@ -3,6 +3,7 @@ title: "Part 1 - Going deeper into MongoDB"
 description: overview of MongoDB, collections and documents, docker
 date: 2020-12-13
 layout: layouts/post.njk
+tags: mongo
 ---
 
 I've been using `MongoDB` for quite some time on and off but I always resort to Google every time I've to use it. I now have a use-case where just the basics won't get me far and I'll have to understand the underlying tech to take advantage of it.
@@ -60,3 +61,28 @@ The benefit of this is in future if your data model changes, you can change the 
 [![Untitled-2020-12-13-2113.png](https://i.postimg.cc/PrH8XZ9T/Untitled-2020-12-13-2113.png)](https://postimg.cc/0rtNZ69B)
 
 > showing co-relations between a SQL and a NoSQL database
+
+## mongo shell
+
+As [shown above](#Tryingitandinstalling) the shell of MongoDB isn't just like a regular database shell. It can even run JavaScript inside it.
+
+```bash
+
+> 0.1 + 0.2
+0.30000000000000004
+```
+
+_LOL, the best way to test JS_
+
+By default when you connect to a `Mongo Shell` and don't specify a db name, it connects to `test`.
+
+You can check this by typing db and seeing the value.
+
+```bash
+
+> db
+test
+>
+```
+
+You can access all the collections, documents from the keyword `db`. It holds the currently selected database.
