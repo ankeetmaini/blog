@@ -61,7 +61,7 @@ db.food.updateOne(
 
 I know you see a weird `$set` keyword in the above command.
 
-> That's an atomic update operator. There're a few of them, not many and they are our friends. I'll also make a table at the end of the post for quick reference. I'm so helpful, I know right!
+> That's an atomic update operator. There're a few of them, not many and they are our friends.
 
 Running this on the shell...
 
