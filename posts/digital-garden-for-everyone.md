@@ -39,4 +39,4 @@ Do try this out and let me know!
 ### credits
 
 - [Foam team](http://foambubble.github.io)
-- [Mathieu Dutour](https://twitter.com/mathieudutour) for his Gatsy theme of [Digital Garden](https://github.com/mathieudutour/gatsby-digital-garden)
+- [Mathieu Dutour](https://twitter.com/mathieudutour) for his Gatsby theme of [Digital Garden](https://github.com/mathieudutour/gatsby-digital-garden)
