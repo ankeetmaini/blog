@@ -975,6 +975,11 @@ ejs@^2.7.4:
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.4.tgz#48661287573dcc53e366c7a1ae52c3a120eec9ba"
   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
 
+eleventy-plugin-youtube-embed@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-youtube-embed/-/eleventy-plugin-youtube-embed-1.5.0.tgz#fd544818d7b64e5b59739342188f3dd6419f4c0c"
+  integrity sha512-zG4ooxWukgxzKMd869C99KbtZvRqx4vXhWLt14FehKrM0Mp2L9yXSlt+CsgZhq9vjOR353KKWADoCeF243qj6A==
+
 emitter-mixin@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/emitter-mixin/-/emitter-mixin-0.0.3.tgz#5948cb286f2e48edc3b251a7cfc1f7883396d65c"

@@ -18,6 +18,10 @@ I've just published a template on Github which has an example and detailed instr
 
 If you would like to checkout the published `notes` or your very own `digital-garden` then here you go [https://ankeetmaini.github.io/foam-digital-garden/](https://ankeetmaini.github.io/foam-digital-garden/)
 
+#### Preview
+
+Here's a small preview on YouTube: https://youtu.be/JSXA7yptS98
+
 ### inside the box
 
 - automatic deploy on push to `main` branch to Github pages
