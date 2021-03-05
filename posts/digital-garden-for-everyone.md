@@ -1,7 +1,7 @@
 ---
 title: "Digital garden for everyone!"
 description:
-date: 2020-12-30
+date: 2021-03-05
 layout: layouts/post.njk
 tags: foam, digital-garden
 ---
