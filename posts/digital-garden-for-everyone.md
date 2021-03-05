@@ -20,7 +20,7 @@ If you would like to checkout the published `notes` or your very own `digital-ga
 
 #### Preview
 
-Here's a small preview on YouTube: https://youtu.be/JSXA7yptS98
+https://youtu.be/JSXA7yptS98
 
 ### inside the box
 
