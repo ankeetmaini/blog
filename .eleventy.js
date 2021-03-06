@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const embedYouTube = require("eleventy-plugin-youtube-embed");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -10,6 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(embedYouTube);
 
   eleventyConfig.setDataDeepMerge(true);
 

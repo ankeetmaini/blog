@@ -19,7 +19,7 @@ You can follow me on social media. I'm
 
 This is an actual photo of me **working** (with my laptop closed :P)
 
-<img src="https://instagram.flko3-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/88162524_3204996546198141_8798735926738611070_n.jpg?_nc_ht=instagram.flko3-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=djmjanXK5JAAX9CbDSV&tp=1&oh=d3e8c53effa90871630cf77d69f3b47d&oe=5FFEC954" width="300px">
+<img src="https://i.postimg.cc/d1BW5vfc/88162524-3204996546198141-8798735926738611070-n.jpg" width="400px">
 </div>
 
 Please subscribe if you liked my posts so that I can deliver them right in your mailbox.
