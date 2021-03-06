@@ -14,7 +14,7 @@ I recently went down this rabbit-hole to try and find the best setup for it. I l
 
 > What's a digital garden?
 
-Digital garden is a collection of notes, that get refined over time. You link your notes and thoughts via a theme, and everything is interconnected using bi-directional links to let you flow freely with the ideas. If you're a visual person then checkout the below preview which shows a garden in action or [click here](https://ankeetmaini.github.io/foam-digital-garden/).
+Digital garden is a collection of notes, that gets refined over time. You link your notes and thoughts by core ideas, and everything is interconnected using bi-directional links to let you flow freely from one idea to another. If you're a visual person then checkout the below preview which shows a garden in action or [click here](https://ankeetmaini.github.io/foam-digital-garden/).
 
 So I combined both of them :)
 
