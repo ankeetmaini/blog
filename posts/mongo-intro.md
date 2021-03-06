@@ -140,9 +140,6 @@ There are two methods to read.
 
 > db.food.findOne()
 { "_id" : ObjectId("5fd64dabed36a5727cf5a243"), "name" : "Croissant" }
-> db.food.findMany()
-uncaught exception: TypeError: db.food.findMany is not a function :
-@(shell):1:1
 > db.food.find()
 { "_id" : ObjectId("5fd64dabed36a5727cf5a243"), "name" : "Croissant" }
 { "_id" : ObjectId("5fd64f09016e04b26b6fbfa9"), "name" : "Samosa" }
