@@ -29,7 +29,7 @@ This is not a rant, but an attempt to deeply understand and appreciate the probl
 
 I think that all engineering problems are beautiful. It wouldn't hurt to at least know them be it frontend or backend. Precisely why I'm turning to actively learn and try it at work.
 
-I'm making my learning progress public by posting what I read, understand in the form of a [digital garden notebook](https://github.com/ankeetmaini/backend-garden).
+I'm making my learning progress public by posting what I read, understand in the form of a [digital garden notebook](https://ankeetmaini.github.io/backend-garden/).
 
 I'm excited for learning again from ground up! I'm also extremely lucky to have an amazing culture at work that I'm getting time and support to try a new path with a good enough safety net. Hoping to share lots of stories, tid-bits that I gain along the way.
 
