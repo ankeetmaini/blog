@@ -16,5 +16,11 @@ module.exports = {
       date: "10 Mar 2021",
       at: "AWS Twitch Stream",
     },
+    {
+      title: "React Day - Web Performance Panel Discussion",
+      video: "https://www.youtube.com/watch?v=76simEsemlY",
+      date: "19 Mar 2021",
+      at: "React Day Conference",
+    },
   ],
 };
