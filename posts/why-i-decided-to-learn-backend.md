@@ -3,7 +3,6 @@ title: "Why I decided to learn backend? (as a frontend engineer)"
 description:
 date: 2021-04-11
 layout: layouts/post.njk
-tags: foam, digital-garden
 ---
 
 ## OMG, I know right!
@@ -28,7 +27,7 @@ There's very little I could do about it mostly because I'd not understand the ni
  
 This is not a rant, but an attempt to deeply understand and appreciate the problems backend engineers face day in and day out.
 
-I think that all engineering problems are beautiful.It wouldn't hurt to at least know them be it frontend or backend. Precisely why I'm turning to actively learn and try it at work.
+I think that all engineering problems are beautiful. It wouldn't hurt to at least know them be it frontend or backend. Precisely why I'm turning to actively learn and try it at work.
 
 I'm making my learning progress public by posting what I read, understand in the form of a [digital garden notebook](https://github.com/ankeetmaini/backend-garden).
 
