@@ -1,4 +1,12 @@
-## Getting Code Coverage for e2e tests run on a Java codebase
+---
+title: Getting Code Coverage for e2e tests run on a Java codebase
+description: jacoco code coverage for component, e2e tests, java agent
+date: 2021-04-13
+layout: layouts/post.njk
+tags:
+	- java
+	- jacoco
+---
 
 I recently was asked to help on a project where the team was trying to get the test coverage for **e2e tests** also known as **component tests** at some places. As I come from a JavaScript/NodeJS background I initially tried to lean to the argument that component tests run on the actual application process and not in the context of a test/source file unlike a __unit test__ and hence the app is a black box to the actual tests and can't be instrumented for getting coverage. 
 
@@ -34,7 +42,7 @@ java -javaagent:<your-monitoring-code>.jar -jar <application-code>.jar
 
 Good news is `JaCoCo` already ships a **java agent** jar which can instrument the code at runtime! Wow, _framework agnostic_ test coverage is here :)
 
-I've created a sample repo to test this out, it's present here on [Github](https://github.com/ankeetmaini/jacoco-e2e)
+I've created a sample repo to test this out, it's present here on https://github.com/ankeetmaini/jacoco-e2e
 
 ### step 1 - build the jar
 
@@ -61,3 +69,22 @@ java -javaagent:jars/org.jacoco.agent-0.8.6-runtime.jar -jar build/libs/rest-ser
 Now is the time to go ballistic and run all your e2e tests in the framework of your choice, or run some curls, or make some requests via Postman. Once you're done, shut down the process and a `jacoco.exec` file should get created at your current working directory.
 
 `jacoco.exec` file contains the codepath and number of times all the classes and methods were run. This is the file that contains raw coverage, but there's just one problem that it's not human readable.
+
+### step 4 - generate pretty HTML reports
+
+JaCoCo gives another jar which takes in the .exec file and converts it to a report.
+
+```bash
+java -jar jars/org.jacoco.cli-0.8.6-nodeps.jar report jacoco.exec --classfiles=build/classes --html coverage
+```
+
+Make sure you point the folder which contains the class files which were generated while building the file.
+
+## Closing
+
+The above post takes into account where the raw coverage data is dumped in one go when the JVM exits, but there are other options also where you can:
+- use a client to connect to the agent and get the coverage dump on demand
+- provide a server which accepts incoming requests where java agent can dump
+- imperatively using the CLI jar to get the dump from time to time.
+
+Please see [this](https://www.jacoco.org/jacoco/trunk/doc/agent.html) and the command line interface [documentation](https://www.jacoco.org/jacoco/trunk/doc/cli.html)
