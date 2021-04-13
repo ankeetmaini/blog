@@ -67,7 +67,16 @@ java -javaagent:jars/org.jacoco.agent-0.8.6-runtime.jar -jar build/libs/rest-ser
 
 ### step 3 - run your tests
 
-Now is the time to go ballistic and run all your e2e tests in the framework of your choice, or run some curls, or make some requests via Postman. Once you're done, shut down the process and a `jacoco.exec` file should get created at your current working directory.
+Now is the time to go ballistic and run all your e2e tests in the framework of your choice, or run some curls, or make some requests via Postman. 
+
+For simplicity's sake I'm going to run some curls to test the coverage.
+
+```bash
+curl localhost:8080/greeting
+{"id":1,"content":"Hello, World!"}
+```
+
+Once you're done, shut down the process and a `jacoco.exec` file should get created at your current working directory.
 
 `jacoco.exec` file contains the codepath and number of times all the classes and methods were run. This is the file that contains raw coverage, but there's just one problem that it's not human readable.
 
@@ -78,6 +87,8 @@ JaCoCo gives another jar which takes in the .exec file and converts it to a repo
 ```bash
 java -jar jars/org.jacoco.cli-0.8.6-nodeps.jar report jacoco.exec --classfiles=build/classes --html coverage
 ```
+
+[![Screenshot-2021-04-13-at-10-26-51-PM.png](https://i.postimg.cc/SKmLMH2s/Screenshot-2021-04-13-at-10-26-51-PM.png)](https://postimg.cc/QFnWL4qG)
 
 Make sure you point the folder which contains the class files which were generated while building the file.
 
