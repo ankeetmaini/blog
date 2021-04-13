@@ -11,7 +11,7 @@ tags:
 
 I recently was asked to help on a project where the team was trying to get the test coverage for **e2e tests** also known as **component tests** at some places. As I come from a JavaScript/NodeJS background I initially tried to lean to the argument that component tests run on the actual application process and not in the context of a test/source file unlike a __unit test__ and hence the app is a black box to the actual tests and can't be instrumented for getting coverage. 
 
-> I was wrong :P
+> I was wrong!
 
 ## Running a java app: basics
 The way a Java app runs is quite similar to a NodeJS app. A __bundle__ in Java world is called a __jar__. You can run an app by just running the jar file which contains built classes and the app dependencies all together.
