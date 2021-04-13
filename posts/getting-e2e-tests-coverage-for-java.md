@@ -87,4 +87,5 @@ The above post takes into account where the raw coverage data is dumped in one g
 - provide a server which accepts incoming requests where java agent can dump
 - imperatively using the CLI jar to get the dump from time to time.
 
-Please see [this](https://www.jacoco.org/jacoco/trunk/doc/agent.html) and the command line interface [documentation](https://www.jacoco.org/jacoco/trunk/doc/cli.html)
+Please see [this](https://www.jacoco.org/jacoco/trunk/doc/agent.html) and the command line interface [documentation](https://www.jacoco.org/jacoco/trunk/doc/cli.html) for more information.
+
