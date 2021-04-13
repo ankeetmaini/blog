@@ -9,7 +9,7 @@ tags:
 ---
 
 
-I recently was asked to help on a project where the team was trying to get the test coverage for **e2e tests** also known as **component tests** at some places. I initially tried to say that component tests run on the actual application process and not in the context of a test/source file. So the app is a black box to the running tests and can't be instrumented for getting coverage. 
+I recently was asked to help on a project where the team was trying to get the test coverage for **e2e tests** also known as **component tests**. I initially tried to say that component tests run on the actual application process and not in the context of a test/source file. So the app is a black box to the running tests and can't be instrumented for getting coverage. 
 
 > I was wrong!
 
