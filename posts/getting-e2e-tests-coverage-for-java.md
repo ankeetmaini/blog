@@ -4,9 +4,10 @@ description: jacoco code coverage for component, e2e tests, java agent
 date: 2021-04-13
 layout: layouts/post.njk
 tags:
-	- java
-	- jacoco
+ - java
+ - jacoco
 ---
+
 
 I recently was asked to help on a project where the team was trying to get the test coverage for **e2e tests** also known as **component tests** at some places. As I come from a JavaScript/NodeJS background I initially tried to lean to the argument that component tests run on the actual application process and not in the context of a test/source file unlike a __unit test__ and hence the app is a black box to the actual tests and can't be instrumented for getting coverage. 
 
