@@ -33,6 +33,12 @@ So you see, we need some automation. If you want you can choose the business cla
 
 I used Trello's webhooks, api to automate the tasks as per my *whims and fantasies*. I used Google Cloud Functions as they've a very generous free quota.
 
+> What are webhooks?
+> Webhooks are events that trello publishes to a URL anytime something happens on your board. Webhooks are nothing but published events that you've subscribed to.
+
+So anytime you add a new todo, a webhook is triggered, and you can decide what to do now. You mark a todo finished you get a call again with the event payload. Payload tells you what changed in the system.
+
+
 ### step 1
 - get your Trello API key and token
 - the documentation is good 
