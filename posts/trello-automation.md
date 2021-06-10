@@ -128,6 +128,8 @@ Please see the details of exact API call from the docs, most of the params are p
 
 This was a fun evening tinkering the API and making something custom-made. See you next time :)
 
+![](https://i.imgur.com/tJZ5mft.png)
+
 
 
 
