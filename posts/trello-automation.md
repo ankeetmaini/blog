@@ -3,6 +3,10 @@ title: Automate Trello overnight!
 description: automate trello with google cloud function 
 date: 2021-06-11
 layout: layouts/post.njk
+tags:
+  - trello
+  - gcp
+  - automation
 ---
 
 I was recently bitten by the *todo-list-obsession-bug* to make myself super organized.
