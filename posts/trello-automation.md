@@ -44,8 +44,8 @@ So anytime you add a new todo, a webhook is triggered, and you can decide what t
 ### step 1
 - get your Trello API key and token
 - the documentation is good 
-  - api docs: https://developer.atlassian.com/cloud/trello/rest/
-  - api key: https://trello.com/app-key
+  - [api docs](https://developer.atlassian.com/cloud/trello/rest/)
+  - [api key](https://trello.com/app-key)
   - api token - find the link in the api key doc above
 
 ### step 2
