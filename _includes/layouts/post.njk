@@ -4,7 +4,11 @@ templateClass: tmpl-post
 ---
 <h1>{{ title }}</h1>
 
-{{ content | toc(tags=['h2', 'h3'], wrapperClass='fixed toc') | safe }}
+<aside>
+  {{ content | toc(tags=['h2', 'h3'], wrapperClass='fixed toc') | safe }}
+</aside>
+
+{{ content | safe }}
 
 <style>
 .textbox {
