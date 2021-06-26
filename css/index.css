@@ -53,6 +53,8 @@ header:after {
 }
 table {
   margin: 1em 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 table td,
 table th {
