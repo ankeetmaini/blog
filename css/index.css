@@ -56,8 +56,10 @@ table {
 }
 table td,
 table th {
-  padding-right: 1em;
+  padding: 6px 13px;
 }
+
+
 
 pre,
 code {
