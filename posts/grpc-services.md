@@ -54,7 +54,7 @@ I am going to implement a sum service that would take two numbers and return the
 
 Below are the definition of the request and response types along with `Sum` service
 
-```proto
+```protobuf
 syntax = 'proto3';
 
 message SumRequest {
