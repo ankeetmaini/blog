@@ -8,13 +8,12 @@ tags:
   - gRPC
 ---
 
-`REST` services is the ubiquitous way of writing APIs for as long as I can remember. Today I want to introduce you to a new way of writing APIs.
+`REST` is the ubiquitous way of writing APIs for as long as I can remember. Today I want to introduce you to a new way of writing APIs.
 
 > Have you met `gRPC`?
 
-## gRPC
 
-This is a relatively new way to write APIs and consume them as if you're just calling a function. 
+**gRPC** is a relatively new way to write APIs and consume them as if you're just calling a function. 
 
 - `gRPC` originated from RPC (Remote Procedure Call). The client can just call a stubbed method which will invoke the method at the server side
 - all the connection details are abstracted at the client with this stub
@@ -121,3 +120,28 @@ public class DemoServiceImpl extends DemoServiceGrpc.DemoServiceImplBase {
 
 ```
 
+## starting the server
+
+With a handful of boilerplate code we can start the server by writing a `main` program in a separate class.
+
+```java
+public class Application {
+	public static void main(String[] args) throws IOException, InterruptedException {
+		Server server = ServerBuilder.forPort(3000)
+				.addService(new DemoServiceImpl())
+				.build();
+
+		server.start();
+
+		// boring boilerplate here
+		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+			server.shutdown();
+		}));
+		server.awaitTermination();
+	}
+}
+
+
+```
+
+The first line shows creating the server and **adding** the service to it. A new instance of `DemoServiceImpl` (impl stands for implementation)
