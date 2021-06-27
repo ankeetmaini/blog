@@ -344,4 +344,4 @@ server says thanks for sending: 4th message from client
 
 ## code
 
-All the code for this post is available (here)[https://github.com/ankeetmaini/grpc-java-service]
+All the code for this post is available [here](https://github.com/ankeetmaini/grpc-java-service).
