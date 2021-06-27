@@ -27,6 +27,19 @@ p,
 img {
   max-width: 37.5em; /* 600px /16 */
 }
+@media only screen and (min-width : 320px) {
+  img {
+    max-width: 98%;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+img {
+    max-width: 98%;
+  }
+}
+
 p,
 .tmpl-post li {
   line-height: 1.45;

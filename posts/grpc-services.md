@@ -122,7 +122,7 @@ public class DemoServiceImpl extends DemoServiceGrpc.DemoServiceImplBase {
 
 ## starting the server
 
-With a handful of boilerplate code we can start the server by writing a `main` program in a separate class.
+With a handful of boilerplate code we can start the server by writing a `main` program in a separate class. The first line shows creating the server and **adding** the service to it. A new instance of `DemoServiceImpl`.
 
 ```java
 public class Application {
@@ -141,7 +141,5 @@ public class Application {
 	}
 }
 
-
 ```
 
-The first line shows creating the server and **adding** the service to it. A new instance of `DemoServiceImpl` (impl stands for implementation)
