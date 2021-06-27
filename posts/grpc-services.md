@@ -120,6 +120,10 @@ public class DemoServiceImpl extends DemoServiceGrpc.DemoServiceImplBase {
 
 ```
 
+- you see the response parameter in the method, notice it's of type `StreamObserver`
+- this means you can call `response.onNext()` multiple times and finally when you're done you can do `response.onCompleted()`
+- this shows that even for a normal (unary) api, you can stream the response.
+
 ## starting the server
 
 With a handful of boilerplate code we can start the server by writing a `main` program in a separate class. The first line shows creating the server and **adding** the service to it. A new instance of `DemoServiceImpl`.
@@ -143,3 +147,48 @@ public class Application {
 
 ```
 
+## consuming the service 
+
+Consuming the service consists of three parts
+
+### creating the channel
+
+This specifies the endpoint and port of the service running. `gRPC` is language agnostic, which means you can write your service in one language and call it using another. But here I'm just sticking with java.
+
+### creating the stub
+
+This is done using the auto-generated classes. Stub can be of two types:
+
+- blocking or sync
+- non-blocking
+
+### calling the service
+
+This is just calling a method on the stub which corresponds to the actual service running
+
+```java
+
+// step 1 - creating the channel
+ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 3000)
+    .usePlaintext()
+    .build();
+
+// step 2 - creating the stub
+DemoServiceGrpc.DemoServiceBlockingStub stub = DemoServiceGrpc.newBlockingStub(channel);
+
+// request
+Service.SumRequest request = Service.SumRequest.newBuilder()
+    .setNum1(10)
+    .setNum2(20)
+    .build();
+
+// step 3 - call the service
+Service.SumResponse response = stub.sum(request);
+
+// print the result
+System.out.println("Response from gRPC service: " + response.getSum());
+
+```
+
+- all the classes used above are auto-generated, notice the same `request` and `response` types which are the same that were defined in the `proto` file
+- all you need to do is to pass the arguments and call the sum method
