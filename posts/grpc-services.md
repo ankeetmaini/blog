@@ -190,5 +190,8 @@ System.out.println("Response from gRPC service: " + response.getSum());
 
 ```
 
-- all the classes used above are auto-generated, notice the same `request` and `response` types which are the same that were defined in the `proto` file
+- all the classes used above are auto-generated, notice the `request` and `response` types which are the same that were defined in the `proto` file
 - all you need to do is to pass the arguments and call the sum method
+
+> this is the magic of gRPC, on the client you're calling just a method and it invokes the actual remote implementation
+
