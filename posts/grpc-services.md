@@ -335,7 +335,7 @@ private void chat() throws InterruptedException {
 
 The final output
 
-```
+```text
 server says thanks for sending: 1st message from client
 server says thanks for sending: 2nd message from client
 server says thanks for sending: 3rd message from client
@@ -344,4 +344,4 @@ server says thanks for sending: 4th message from client
 
 ## code
 
-All the code for this post is available here https://github.com/ankeetmaini/grpc-java-service
+All the code for this post is available (here)[https://github.com/ankeetmaini/grpc-java-service]
