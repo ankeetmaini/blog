@@ -258,3 +258,7 @@ a[href].direct-link:focus:visited,
   width: 100%;
   margin-left: 24px;
 }
+
+aside > nav li {
+  list-style-type: disc;
+}
