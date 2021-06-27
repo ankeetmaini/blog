@@ -201,19 +201,19 @@ Let's see how streaming work both ways, and the perfect example of it would be a
 
 ### adding new definition in the proto file
 
-```diff
+``` protobuf/1-3,4-7,11/
 
-+  message ChatRequest {
-+    string message = 1;
-+  }
+   message ChatRequest {
+     string message = 1;
+   }
 
-+  message ChatResponse {
-+    string reply = 1;
-+  }
+   message ChatResponse {
+     string reply = 1;
+   }
 
    service DemoService {
      rpc Sum(SumRequest) returns (SumResponse);
-+    rpc Chat(stream ChatRequest) returns (stream ChatResponse);
+     rpc Chat(stream ChatRequest) returns (stream ChatResponse);
    }
 
 
@@ -266,7 +266,7 @@ return new StreamObserver<ChatRequest>() {
 
 Let's add the logic to reply to this client and reply back using the method argument `responseObserver`
 
-```java
+```java/6,9-11,14,24/
 @Override
 public StreamObserver<ChatRequest> chat(StreamObserver<ChatResponse> responseObserver) {
   return new StreamObserver<ChatRequest>() {
@@ -341,3 +341,7 @@ server says thanks for sending: 2nd message from client
 server says thanks for sending: 3rd message from client
 server says thanks for sending: 4th message from client
 ```
+
+## code
+
+All the code for this post is available here https://github.com/ankeetmaini/grpc-java-service
