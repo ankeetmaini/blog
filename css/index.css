@@ -27,6 +27,19 @@ p,
 img {
   max-width: 37.5em; /* 600px /16 */
 }
+@media only screen and (min-width : 320px) {
+  img {
+    max-width: 98%;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+img {
+    max-width: 98%;
+  }
+}
+
 p,
 .tmpl-post li {
   line-height: 1.45;
@@ -53,11 +66,16 @@ header:after {
 }
 table {
   margin: 1em 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 table td,
 table th {
-  padding-right: 1em;
+  padding: 6px 13px;
+  border: 1px solid var(--lightgray);
 }
+
+
 
 pre,
 code {
@@ -239,4 +257,8 @@ a[href].direct-link:focus:visited,
 .full {
   width: 100%;
   margin-left: 24px;
+}
+
+aside > nav li {
+  list-style-type: disc;
 }
