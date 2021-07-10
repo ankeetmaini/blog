@@ -4,7 +4,7 @@ title: About Me
 templateClass: tmpl-post
 eleventyNavigation:
   key: About Me
-  order: 3
+  order: 4
 ---
 
 Hi friends, I'm Ankeet Maini!

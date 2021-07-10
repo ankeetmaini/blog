@@ -1,0 +1,12 @@
+---
+layout: layouts/home.njk
+permalink: /problem-solving/
+eleventyNavigation:
+  key: DSA
+  order: 2
+---
+
+<h1>Solutions</h1>
+
+{% set postslist = collections.dsa %}
+{% include "postslist.njk" %}
