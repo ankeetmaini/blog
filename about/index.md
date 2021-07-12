@@ -21,5 +21,3 @@ This is an actual photo of me **working** (with my laptop closed :P)
 
 <img src="https://i.postimg.cc/d1BW5vfc/88162524-3204996546198141-8798735926738611070-n.jpg" style="max-width: 100%">
 </div>
-
-Please subscribe if you liked my posts so that I can deliver them right in your mailbox.
