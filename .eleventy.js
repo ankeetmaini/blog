@@ -43,34 +43,21 @@ module.exports = function (eleventyConfig) {
 
     return array.slice(0, n);
   });
+  
+  function filterTagList(tags) {
+    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+  }
 
-  eleventyConfig.addCollection("tagList", function (collection) {
+  eleventyConfig.addFilter("filterTagList", filterTagList)
+
+   // Create an array of all tags
+   eleventyConfig.addCollection("tagList", function(collection) {
     let tagSet = new Set();
-    collection.getAll().forEach(function (item) {
-      if ("tags" in item.data) {
-        let tags = item.data.tags;
-
-        tags = tags.filter(function (item) {
-          switch (item) {
-            // this list should match the `filter` list in tags.njk
-            case "all":
-            case "nav":
-            case "post":
-            case "posts":
-              return false;
-          }
-
-          return true;
-        });
-
-        for (const tag of tags) {
-          tagSet.add(tag);
-        }
-      }
+    collection.getAll().forEach(item => {
+      (item.data.tags || []).forEach(tag => tagSet.add(tag));
     });
 
-    // returning an array in addCollection works in Eleventy 0.5.3
-    return [...tagSet];
+    return filterTagList([...tagSet]);
   });
 
   eleventyConfig.addPassthroughCopy("img");
