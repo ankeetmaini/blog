@@ -3,11 +3,14 @@
   "version": "5.0.2",
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "eleventy",
-    "watch": "eleventy --watch",
-    "serve": "ELEVENTY_ENV=true eleventy --serve",
-    "start": "eleventy --serve",
-    "debug": "DEBUG=* eleventy"
+    "build": "npm run js-build && eleventy && npm run test",
+    "watch": "concurrently \"eleventy --serve\" \"npm run js-build-watch\" \"npm run test-watch\"",
+    "serve": "eleventy --serve",
+    "js-build": "rollup -c rollup.config.js",
+    "js-build-watch": "rollup -c rollup.config.js -w",
+    "debug": "DEBUG=* eleventy && npm run test",
+    "test": "mocha test/test*.js",
+    "test-watch": "mocha test/test*.js --watch"
   },
   "repository": {
     "type": "git",
@@ -33,5 +36,29 @@
     "luxon": "^1.21.3",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^6.0.1"
+  },
+  "dependencies": {
+    "@ampproject/toolbox-optimizer": "^2.8.3",
+    "any-shell-escape": "^0.1.1",
+    "concurrently": "^6.2.0",
+    "csp-hash-generator": "^0.0.3",
+    "csso": "^4.2.0",
+    "datauri": "^3.0.0",
+    "eleventy-plugin-local-images": "^0.4.1",
+    "expect.js": "^0.3.1",
+    "ffmpeg-static": "^4.4.0",
+    "file-type": "^16.5.1",
+    "hasha": "^5.2.2",
+    "html-minifier": "^4.0.0",
+    "image-size": "^1.0.0",
+    "jimp": "^0.16.1",
+    "lru-cache": "^6.0.0",
+    "mocha": "^9.0.2",
+    "node-fetch": "^2.6.1",
+    "purgecss": "^4.0.3",
+    "rollup": "^2.53.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "sharp": "^0.28.3",
+    "shorthash": "^0.0.2"
   }
 }

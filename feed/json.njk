@@ -1,12 +1,11 @@
 ---
 # Metadata comes from _data/metadata.json
-permalink: "{{ metadata.jsonfeed.path }}"
+permalink: "{{ metadata.jsonfeed.path | url }}"
 eleventyExcludeFromCollections: true
 ---
 {
-  "version": "https://jsonfeed.org/version/1.1",
+  "version": "https://jsonfeed.org/version/1",
   "title": "{{ metadata.title }}",
-  "language": "{{ metadata.language }}",
   "home_page_url": "{{ metadata.url }}",
   "feed_url": "{{ metadata.jsonfeed.url }}",
   "description": "{{ metadata.description }}",
@@ -21,7 +20,7 @@ eleventyExcludeFromCollections: true
       "id": "{{ absolutePostUrl }}",
       "url": "{{ absolutePostUrl }}",
       "title": "{{ post.data.title }}",
-      "content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
+      "content_html": {% if post.templateContent %}{{ post.templateContent | dump | safe }}{% else %}""{% endif %},
       "date_published": "{{ post.date | rssDate }}"
     }
     {%- if not loop.last -%}

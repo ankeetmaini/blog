@@ -1,7 +1,10 @@
 {
   "title": "Under Engineered",
   "url": "https://ankeetmaini.dev/",
+  "domain": "ankeetmaini.dev",
   "description": "This is my blog and it's fun just like me 😎",
+  "googleAnalyticsId": "UA-61474244-4",
+  "sendWebVitals": true,
   "feed": {
     "subtitle": "This is my blog and it's fun just like me 😎",
     "filename": "feed.xml",
@@ -15,6 +18,6 @@
   "author": {
     "name": "Ankeet Maini",
     "email": "ankeet.maini@gmail.com",
-    "url": "https://ankeetmaini.dev/about-me/"
+    "url": "https://ankeetmaini.dev/about/"
   }
 }
