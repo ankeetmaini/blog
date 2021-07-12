@@ -1,0 +1,16 @@
+---
+layout: layouts/home.njk
+permalink: /dsa/
+eleventyNavigation:
+  key: Algorithms
+  order: 1
+---
+
+<h1>All Problems</h1>
+
+{% set problemSolving = true %}
+
+{% include "subscribe.njk" %}
+
+{% set postslist = collections.dsa %}
+{% include "postslist.njk" %}
