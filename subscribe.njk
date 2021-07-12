@@ -1,0 +1,48 @@
+<style>
+.textbox {
+  padding: 8px 6px;
+  margin-bottom: 1em;
+  font-size: 14px;
+  max-width: 98%;
+}
+
+.button {
+  padding: 0.75em 1em;
+  margin-bottom: 1em;
+  font-size: 14px;
+  border-radius: 0.25em;
+  background: #0069ff;
+  color: #fff;
+  border: 0;
+}
+
+.subs {
+  transform: rotate(-2deg) translateX(-18px);
+  padding: 1em;
+  margin: 2em;
+  border: 1px #333 solid;
+  border-radius: 4px;
+  box-shadow: 6px 6px #ddd;
+  font-size: 18px;
+  max-width: 600px;
+}
+</style>
+
+<form
+  action="https://buttondown.email/api/emails/embed-subscribe/ankeetmaini"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.email/ankeetmaini', 'popupwindow')"
+  class="embeddable-buttondown-form subs"
+>
+  <h4>Subscribe below to get future posts</h4>
+  <input
+    type="email"
+    name="email"
+    id="bd-email"
+    placeholder="your@email.com"
+    class="textbox"
+  ></input>
+  <input type="hidden" value="1" name="embed"></input>
+  <input class="button" type="submit" value="Subscribe"></input>
+</form>

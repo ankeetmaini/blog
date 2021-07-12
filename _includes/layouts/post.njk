@@ -4,53 +4,28 @@ templateClass: tmpl-post
 ---
 <h1>{{ title }}</h1>
 
+<p>
+<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+{%- for tag in tags | filterTagList -%}
+{%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+{%- endfor %}
+<p>
+
 <aside>
   {{ content | toc(tags=['h2', 'h3'], wrapperClass='fixed toc') | safe }}
 </aside>
 
 {{ content | safe }}
 
-<style>
-.textbox {
-  width: 240px;  
-  padding: 0.70em 1em;
-  margin-bottom: 1em;
-  font-size: 14px;
-}
+{% include "subscribe.njk" %}
 
-.button {
-  padding: 0.75em 1em;
-  margin-bottom: 1em;
-  font-size: 14px;
-  border-radius: 0.25em;
-  background: #0069ff;
-  color: #fff;
-  border: 0;
-}
-</style>
-
-<form
-  action="https://buttondown.email/api/emails/embed-subscribe/ankeetmaini"
-  method="post"
-  target="popupwindow"
-  onsubmit="window.open('https://buttondown.email/ankeetmaini', 'popupwindow')"
-  class="embeddable-buttondown-form"
->
-  <input
-    type="email"
-    name="email"
-    id="bd-email"
-    placeholder="your.awesome@email.com"
-    class="textbox"
-  ></input>
-  <input type="hidden" value="1" name="embed"></input>
-  <input class="button" type="submit" value="Subscribe"></input>
-</form>
-
+{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{%- if nextPost or previousPost %}
 <hr>
 <ul>
-  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
   {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
+{%- endif %}
