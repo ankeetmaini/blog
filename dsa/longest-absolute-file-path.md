@@ -175,6 +175,6 @@ If you're scratching your head and wondering what's going on in there, let me br
 
 ## practise
 
-- this problem can be practised at [leedcode](https://leetcode.com/problems/longest-absolute-file-path/)
+- this problem can be practised at [leetcode](https://leetcode.com/problems/longest-absolute-file-path/)
 - you can paste the code snippet to verify the solution works for all test cases!
 - this was also featured in Daily Coding Problem series and was asked by `Google` as per them :P
