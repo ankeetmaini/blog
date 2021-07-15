@@ -35,7 +35,7 @@ img {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
-img {
+  img {
     max-width: 98%;
   }
 }
@@ -262,3 +262,10 @@ a[href].direct-link:focus:visited,
 aside > nav li {
   list-style-type: disc;
 }
+
+@media only screen and (min-width: 768px)  {
+  .giscus {
+    max-width: 60%;
+  }
+}
+
