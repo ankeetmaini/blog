@@ -13,11 +13,11 @@ Today I want to walk you through on what's it like to call them from frontend ap
 
 ## philosophy
 
-- the whole point of gRPC services is that they confirm to a schema/contract which is defined in a protobuf file (a new binary format)
+- the whole point of gRPC services is that they conform to a schema/contract which is defined in a protobuf file (a new binary format)
 - this makes it easier to consume those services from other services; as they can infer exactly not only the request/response payloads but what different services there are to call!
 - this is amazing for
-    - discoverability: you don't have to refer a doc to find the api signatures, or talk to a person to confirm - the `.proto` file is all you need
-    - binding: you can be sure that the contract is super tight and not dependent on some verbal/mutual agreement _(well almost)_
+    - **discoverability**: you don't have to refer a doc to find the api signatures, or talk to a person to confirm - the `.proto` file is all you need
+    - **binding**: you can be sure that the contract is super tight and not dependent on some verbal/mutual agreement _(well almost)_
         - I don't think someone will hand you out old `.proto` files though :P
 
 > so what's the catch? sounds too good to be true
@@ -37,7 +37,7 @@ There's no way a browser can mandate the transport protocol to the server whethe
 This happens because:
 
 - not all browser versions support HTTP 2.0
-- and even if they did, this is too low level details from an app development wise; you shouldn't have to care about the protocol and automatically best decision is taken for you
+- and even if they did, this is too low level details from an app development wise; you shouldn't have to care about the protocol and automatically best decision should be taken for you
 
 And **SSL/TLS**
 
@@ -47,11 +47,11 @@ Even though `HTTP 2` can work without SSL but browsers have taken a call that th
 
 A ready-made proxy available to seamlessly convert gRPC calls from `http1 <-> http2` and taking care of all other differences.
 
-There are two proxies you can use:
+There are two proxies you can use today:
 - [envoy with grpc filter](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/grpc_web_filter#config-http-filters-grpc-web)
 - [go proxy](https://github.com/improbable-eng/grpc-web/tree/master/go/grpcwebproxy)
 
-I will use the second in this post today.
+I will use the second in this post.
 
 ## consuming the gRPC service
 
@@ -136,6 +136,8 @@ const client = new DemoServiceClient("http://localhost:3000/api");
 
 // call methods instead of firing api
 const response = await client.sum(request, {'some-header': 'probably'});
+
+const result = response.getSum();
 ```
 
 If you're to hover on the `client.sum` method, you can see its signature.
@@ -157,5 +159,101 @@ docker-compose up --build
 The app would be accessible on `localhost:3000`.
 
 It uses the go web proxy to smoothen over the gaps of grpc-web and grpc protocol.
+
+![using grpc service in browser](/img/grpc-call.png)
+
+If you look at the network call you won't find your friendly old `json`, but some binary gibberish!
+
+![request payload of a grpc call](/img/grpc-req.png)
+
+And same on the response too.
+
+![grpc response in devtools](/img/grpc-response.png)
+
+
+## deployment pattern
+
+Out of all the possible ways of deployment, I've gone ahead and taken a progressive approach. I've assumed
+
+- you already have a frontend app
+- it's talking to rest services
+- you want to try out the grpc support for one api before re-writing everything
+
+![architecture of grpc](/img/arch-grpc.png)
+
+In the above architecture diagram, all the calls from client are landing at UI server which is an express server running at port=3000.
+
+Instead of routing the calls directly to the backend service I'm sending them to an intermediary layer - **grpc web proxy** which transforms the web request to proper grpc http/2 request which the backend service understands!
+
+## request path
+
+### browser -> ui server 
+
+- this was done when you specified the url in the client
+
+```js
+const client = new DemoServiceClient("http://localhost:3000/api");
+```
+
+- I've configured that all grpc requests from the frontend would land at `:3000/api` route
+
+### ui server -> grpc proxy
+
+- used the plain node-http-proxy
+
+```js
+const httpProxy = require('http-proxy');
+
+const proxy = httpProxy.createProxyServer({
+  target: 'http://proxy:8080'
+});
+
+
+// catching the gRPC requests here
+// and removing the made-up /api
+// before sending it to proxy
+app.all('/api/*', (req, res) => {
+  req.url = req.url.replace('/api', '');
+  proxy.web(req, res, (e) => console.error(e));
+});
+```
+
+### proxy -> grpc backend
+
+I'm using here the [grpcWebProxy](https://github.com/improbable-eng/grpc-web/tree/master/go/grpcwebproxy) as a binary which takes in a command line parameter `--backend_addr=some.ip.addr:port` the address of the backend service.
+
+I dockerised this too and this is the tiny `Dockerfile` which does the entire configuration
+
+```docker
+FROM debian:stretch-slim
+
+WORKDIR /proxy
+
+COPY grpcwebproxy-v0.14.0-linux-x86_64 ./proxy-binary
+
+CMD ["./proxy-binary", "--backend_addr=grpc-java-service:3000", "--run_tls_server=false", "--allow_all_origins"]
+```
+
+### proxy considerations
+
+Which one to choose? envoy or grpcWebProxy?
+
+- if there's just one single backend service that you'd want to talk to then using the binary makes sense; less code, easier maintenance
+- but if you've a lot of services which you want to proxy from a single frontend then envoy would make more sense - as it can give granular control 
+
+## closing 
+
+- integrating gRPC apis feels like a big win from the erstwhile REST ones with both payload as well as client stubs
+- it helps in discovering all the apis which a service is exposing from the comfort of your IDE
+
+Frontend code style is more prototypal in nature, which means that you don't explicitly add setters/getters in the classes, and just directly use the attribute.
+
+But just while using this, one needs to take care of using them in a manner where you set or get the data only using setter/getter methods.
+
+If you're to look at the JS object (say `SumRequest`)
+
+![grpc object in js](/img/grpc-obj.png)
+
+You can see the prototype has all the required methods to access the data, and if you don't try to access the attribute directly - you'll do just fine :)
 
 
