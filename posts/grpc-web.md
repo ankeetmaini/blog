@@ -250,7 +250,7 @@ Frontend code style is more prototypal in nature, which means that you don't exp
 
 But just while using this, one needs to take care of using them in a manner where you set or get the data only using setter/getter methods.
 
-If you're to look at the JS object (say `SumRequest`)
+If you're to look at the JS object (say `SumResponse`)
 
 ![grpc object in js](/img/grpc-obj.png)
 
