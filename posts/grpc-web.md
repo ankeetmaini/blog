@@ -1,6 +1,6 @@
 ---
 title: Calling gRPC services from JavaScript for web!
-description: gRPC web browser javascript
+description: consuming grpc web service from ui using javascript and typescript, without envoy proxy.
 layout: layouts/post.njk
 tags:
   - gRPC
@@ -53,7 +53,7 @@ There are two proxies you can use today:
 - [envoy with grpc filter](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/grpc_web_filter#config-http-filters-grpc-web)
 - [go proxy](https://github.com/improbable-eng/grpc-web/tree/master/go/grpcwebproxy)
 
-I will use the second in this post.
+I will use the second in this post without using envoy proxy.
 
 ## consuming the gRPC service
 
