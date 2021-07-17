@@ -1,5 +1,5 @@
 ---
-title: Calling gRPC services from JavaScript for web!
+title: Calling gRPC services from UI!
 description: consuming grpc web service from ui using javascript and typescript, without envoy proxy.
 layout: layouts/post.njk
 tags:
