@@ -1,5 +1,5 @@
 ---
-title: Consuming gRPC services from web
+title: Calling gRPC services from JavaScript for web!
 description: gRPC web browser javascript
 layout: layouts/post.njk
 tags:
@@ -9,7 +9,7 @@ tags:
 
 In my [last post](https://ankeetmaini.dev/posts/grpc-services/) I went over how gRPC fares against the REST services. 
 
-Today I want to walk you through on what's it like to call them from frontend apps.
+Today I want to walk you through on what's it like to call them from frontend apps and show how to create a web gRPC JavaScript client!
 
 ## philosophy
 
