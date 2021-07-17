@@ -76,7 +76,7 @@ service DemoService {
 }
 ```
 
-This tells that there's a `DemoService` which has an API called `Sum` which take `SumRequest` and return `SumResponse`.
+This tells that there's a `DemoService` which has an API called `Sum` which take `SumRequest` and returns `SumResponse`.
 
 ### step 2: generate client stubs
 
@@ -106,7 +106,6 @@ protoc \
 ```
 
 The `protoc` command takes some options which are self-explanatory 
-- plugin: where I use this to generate TS models of the code
 - js_out: to specify the style of generated code, commonjs and the location folder
 - -I: takes in the directory where the .proto file resides
 - and lastly the proto file pattern or a single file if you wish!
@@ -158,7 +157,7 @@ docker-compose up --build
 ```
 The app would be accessible on `localhost:3000`.
 
-It uses the go web proxy to smoothen over the gaps of grpc-web and grpc protocol.
+It uses the go web proxy to smoothen over the gaps of grpc-web and grpc protocol. (covered in detail later)
 
 ![using grpc service in browser](/img/grpc-call.png)
 
@@ -234,7 +233,7 @@ COPY grpcwebproxy-v0.14.0-linux-x86_64 ./proxy-binary
 CMD ["./proxy-binary", "--backend_addr=grpc-java-service:3000", "--run_tls_server=false", "--allow_all_origins"]
 ```
 
-### proxy considerations
+#### proxy considerations
 
 Which one to choose? envoy or grpcWebProxy?
 
