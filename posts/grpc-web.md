@@ -43,6 +43,8 @@ And **SSL/TLS**
 
 Even though `HTTP 2` can work without SSL but browsers have taken a call that they won't.
 
+> If you're hungry for more, read the actual spec differences [here](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md)
+
 ## solution
 
 A ready-made proxy available to seamlessly convert gRPC calls from `http1 <-> http2` and taking care of all other differences.
