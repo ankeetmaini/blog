@@ -88,7 +88,7 @@ JaCoCo gives another jar which takes in the .exec file and converts it to a repo
 java -jar jars/org.jacoco.cli-0.8.6-nodeps.jar report jacoco.exec --classfiles=build/classes --html coverage
 ```
 
-[![Screenshot-2021-04-13-at-10-26-51-PM.png](https://i.postimg.cc/SKmLMH2s/Screenshot-2021-04-13-at-10-26-51-PM.png)](https://postimg.cc/QFnWL4qG)
+![](img/jacoco-coverage.png)
 
 Make sure you point the folder which contains the class files which were generated while building the file.
 

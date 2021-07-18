@@ -161,15 +161,15 @@ The app would be accessible on `localhost:3000`.
 
 It uses the go web proxy to smoothen over the gaps of grpc-web and grpc protocol. (covered in detail later)
 
-![using grpc service in browser](/img/grpc-call.png)
+![using grpc service in browser](img/grpc-call.png)
 
 If you look at the network call you won't find your friendly old `json`, but some binary gibberish!
 
-![request payload of a grpc call](/img/grpc-req.png)
+![request payload of a grpc call](img/grpc-req.png)
 
 And same on the response too.
 
-![grpc response in devtools](/img/grpc-response.png)
+![grpc response in devtools](img/grpc-response.png)
 
 
 ## deployment pattern
@@ -180,7 +180,7 @@ Out of all the possible ways of deployment, I've gone ahead and taken a progress
 - it's talking to rest services
 - you want to try out the grpc support for one api before re-writing everything
 
-![architecture of grpc](/img/arch-grpc.png)
+![architecture of grpc](img/arch-grpc.png)
 
 In the above architecture diagram, all the calls from client are landing at UI server which is an express server running at port=3000.
 
@@ -253,7 +253,7 @@ But just while using this, one needs to take care of using them in a manner wher
 
 If you're to look at the JS object (say `SumResponse`)
 
-![grpc object in js](/img/grpc-obj.png)
+![grpc object in js](img/grpc-obj.png)
 
 You can see the prototype has all the required methods to access the data, and if you don't try to access the attribute directly - you'll do just fine :)
 
