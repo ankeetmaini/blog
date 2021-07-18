@@ -1,0 +1,37 @@
+name: Lighthouse CI
+on: push
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install & Build
+        run: |
+          yarn install
+          yarn build
+
+      - name: Generate URLs for lighthouse
+        run: echo "{BLOG_URLS}={$(node ./plugins/generate-urls.js)}" >> $GITHUB_ENV
+
+      - name: test
+        run: echo "{{ env.BLOG_URLS }}"
+
+      - name: Wait for the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1
+        id: netlify
+        with:
+          site_name: 'under-engineered'
+
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: ${{ env.BLOG_URLS }}
+          budgetPath: ./budget.json # test performance budgets
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
