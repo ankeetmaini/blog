@@ -43,7 +43,7 @@ Did I tell you that streaming is a first class citizen in `gRPC` due to HTTP/2 p
 4. both client and server streaming continuously
 
 
-![types of api](https://i.imgur.com/SmC5J7K.png)
+![types of api](img/SmC5J7K.png)
 
 ## defining the interface 
 

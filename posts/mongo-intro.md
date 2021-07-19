@@ -58,7 +58,7 @@ Not that I'm recommending of doing this (having disjoint attribute names for eve
 
 The benefit of this is in future if your data model changes, you can change the document structure without migrating the old data.
 
-[![Untitled-2020-12-13-2113.png](https://i.postimg.cc/PrH8XZ9T/Untitled-2020-12-13-2113.png)](https://postimg.cc/0rtNZ69B)
+[Untitled-2020-12-13-2113.png](img/PrH8XZ9T/Untitled-2020-12-13-2113.png)
 
 > showing co-relations between a SQL and a NoSQL database
 

@@ -263,9 +263,3 @@ aside > nav li {
   list-style-type: disc;
 }
 
-@media only screen and (min-width: 768px)  {
-  .giscus {
-    max-width: 60%;
-  }
-}
-

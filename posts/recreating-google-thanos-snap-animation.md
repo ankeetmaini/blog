@@ -31,7 +31,7 @@ If you haven't seen this animation it's probably better to check it out first.
 </div>
 ```
 
-- add some CSS to pretty things a bit [![search-item.png](https://i.postimg.cc/Twsb5S3s/search-item.png)](https://postimg.cc/vgWTp097)
+- add some CSS to pretty things a bit ![search-item.png](img/search-item.png)
 - copy/paste the `div` with `class=result` a number of times (later)
 
 ## step - 2: nail the disappearing act
@@ -159,4 +159,4 @@ snapButton.addEventListener("click", () => {
 - see the code at [Github](https://github.com/ankeetmaini/css-challenges/tree/master/src/thanos-snap)
 - or this [codepen](https://codepen.io/ankeetmaini/pen/QRLXEK)
 
-[![thanos.gif](https://i.postimg.cc/VkqmSHRk/thanos.gif)](https://postimg.cc/5X2ZTgTh)
+![thanos.gif](img/thanos.gif)

@@ -24,7 +24,7 @@ How do I do that? Using a CI server, like [Travis](http://travis-ci.org). With T
 
 Enable Travis CI for your repository by going to your profile page
 
-![Imgur](https://i.imgur.com/kSduutGl.png)
+![Imgur](img/kSduutGl.jpg)
 
 Once you enable the switch, you’d then need to add a .travis.yml which will instruct Travis on what to do at different stages of the build.
 
@@ -83,7 +83,7 @@ env:
 
 With this setup now Travis will deploy every pull request¹. You can see in the below image that a Staging deployment was done.
 
-![CI checks PR for lint, deploys and audits app performance](https://i.imgur.com/pGJEMiBl.png)_CI checks PR for lint, deploys and audits app performance_
+![CI checks PR for lint, deploys and audits app performance](img/pGJEMiBl.png)_CI checks PR for lint, deploys and audits app performance_
 
 ### Step — 3: Integrating Lighthouse
 
@@ -135,7 +135,7 @@ child.on("error", err => {
 
    ./run-lighthouse.js --file=now_url
 
-![Imgur](https://i.imgur.com/bQdeKyWl.png)
+![](img/bQdeKyWl.jpg)
 
 **Congratulations!**, you’ve successfully setup an awesome workflow. All the code used in the citations [lives here](https://github.com/ankeetmaini/react-hn).
 

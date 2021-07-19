@@ -68,7 +68,7 @@ exports.automate = (req, res) => {
 - once you create this function and deploy it - you need to make this endpoint public
 - go to your cloud function page and choose `Permissions` -> `Add` 
 
-<img src="https://i.imgur.com/FGmzsuC.png" alt="google cloud page for permissions" style="max-width: 100%">
+<img src="img/FGmzsuC.png" alt="google cloud page for permissions" style="max-width: 100%">
 
 - without this Trello or anyone can't post or access the cloud function's url
 - quick tip: to safeguard yourself from someone bulk posting on your api, make sure to set sane limits. 
@@ -144,7 +144,7 @@ Thanks friends!
 
 (my trello board after doing this - lol)
 
-<img src="https://i.imgur.com/tJZ5mft.png" alt="trello page" style="max-width: 100%">
+<img src="img/tJZ5mft.png" alt="trello page" style="max-width: 100%">
 
 
 
