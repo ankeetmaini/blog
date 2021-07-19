@@ -3,7 +3,7 @@
 const fs = require('fs');
 const parser = require('fast-xml-parser');
 
-const netlifySlug = '${{ steps.netlify.outputs.url }}/';
+const netlifySlug = '${{ env.steps.netlify.outputs.url }}/';
 const prodHostname = 'https://ankeetmaini.dev/';
 
 const siteMap = fs.readFileSync('./_site/sitemap.xml').toString();
