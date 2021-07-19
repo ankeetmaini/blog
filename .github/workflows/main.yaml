@@ -16,12 +16,6 @@ jobs:
           yarn install
           yarn build
 
-      - name: Generate URLs for lighthouse
-        run: echo "{BLOG_URLS}={$(node ./plugins/generate-urls.js)}" >> $GITHUB_ENV
-
-      - name: test
-        run: echo "{{ env.BLOG_URLS }}"
-
       - name: Wait for the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1
         id: netlify
@@ -31,7 +25,7 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v7
         with:
-          urls: ${{ env.BLOG_URLS }}
+          configPath: './lighthouserc.json'
           budgetPath: ./budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
