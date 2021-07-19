@@ -3,7 +3,7 @@
 const fs = require('fs');
 const parser = require('fast-xml-parser');
 
-const netlifySlug = `https://deploy-preview-${process.env.PR_NUMBER}--under-engineered.netlify.app`;
+const netlifySlug = `https://deploy-preview-${process.env.PR_NUMBER}--under-engineered.netlify.app/`;
 const prodHostname = 'https://ankeetmaini.dev/';
 
 
