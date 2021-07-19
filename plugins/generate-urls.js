@@ -14,5 +14,5 @@ const urls = dom.urlset.url
     .filter(u => u && u.loc && !u.loc.includes('/tags/'))
     .map(u => u.loc.replace(prodHostname, netlifySlug));
 
-const config = { ci: { collect: { urls }}};
+const config = { ci: { collect: { url: urls }}};
 fs.writeFileSync('./lighthouserc.json', JSON.stringify(config, null, 2));
