@@ -15,4 +15,4 @@ const urls = dom.urlset.url
     .map(u => u.loc.replace(prodHostname, netlifySlug));
 
 const config = { urls };
-fs.writeFileSync('./.github/workflows/lighthouserc.json', JSON.stringify(config, null, 2));
+fs.writeFileSync('./lighthouserc.json', JSON.stringify(config, null, 2));
