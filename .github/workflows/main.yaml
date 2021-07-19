@@ -15,6 +15,9 @@ jobs:
         run: |
           yarn install
           yarn build
+      
+      - name: Generate URLs for lighthouse
+        run: node ./plugins/generate-urls.js
 
       - name: Wait for the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1
