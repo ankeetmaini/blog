@@ -27,7 +27,7 @@ So you see the task is to enumerate the input array in all combinations and retu
 
 This can be solved if you can visualize it as fixing the position of a number and then generating all other variants using a recursive call. Let's understand it in a more pictorial manner.
 
-![first recursion tree](/img/first-tree.png)
+![first recursion tree](img/first-tree.png)
 
 Similarly we can trace the next permutations by starting with `2` and then with `3`
 
