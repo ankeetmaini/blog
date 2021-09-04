@@ -1,5 +1,4 @@
 const { DateTime } = require("luxon");
-const embedYouTube = require("eleventy-plugin-youtube-embed");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -7,12 +6,12 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const pluginTOC = require('eleventy-plugin-nesting-toc');
+const markdownImage = require('./plugins/markdown-image');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(embedYouTube);
   eleventyConfig.addPlugin(pluginTOC);
 
   eleventyConfig.setDataDeepMerge(true);
@@ -48,7 +47,7 @@ module.exports = function (eleventyConfig) {
     return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
   }
 
-  eleventyConfig.addFilter("filterTagList", filterTagList)
+  eleventyConfig.addFilter("filterTagList", filterTagList);
 
    // Create an array of all tags
    eleventyConfig.addCollection("tagList", function(collection) {
@@ -75,7 +74,8 @@ module.exports = function (eleventyConfig) {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "🔗",
-  });
+  }).use(markdownImage);
+  
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Browsersync Overrides

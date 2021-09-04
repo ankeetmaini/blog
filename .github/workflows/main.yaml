@@ -1,0 +1,36 @@
+name: Lighthouse CI
+on: pull_request
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install & Build
+        run: |
+          yarn install
+          yarn build
+      
+      - name: Generate URLs for lighthouse
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: node ./plugins/generate-urls.js
+
+      - name: Wait for the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1
+        id: netlify
+        with:
+          site_name: 'under-engineered'
+
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          configPath: './lighthouserc.json'
+          budgetPath: ./budget.json # test performance budgets
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
