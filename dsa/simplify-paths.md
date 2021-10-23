@@ -8,7 +8,7 @@ tags:
 
 Hi! Today I'll go through the problem **simplify paths** and see how best to solve it!
 
-The premise is simple, you'd be given a unix like path and we need to simplify it as much as we can. This means
+The premise is simple, you're given a unix like path and it is to be simplified. This means
 
 - removing trailing slashes
 - removing `..` parent references
@@ -25,8 +25,9 @@ output = '/b'
 You might get tempted to do it the same way you're probably thinking right now. 
  - take a pass and remove all `.`
  - make all `//` to single one
+ - evaluate the expression as you go and store the result, repeat
 
-But this isn't so easy as you'll have to keep track of previous element too. As both `.`, `..` and `/`, `//` are to be processed differently.
+But this isn't so easy as you'll have to keep track of previous element too. As both `.`, `..` and `/`, `//` are to be processed differently. We want the solution to be simple and lazy.
 
 ### some examples
 
