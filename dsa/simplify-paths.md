@@ -46,7 +46,7 @@ You need something to go and keep track of directory/nesting level. I'm going to
 - split the input path by `/`
 - for each path segment
     - if it's `.` then ignore
-    - if it's `..` then drop the last item in the array as we want to land to the parent directory
+    - if it's `..` then drop the last item in the array as we want to land in the parent directory
     - if it's empty - ignore
 
 ### code
