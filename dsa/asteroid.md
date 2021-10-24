@@ -101,9 +101,51 @@ The main loop will go on till any of the pointers go outside the bound of input 
         - move the right pointer and adjust left
 - finally, ignore all the `null` values and return the remaining asteroids for the answer
 
+#### willCollide
 
+- out of all the ways possible the two asteroids will only collide if the left is going right -> and the right is going <-
+- you might be tempted to keep a variable that checks if the sign changes from the last asteroid and if it does than baamm!
+- but no, if the left asteroid is going left <-, and the right asteroid is going right ->, then the two will never collide
+
+So coding the above in a sweet function.
+
+```javascript
+const willCollide = () => {
+    if (asteroids[left] > -1 && asteroids[right] < 0) return true;
+    return false;
+}
+```
+
+#### adjustLeft
+
+- this is a fun bit, where we'll land in if the left asteroid gets destroyed.
+- we've two options here
+    - either go leftwards and find an existing asteroid
+    - or if no asteroid is left, then make the _right_ asteroid the _left_
+        - and increment the right pointer
+
+```javascript
+    const adjustLeft = () => {
+        // starting one less than the right (going leftwards)
+        let start = right - 1;
+        while (start >= 0) {
+            // as soon as we find a health asteroid, assign it to left pointer
+            // and immediately return
+            if (asteroids[start] !== null) {
+                left = start;
+                return;
+            }
+            start--;
+        }
+
+        // if the control reaches here then it means all the asteroids to the left
+        // of right pointer are dead, make right one the left
+        left = right;
+        right++;
+    }
+```
 
 ### practise
 
-You can practise this question on [leetcode](https://leetcode.com/problems/simplify-path/)
+You can practise this question on [leetcode](https://leetcode.com/problems/asteroid-collision/). As a fun challenge, try to do this recursively and shout-out on Twitter?
     
