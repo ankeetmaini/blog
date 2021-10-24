@@ -6,3 +6,4 @@ lighthouserc.json
 *.jpeg
 *.avif
 *.webp
+*.DS_Store
