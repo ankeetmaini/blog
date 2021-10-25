@@ -8,7 +8,8 @@ module.exports = function markdownImage (md, opts) {
 
         let options = {
             widths: [600, 900, 1500],
-            formats: ['webp', 'jpeg']
+            formats: ['webp', 'jpeg'],
+            outputDir: "./_site/img/" 
         };
         
         Image(src, options);
