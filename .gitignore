@@ -3,7 +3,4 @@ node_modules/
 package-lock.json
 .cache/
 lighthouserc.json
-*.jpeg
-*.avif
-*.webp
 *.DS_Store
