@@ -3,3 +3,4 @@ node_modules/
 package-lock.json
 .cache/
 lighthouserc.json
+*.DS_Store

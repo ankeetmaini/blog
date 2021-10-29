@@ -20,8 +20,16 @@ templateClass: tmpl-post
 
 {% include "subscribe.njk" %}
 
-{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{% set items = [] %}
+{% if '/dsa' in page.url %}
+  {% set items = collections.dsa %}
+{% endif %}
+{% if '/posts' in page.url %}
+  {% set items = collections.posts %}
+{% endif %}
+
+{%- set nextPost = items | getNextCollectionItem(page) %}
+{%- set previousPost = items | getPreviousCollectionItem(page) %}
 {%- if nextPost or previousPost %}
 <hr>
 <ul>

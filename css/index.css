@@ -39,6 +39,12 @@ img {
     max-width: 98%;
   }
 }
+img[width] {
+  width: auto; /* Defer to max-width */
+}
+img[width][height] {
+  height: auto; /* Preserve aspect ratio */
+}
 
 p,
 .tmpl-post li {

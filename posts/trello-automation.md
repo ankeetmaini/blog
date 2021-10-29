@@ -144,7 +144,7 @@ Thanks friends!
 
 (my trello board after doing this - lol)
 
-<img src="img/tJZ5mft.png" alt="trello page" style="max-width: 100%">
+![trello board](img/tJZ5mft.png)
 
 
 

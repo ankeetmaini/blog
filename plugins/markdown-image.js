@@ -7,15 +7,16 @@ module.exports = function markdownImage (md, opts) {
         const alt = image.content;
 
         let options = {
-            widths: [300, 600],
-            formats: ['avif', 'webp', 'jpeg']
+            widths: [null],
+            formats: ['webp', 'jpeg'],
+            outputDir: "./_site/img/",
         };
         
         Image(src, options);
 
         let imageAttributes = {
             alt,
-            sizes: "(min-width: 30em) 50vw, 100vw",
+            sizes: "(min-width: 30em) 100vw, 100vw",
             loading: "lazy",
             decoding: "async",
         };
