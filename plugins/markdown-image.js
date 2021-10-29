@@ -1,4 +1,5 @@
 const Image = require("@11ty/eleventy-img");
+const path = require("path");
 
 module.exports = function markdownImage (md, opts) {
     md.renderer.rules.image = function imageRule (tokens, idx) {
@@ -10,6 +11,12 @@ module.exports = function markdownImage (md, opts) {
             widths: [null],
             formats: ['webp', 'jpeg'],
             outputDir: "./_site/img/",
+            filenameFormat: function (id, src, width, format, options) {
+                const extension = path.extname(src);
+                const name = path.basename(src, extension);
+        
+                return `${name}-${width}w.${format}`;
+            }
         };
         
         Image(src, options);
