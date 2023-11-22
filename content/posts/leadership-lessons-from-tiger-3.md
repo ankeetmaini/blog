@@ -6,7 +6,7 @@ tags:
   - leadership
 ---
 
-I really hit the jackpot when I accidentally found myself sitting at the screening of ``Tiger` 3` (don’t ask me how). I was so fascinated (read overwhelmed) by the turn of events that night that my brain went bonkers seeing so many amazing Leadership lessons (or lack thereof) that I thought are too precious to just keep to myself and the entire world should know and learn.
+I really hit the jackpot when I accidentally found myself sitting at the screening of `Tiger 3` (don’t ask me how). I was so fascinated (read overwhelmed) by the turn of events that night that my brain went bonkers seeing so many amazing Leadership lessons (or lack thereof) that I thought are too precious to just keep to myself and the entire world should know and learn.
 
 This is not a spoiler (although you might get to know a few bits here and there), but it's by no means a replacement of the movie in itself, as my words or any words can’t do justice to what happens on screen. Nobody, not even the father of the Director understands it completely.
 
@@ -18,10 +18,17 @@ This story begins and revolves around two orgs (teams to be simple) – `RAW` an
 
 `Tiger` being a diligent employee doesn’t just sit back at his desk unlike a regular employee and takes matters into his own hands. He starts literally tailing engineers of the other team (ISI, `Zoya`) and starts asking questions directly instead of going via proper channels. After wasting spending a lot of time he finds out that `Zoya`’s team is doing the exact opposite of what he was thinking and gets into a direct conflict with her.
 
-| What went well? | What went wrong? |
-|------------------|------------------|
-|`Tiger` pushed hard and didn’t get complacent | - Lots of time wasted at both ends <br> - `Zoya` chasing wrong goals, not at all what’s needed by her stakeholder, `Tiger` <br> - No communication at all, no Jira updates, or e-mails <br> - `Zoya` doesn’t believe in delegation and tries to do everything herself, will be a growth area for her next promotion
+<div class="message-box">
+  
+- What went well?
+  - `Tiger` pushed hard and didn’t get complacent
+- What went wrong?
+  - Lots of time wasted at both ends
+  - `Zoya` chasing wrong goals, not at all what’s needed by her stakeholder, `Tiger`
+  - No communication at all, no Jira updates, or e-mails
+  - `Zoya` doesn’t believe in delegation and tries to do everything herself, will be a growth area for her next promotion
 
+</div>
  
 > **Lesson – Essence of keeping Project status real**. Keep project status updates real and share the report with stakeholders at regular cadence to avoid last minute surprises. Avoid getting into meetings (or stalk) 1:1 just for status updates – huge waste of everyone’s time.
 
