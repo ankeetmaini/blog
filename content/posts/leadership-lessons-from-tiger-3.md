@@ -6,17 +6,17 @@ tags:
   - leadership
 ---
 
-I really hit the jackpot when I accidentally found myself sitting at the screening of `Tiger 3` (don’t ask me how). I was so fascinated (read overwhelmed) by the turn of events that night that my brain went bonkers seeing so many amazing Leadership lessons (or lack thereof) that I thought are too precious to just keep to myself and the entire world should know and learn.
+I really hit the jackpot when I accidentally found myself sitting at the screening of `Tiger 3` (don’t ask me how). I was fascinated (read overwhelmed) by the turn of events that my brain went bonkers seeing so many amazing Leadership lessons (or lack thereof) that I thought are too precious to just keep to myself and the entire world should know and learn.
 
-This is not a spoiler (although you might get to know a few bits here and there), but it's by no means a replacement of the movie in itself, as my words or any words can’t do justice to what happens on screen. Nobody, not even the father of the Director understands it completely.
+This is not a spoiler (although you might get to know a few bits here and there), but it's by no means a replacement of the movie in itself, as my words or any words can’t do justice to what happens on screen. Nobody, not even Director's father understands it completely.
 
 This story begins and revolves around two orgs (teams to be simple) – `RAW` and `ISI` in a large company called `World Peace`
 
-`RAW` has `Tiger` (Salman Khan) and ISI has `Zoya` (Katrina Kaif). I don’t know about the actual positions, but these two are at Lead (Senior Engineer) positions that have high visibility and are leading the projects. 
+`RAW` has `Tiger` (Salman Khan) and ISI has `Zoya` (Katrina Kaif). I don’t know about the actual positions, but these two are at Lead (Senior+ Engineer) positions that have high visibility and are leading key projects. 
 
-`RAW` and ISI are two teams solving similar problem statements and need some collaboration. In this instance `Tiger` needs some info from `Zoya` but he’s not able to get a satisfactory response. He tries to get the project execution status and details multiple times but always gets a canned response – we’re on track, it’ll be shipped in time and everything’s good.
+`RAW` and `ISI` are two teams solving similar problem statements and need some collaboration. In this instance `Tiger` needs some info from `Zoya` but he’s not able to get a satisfactory response. He tries to get the project execution status and details multiple times but always gets a canned response – we’re on track, it’ll be shipped in time and everything’s good.
 
-`Tiger` being a diligent employee doesn’t just sit back at his desk unlike a regular employee and takes matters into his own hands. He starts literally tailing engineers of the other team (ISI, `Zoya`) and starts asking questions directly instead of going via proper channels. After wasting spending a lot of time he finds out that `Zoya`’s team is doing the exact opposite of what he was thinking and gets into a direct conflict with her.
+`Tiger` being a diligent employee doesn’t just sit back at his desk and takes matters into his own hands. He starts literally tailing engineers of the other team (ISI, `Zoya`) and begins confronting/spying instead of going via proper channels. After wasting a lot of time he finds out that `Zoya`’s team is doing the exact opposite of what he was thinking and gets into a direct conflict with her.
 
 <div class="message-box">
   
@@ -43,7 +43,7 @@ Later in the movie, another important moment comes when `Tiger` & `Zoya` have to
 
 At this time, the team rejects all conventional wisdom and decides to go with Option 1, I mean, can you believe it? Yes, me neither 🤦
 
-Result as you will see, was disastrous and led to astronomical losses for everyone. It led to a multi-level escalation sending the entire organisation into a tizzy, disrupting existing projects; causing huge stress for regular employees.
+Needless to say the result was disastrous, led to astronomical losses for everyone and a multi-level escalation sending the entire organisation into a tizzy. It disrupted existing projects and caused huge stress for regular employees.
 
 <div class="message-box">
   
@@ -57,7 +57,7 @@ Result as you will see, was disastrous and led to astronomical losses for everyo
 > **Lesson – Strategy and plan review are key for success**.
 >> Never go into execution before carefully evaluating all possible options in the Design (HLD) review. Have a thorough review process for critical projects by Leadership (Bosses of `Zoya` & `Tiger`)
 
-As you can expect, the Tech Leads made commitments without even thinking on who will actually do the work and then ran helter-skelter for hiring the team. They beguiled 5 new hires into joining them by promising challenging work (which was actually true) and the opportunity to learn and get mentored by legends (of course)
+As you can expect, the Tech Leads made commitments without even thinking who will actually do the work and then ran helter-skelter for hiring the team. They beguiled 5 new hires into joining them by promising challenging work (which was actually true) and the opportunity to learn and get mentored by legends (of course)
 
 <div class="message-box">
   
@@ -110,4 +110,4 @@ Apart from these contextual leadership lessons, there were some uber level lesso
 > **Lesson – Don’t celebrate early and Hero culture; use Vision document to bring org alignment.**
 >> Leads prematurely celebrated victories, overlooking crucial details, displaying a casual approach, and later had to retract. The entire organisation is built around a Hero worship culture which makes the environment toxic and non-scalable. No knowledge transfer/mentorship/documentation. Huge dependency as a result on a few shoulders. These employees should be given stern warning and coached out if they don’t improve. No concept of sharing regular updates or doing retros to learn from past mistakes. No vision document to align team’s work and lack of OKR review process which caused conflicting work to be approved all the time
 
-Hope you enjoyed the Leadership lessons as much as the movie itself.
+Hope you enjoyed the Leadership lessons as much as the movie if not more 😜
