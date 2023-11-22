@@ -30,7 +30,8 @@ This story begins and revolves around two orgs (teams to be simple) – `RAW` an
 
 </div>
  
-> **Lesson – Essence of keeping Project status real**. Keep project status updates real and share the report with stakeholders at regular cadence to avoid last minute surprises. Avoid getting into meetings (or stalk) 1:1 just for status updates – huge waste of everyone’s time.
+> **Lesson – Essence of keeping Project status real**.
+> Keep project status updates real and share the report with stakeholders at regular cadence to avoid last minute surprises. Avoid getting into meetings (or stalk) 1:1 just for status updates – huge waste of everyone’s time.
 
 Later in the movie, another important moment comes when `Tiger` & `Zoya` have to choose between two projects as mentioned below
 
