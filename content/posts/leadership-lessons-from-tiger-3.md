@@ -20,10 +20,8 @@ This story begins and revolves around two orgs (teams to be simple) – `RAW` an
 
 | What went well? | What went wrong? |
 |------------------|------------------|
-|`Tiger` pushed hard and didn’t get complacent | Lots of time wasted at both ends
-| | `Zoya` chasing wrong goals, not at all what’s needed by her stakeholder, `Tiger`
-| | No communication at all, no Jira updates, or e-mails
-| | `Zoya` doesn’t believe in delegation and tries to do everything herself, will be a growth area for her next promotion
+|`Tiger` pushed hard and didn’t get complacent | Lots of time wasted at both ends <br> `Zoya` chasing wrong goals, not at all what’s needed by her stakeholder, `Tiger` <br> No communication at all, no Jira updates, or e-mails <br>  `Zoya` doesn’t believe in delegation and tries to do everything herself, will be a growth area for her next promotion
+
  
 > **Lesson – Essence of keeping Project status real**. Keep project status updates real and share the report with stakeholders at regular cadence to avoid last minute surprises. Avoid getting into meetings (or stalk) 1:1 just for status updates – huge waste of everyone’s time.
 
@@ -60,8 +58,7 @@ After the teams induct new hires, the project execution begins, things go awry s
 
 |What went well? | What went wrong?|
 |----------------|-----------------|
-|Consultant was able to unblock the team in the short term | Increased project cost because of last minute hire of an external consultant
-| | Major re-arch because the Consultant didn’t understand the problem and the existing architecture completely
+|Consultant was able to unblock the team in the short term | Increased project cost because of last minute hire of an external consultant <br> Major re-arch because the Consultant didn’t understand the problem and the existing architecture completely
 
 > **Lesson – Careful with external help in the middle of a high-stakes project**. Always review the project quote/plan given by expert external consultants as their solution might not always be best for the long run of the project or solve all edge cases
 
@@ -69,11 +66,7 @@ Final act was a mega major project where both teams (with considerable head-coun
 
 |What went well? | What went wrong? |
 |------------|---------------------|
-The project was delivered meeting the exit criteria | Project was executed in a totally random manner
-| | No blueprint, plan existed
-| | Huge army of people hired with sub-par skills – they fired so many dead bullets, not one hit the target (enemy)
-| | A culture of total chaos; toxic work environment
-| | Leaders weren’t meeting with each other 1:1 and were communicating major decisions directly in all-hands
+The project was delivered meeting the exit criteria | Project was executed in a totally random manner <br> No blueprint, plan existed <br> Huge army of people hired with sub-par skills – they fired so many dead bullets, not one hit the target (enemy) <br> A culture of total chaos; toxic work environment <br> Leaders weren’t meeting with each other 1:1 and were communicating major decisions directly in all-hands
 
 > **Lesson – Culture and alignment form the bedrock of Leadership and defines future successes or failures.** A project of this magnitude was undertaken without Leadership buy-in and alignment was sought between stakeholders as the project was being executed. Bad hiring where people were hired in huge numbers without a proper interview process which took the entire team down. Toxic culture where Women in Leadership don’t recognise Women for equal work – classic case of Gender Inequality. `Tiger` got the entire credit at the end and `Zoya` wasn’t mentioned at all by the Pakistani PM 😭
 
