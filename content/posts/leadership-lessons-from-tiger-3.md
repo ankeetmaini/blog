@@ -108,7 +108,7 @@ Final act was a mega major project where both teams (with considerable head-coun
 Apart from these contextual leadership lessons, there were some uber level lessons we can learn.
 
 > **Lesson – Don’t celebrate early and avoid Hero culture.**
->> Leads celebrated victories prematurely, overlooked crucial details, displayed a casual approach, and later had to retract. The entire organisation was built around a Hero-worshipping culture which made the environment toxic and non-scalable. No precedent of knowledge transfer/mentorship/documentation. Hence huge dependency on a few shoulders.
+>> Leads celebrated victories prematurely, overlooked crucial details, displayed a casual approach, and later had to retract. The entire organisation was built around a Hero-worshipping culture which made the environment toxic and non-scalable. No precedent of knowledge transfer, mentorship or documentation. Hence huge dependency on a few shoulders.
 
 
 Hope you enjoyed the Leadership lessons as much as the movie if not more 😜
