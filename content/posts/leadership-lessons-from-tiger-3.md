@@ -8,7 +8,7 @@ tags:
 
 I really hit the jackpot when I accidentally found myself sitting at the screening of `Tiger 3` (don’t ask me how). I was fascinated (read overwhelmed) by the turn of events that my brain went bonkers seeing so many amazing Leadership lessons (or lack thereof) that I thought are too precious to just keep to myself and the entire world should know and learn.
 
-This is not a spoiler (although you might get to know a few bits here and there), but it's by no means a replacement of the movie in itself, as my words or any words can’t do justice to what happens on screen. Nobody, not even Director's father understands it completely.
+This is not a spoiler (although you might get to know a few bits here and there), but it's by no means a replacement of the movie in itself, as my words or any words can’t do justice to what happens on screen. Nobody, not even Director's father, understands it completely.
 
 This story begins and revolves around two orgs (teams to be simple) – `RAW` and `ISI` in a large company called `World Peace`
 
@@ -107,7 +107,8 @@ Final act was a mega major project where both teams (with considerable head-coun
 
 Apart from these contextual leadership lessons, there were some uber level lessons we can learn.
 
-> **Lesson – Don’t celebrate early and Hero culture; use Vision document to bring org alignment.**
->> Leads prematurely celebrated victories, overlooking crucial details, displaying a casual approach, and later had to retract. The entire organisation is built around a Hero worship culture which makes the environment toxic and non-scalable. No knowledge transfer/mentorship/documentation. Huge dependency as a result on a few shoulders. These employees should be given stern warning and coached out if they don’t improve. No concept of sharing regular updates or doing retros to learn from past mistakes. No vision document to align team’s work and lack of OKR review process which caused conflicting work to be approved all the time
+> **Lesson – Don’t celebrate early and avoid Hero culture.**
+>> Leads celebrated victories prematurely, overlooked crucial details, displayed a casual approach, and later had to retract. The entire organisation was built around a Hero-worshipping culture which made the environment toxic and non-scalable. No precedent of knowledge transfer/mentorship/documentation. Hence huge dependency on a few shoulders.
+
 
 Hope you enjoyed the Leadership lessons as much as the movie if not more 😜
