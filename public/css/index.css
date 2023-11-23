@@ -281,3 +281,8 @@ img {
 	height: auto;
 	max-width: none;
   }
+
+table, td, th {
+  border: 0.1px solid;
+  border-collapse: collapse;
+}
