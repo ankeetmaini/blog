@@ -12,7 +12,7 @@ This is not a spoiler (although you might get to know a few bits here and there)
 
 This story begins and revolves around two orgs (teams to be simple) – `RAW` and `ISI` in a large company called `World Peace`
 
-`RAW` has `Tiger` (Salman Khan) and ISI has `Zoya` (Katrina Kaif). I don’t know about the actual positions, but these two are at Lead (Senior+ Engineer) positions that have high visibility and are leading key projects. 
+`RAW` has `Tiger` (Salman Khan) and ISI has `Zoya` (Katrina Kaif). I don’t know about the actual positions, but these two are at Lead (Senior+ Engineer) positions that have high visibility and are leading key projects.
 
 `RAW` and `ISI` are two teams solving similar problem statements and need some collaboration. In this instance `Tiger` needs some info from `Zoya` but he’s not able to get a satisfactory response. He tries to get the project execution status and details multiple times but always gets a canned response – we’re on track, it’ll be shipped in time and everything’s good.
 
@@ -30,16 +30,15 @@ This story begins and revolves around two orgs (teams to be simple) – `RAW` an
 
 </div>
  
-> **Lesson – Essence of keeping Project status real**.
+>  ### Lesson – Essence of keeping Project status real**.
 >> Keep project status updates real and share the report with stakeholders at regular cadence to avoid last minute surprises. Avoid getting into meetings (or stalk) 1:1 just for status updates – huge waste of everyone’s time.
 
 Later in the movie, another important moment comes when `Tiger` & `Zoya` have to choose between two projects as mentioned below
 
-
-|Project summary | Complexity | Success probability
-|----------------|------------|----------------|
-|Steal something (details not available) from an ultra high secure establishment (illegal pro max) | Super high | Negative, not even 0 |
-|Find a not-so-common drug | Medium | High (given the skillset of the team) |
+| Project summary                                                                                   | Complexity | Success probability                   |
+| ------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------- |
+| Steal something (details not available) from an ultra high secure establishment (illegal pro max) | Super high | Negative, not even 0                  |
+| Find a not-so-common drug                                                                         | Medium     | High (given the skillset of the team) |
 
 At this time, the team rejects all conventional wisdom and decides to go with Option 1, I mean, can you believe it? Yes, me neither 🤦
 
@@ -54,8 +53,9 @@ Needless to say the result was disastrous, led to astronomical losses for everyo
 
 </div>
 
-> **Lesson – Strategy and plan review are key for success**.
->> Never go into execution before carefully evaluating all possible options in the Design (HLD) review. Have a thorough review process for critical projects by Leadership (Bosses of `Zoya` & `Tiger`)
+> ### Lesson – Strategy and plan review are key for success\*\*.
+>
+> > Never go into execution before carefully evaluating all possible options in the Design (HLD) review. Have a thorough review process for critical projects by Leadership (Bosses of `Zoya` & `Tiger`)
 
 As you can expect, the Tech Leads made commitments without even thinking who will actually do the work and then ran helter-skelter for hiring the team. They beguiled 5 new hires into joining them by promising challenging work (which was actually true) and the opportunity to learn and get mentored by legends (of course)
 
@@ -68,8 +68,9 @@ As you can expect, the Tech Leads made commitments without even thinking who wil
 
 </div>
 
-> **Lesson – Integrity & transparency is the foundation of good Leadership**.
->> Leadership lacked integrity; Tech Leads exploited their reputation, using it to manipulate and coerce interview candidates through power games. Never hire candidates under false pretences which would prove detrimental for their future. Candidates should also do their due diligence before accepting the role
+> ### Lesson – Integrity & transparency is the foundation of good Leadership\*\*.
+>
+> > Leadership lacked integrity; Tech Leads exploited their reputation, using it to manipulate and coerce interview candidates through power games. Never hire candidates under false pretences which would prove detrimental for their future. Candidates should also do their due diligence before accepting the role
 
 After the teams induct new hires, the project execution begins, things go awry soon and the Tech Leads find themselves in a helpless state needing immediate help. The organisation has no other option but to rope in an external consultant (Shahrukh as Pathaan) to help in overcoming this roadblock to meet promised deadline
 
@@ -83,8 +84,9 @@ After the teams induct new hires, the project execution begins, things go awry s
 
 </div>
 
-> **Lesson – Careful with external help in the middle of a high-stakes project**.
->> Always review the project quote/plan given by expert external consultants as their solution might not always be best for the long run of the project or solve all edge cases
+> ### Lesson – Careful with external help in the middle of a high-stakes project\*\*.
+>
+> > Always review the project quote/plan given by expert external consultants as their solution might not always be best for the long run of the project or solve all edge cases
 
 Final act was a mega major project where both teams (with considerable head-count) were working together against a common goal (read enemy `Emraan Hashmi`). This project was anything but smooth. One moment it would appear `on track` and the next it would be in `grave red`, almost like a sine wave which is never a good thing for a company’s report card.
 
@@ -101,14 +103,14 @@ Final act was a mega major project where both teams (with considerable head-coun
 
 </div>
 
-
-> **Lesson – Culture and alignment form the bedrock of Leadership and defines future successes or failures.**
->> A project of this magnitude was undertaken without Leadership buy-in and alignment was sought between stakeholders as the project was being executed. Bad hiring where people were hired in huge numbers without a proper interview process which took the entire team down. Toxic culture where Women in Leadership don’t recognise Women for equal work – classic case of Gender Inequality. `Tiger` got the entire credit at the end and `Zoya` wasn’t mentioned at all by the Pakistani PM 😭
+> ### Lesson – Culture and alignment form the bedrock of Leadership and defines future successes or failures.\*\*
+>
+> > A project of this magnitude was undertaken without Leadership buy-in and alignment was sought between stakeholders as the project was being executed. Bad hiring where people were hired in huge numbers without a proper interview process which took the entire team down. Toxic culture where Women in Leadership don’t recognise Women for equal work – classic case of Gender Inequality. `Tiger` got the entire credit at the end and `Zoya` wasn’t mentioned at all by the Pakistani PM 😭
 
 Apart from these contextual leadership lessons, there were some uber level lessons we can learn.
 
-> **Lesson – Don’t celebrate early and avoid Hero culture.**
->> Leads celebrated victories prematurely, overlooked crucial details, displayed a casual approach, and later had to retract. The entire organisation was built around a Hero-worshipping culture which made the environment toxic and non-scalable. No precedent of knowledge transfer, mentorship or documentation. Hence huge dependency on a few shoulders.
-
+> ### Lesson – Don’t celebrate early and avoid Hero culture.\*\*
+>
+> > Leads celebrated victories prematurely, overlooked crucial details, displayed a casual approach, and later had to retract. The entire organisation was built around a Hero-worshipping culture which made the environment toxic and non-scalable. No precedent of knowledge transfer, mentorship or documentation. Hence huge dependency on a few shoulders.
 
 Hope you enjoyed the Leadership lessons as much as the movie if not more 😜
