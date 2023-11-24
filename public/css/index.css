@@ -283,6 +283,7 @@ img {
   }
 
 table, td, th {
-  border: 0.1px solid;
+  border: 1px solid;
   border-collapse: collapse;
+  padding: .5em 1em;
 }
