@@ -17,18 +17,17 @@ layout: layouts/base.njk
 
 {{ content | safe }}
 
-
-
 {%- if collections.posts %}
 
 {% set currentPost = collections.posts | getCollectionItem %}
 {% set postUrl = "https://ankeetmaini.dev" + currentPost.url %}
 {% set url = postUrl | encode %}
 {% set twitterUrl = "https://mobile.twitter.com/search?q=" +  url %}
+{%- if title != "About Me" %}
 <div class="message-box">
 	<p><a href="{{ twitterUrl }}" target="_black" rel="noopener noreferrer">Discuss on Twitter, because why not?</a></p>
 </div>
-
+{%- endif %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
