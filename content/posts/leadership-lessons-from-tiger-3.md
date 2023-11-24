@@ -36,10 +36,10 @@ This story begins and revolves around two orgs (teams to be simple) – `RAW` an
 Later in the movie, another important moment comes when `Tiger` & `Zoya` have to choose between two projects as mentioned below
 
 
-|Project summary | Complexity | Funding needed | Success probability
-|----------------|------------|----------------|-------------------|
-|Steal something (details not available) from an ultra high secure establishment (illegal pro max) | Super high | Super high | Negative, not even 0 |
-|Find a not-so-common drug | Medium | Less | High (given the skillset of the team) |
+|Project summary | Complexity | Success probability
+|----------------|------------|----------------|
+|Steal something (details not available) from an ultra high secure establishment (illegal pro max) | Super high | Negative, not even 0 |
+|Find a not-so-common drug | Medium | High (given the skillset of the team) |
 
 At this time, the team rejects all conventional wisdom and decides to go with Option 1, I mean, can you believe it? Yes, me neither 🤦
 
