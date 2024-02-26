@@ -2,6 +2,7 @@
 title: Asteroid Collision
 description: asteroid collision google facebook leetcode
 layout: layouts/post.njk
+date: 2021-06-11
 tags:
   - two pointers
 ---
