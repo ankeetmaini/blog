@@ -2,6 +2,7 @@
 title: All permutations of an array
 description: permutations using backtracking
 layout: layouts/post.njk
+date: 2021-09-04
 tags:
   - backtracking
   - psds

@@ -2,6 +2,7 @@
 title: Life as an Engineering Manager
 description: being an engineering manager, what do they do, how do they do
 layout: layouts/post.njk
+date: 2023-06-11
 tags:
   - leadership
 ---

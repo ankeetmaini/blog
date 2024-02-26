@@ -1,7 +1,7 @@
 ---
 title: Simplify Paths
 description: simplify unix path leetcode
-date: 2023-06-11
+date: 2021-10-21
 layout: layouts/post.njk
 tags:
   - stack
