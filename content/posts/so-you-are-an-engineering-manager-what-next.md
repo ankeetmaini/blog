@@ -2,7 +2,7 @@
 title: so you’re an engineering manager, what next?
 description: this post talks about an underrated trait of setting the identity of the team and its vision, which ultimately define the success of the team
 layout: layouts/post.njk
-date: 2024-03-4
+date: 2024-03-04
 tags:
   - leadership
 ---
