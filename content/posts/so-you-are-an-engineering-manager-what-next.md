@@ -9,7 +9,7 @@ tags:
 
 so you became an engineering manager, what next?
 
-i too became an engineering manager sometime back and found out that there are so many hats that i need to wear on a daily basis
+i too became one sometime back and found out (the hard way) that there are so many hats i need to wear on a daily basis
 - coaching and mentoring the people reporting in, ensuring they are growing and challenging themselves
 - acting as program/project manager to deliver projects
 - being the glue to hold the team together
