@@ -15,7 +15,7 @@ i too became one sometime back and found out (the hard way) that there are so ma
 - being the glue to hold the team together
 - and serving as a shield to save them from top down stress, pressure and incoming barrage of requests, questions and last minute asks!
 
-there’s another aspect which sometimes isn’t visible at the outset － establishing the identity of the team; which includes
+there’s another aspect which sometimes isn’t visible at the outset － **establishing the identity of the team**; which includes
 - defining what the team actually stands for
 - providing a framework or a north star to help them say yes or no to work requests
 - defining the vision & mission of the team
