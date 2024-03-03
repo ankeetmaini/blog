@@ -21,11 +21,11 @@ there’s another aspect which sometimes isn’t visible at the outset － **est
 - defining the vision & mission of the team
 - socialising the problem statements and domain of the team
 
-this aspect often goes under the radar for two reasons and is probably the most important of all as we see later on.
+this aspect often goes under the radar for two reasons and is probably the **most important** of all as we see later on.
 
 first, you may have got a product team that decides what you’ll do, and in that case, the engineering manager can choose to challenge and prioritise the work defined by them instead of setting one’s own roadmap. most often, only tech debt at these teams are pitched by em which certainly don't define the success of the team.
 
-second, you may be in a bullish phase, where there’s just too much work going around. people are gasping for breath but there’s none available. imagine a new rewrite happening org-wide or within your team. someone somehow managed to convince a bunch of folks who matter (usually the c-suite) that the current version of our software is untenable and we’d need to write it again from scratch to deliver impact at a future time. post this, it’s the easiest time for an engineering manager only from a strategic point of view. the success of the team is measured by the delivery of the said rewrite or migration that was promised.
+second, you may be in a bullish phase, where there’s just too much work going around. people are gasping for breath but there’s none available. imagine a new rewrite happening org-wide or within your team. someone somehow managed to convince a bunch of folks who matter (usually the c-suite) that the current version of our software is untenable and we’d need to write it again from scratch to deliver impact at a future time. post this, it’s the easiest time for an engineering manager only from a strategic point of view.
 
 but this is not always the case. 
 
@@ -36,11 +36,13 @@ _what defines their success and ultimately yours?_
 
 well, for starters, you can pick up some tech-debt items and keep everyone busy for a while. but every team needs to deliver innovation and impact which would be a bit hard to justify if all the team did was some cleanup and hygiene tasks.
 
-next, you can ping your manager and ask for help. the funny thing about being an engineering manager is that they are hired to take care of the team and drive the charter by themselves. nobody would hand down tasks to you. although you might get some help for the first few times, but after that, you’re not helping your manager, if your problem also becomes their problem. at this level you’re supposed to define the charter if it doesn’t exist!
+next, you can ping your manager and ask for help. the funny thing about being an engineering manager is that they are hired to take care of the team and drive the charter by themselves. nobody would hand down tasks to you. although you might get some help for the first few times, but after that, you’re not helping your manager, if _your problem_ also becomes _their problem_. 
 
-and this was exactly my problem. i was neck-deep in a big migration project but my worry wasn’t about today, it was about tomorrow. 
+> at this level you’re supposed to define the charter if it doesn’t exist!
 
-so instead of directly asking for new projects, i tried first writing a small doc － vision document for my team. it is a 1-pager of sorts to define what the team stands for, its identity.
+and this was exactly my problem. i was neck-deep in a big migration project but my worry wasn’t about _today_, it was about _tomorrow_. 
+
+so instead of directly asking for new projects, i tried first writing a small doc － `vision document` for my team. it is a 1-pager of sorts to define what the team stands for, its identity.
 
 > a vision document crisply defines the broad themes which come into the team's ambit and where the team wants to go to; the end state. the doc doesn't address anything of the immediate term; but looks way into the future and if written well should be timeless.
 
@@ -78,7 +80,7 @@ usually, this is a bad thing, but this time it was a blessing in disguise. leade
 
 we managed to convince other leaders that this is indeed a problem that needs constant investment instead of a one time quick fix and my team would be at the helm of it.
 
-the vision also got discussed thoroughly within the team to help explain everyone our purpose and get the team’s heart & soul behind our new okrs which aimed at moving the current metrics closer to our north star quarter over quarter. because the vision means nothing if the team doesn't believe in it.
+the vision also got discussed thoroughly within the team to help explain everyone our purpose and get the team’s heart & soul behind our new okrs which aimed at moving the current metrics closer to our north star quarter over quarter. because the vision means nothing if the team only doesn't believe in it.
 
 now the team wasn’t operating as `android`, `web` & `ios` pods but as 
 - performance swat team
