@@ -1,15 +1,15 @@
-
 ---
 title: so you’re an engineering manager, what next?
 description: this post talks about an underrated trait of setting the identity of the team and its vision, which ultimately define the success of the team
 layout: layouts/post.njk
+date: 2024-03-4
 tags:
   - leadership
 ---
 
 so you became an engineering manager, what next?
 
-there are so many hats that an engineering manager wears on a daily basis
+i too became an engineering manager sometime back and found out that there are so many hats that i need to wear on a daily basis
 - coaching and mentoring the people reporting in, ensuring they are growing and challenging themselves
 - acting as program/project manager to deliver projects
 - being the glue to hold the team together
@@ -23,7 +23,7 @@ there’s another aspect which sometimes isn’t visible at the outset － estab
 
 this aspect often goes under the radar for two reasons and is probably the most important of all as we see later on.
 
-first, you’ve got a product team that decides what you’ll do, and in that case, the engineering manager can choose to challenge and prioritise the work defined by them instead of setting one’s own roadmap. most often, only tech debt at these teams are pitched by em and not other initiatives
+first, you’ve got a product team that decides what you’ll do, and in that case, the engineering manager can choose to challenge and prioritise the work defined by them instead of setting one’s own roadmap. most often, only tech debt at these teams are pitched by em which certainly define the success of the team.
 
 second, you’re in a bullish phase, where there’s just too much work going around. people are gasping for breath but there’s none available. imagine a new rewrite happening org-wide or within your team. someone somehow managed to convince a bunch of folks who matter (usually the c-suite) that the current version of our software is untenable and we’d need to write it again from scratch to deliver impact at a future time. post this, it’s the easiest time for an engineering manager from a strategy point of view only. the success of the team is only measured by the delivery of the said rewrite or migration that was promised.
 
@@ -89,5 +89,5 @@ the better you get at it, the better off your teams will be.
 
 finally, there’s a very thin line between relevance and irrelevance, and it’s your vision alone that determines which side your team falls on.
 
-
+*special thanks to [pragya](https://www.linkedin.com/in/pragya-saha-116a0911/), [rahul](https://www.linkedin.com/in/rahulkrish/), [geetha](https://www.linkedin.com/in/geetha-rajendran1710/) and [amit](https://www.linkedin.com/in/amit-kishore/) for providing valuable feedback and delaying this blog by over 2 weeks :P*
 
