@@ -23,7 +23,7 @@ layout: layouts/base.njk
 {% set postUrl = "https://ankeetmaini.dev" + currentPost.url %}
 {% set url = postUrl | encode %}
 {% set twitterUrl = "https://mobile.twitter.com/search?q=" +  url %}
-{%- if title != "About Me" %}
+{%- if title != "about me" %}
 <div class="message-box">
 	<p><a href="{{ twitterUrl }}" target="_black" rel="noopener noreferrer">discuss on twitter, because why not?</a></p>
 </div>
