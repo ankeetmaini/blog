@@ -23,17 +23,17 @@ layout: layouts/base.njk
 {% set postUrl = "https://ankeetmaini.dev" + currentPost.url %}
 {% set url = postUrl | encode %}
 {% set twitterUrl = "https://mobile.twitter.com/search?q=" +  url %}
-{%- if title != "About Me" %}
+{%- if title != "about me" %}
 <div class="message-box">
-	<p><a href="{{ twitterUrl }}" target="_black" rel="noopener noreferrer">Discuss on Twitter, because why not?</a></p>
+	<p><a href="{{ twitterUrl }}" target="_black" rel="noopener noreferrer">discuss on twitter, because why not?</a></p>
 </div>
 {%- endif %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
 {%- if nextPost or previousPost %}
 <ul class="links-nextprev">
-	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+	{%- if previousPost %}<li>previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+	{%- if nextPost %}<li>next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
 </ul>
 {%- endif %}
 {%- endif %}

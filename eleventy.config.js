@@ -42,12 +42,12 @@ module.exports = function (eleventyConfig) {
     // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
     return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
       format || "dd LLLL yyyy"
-    );
+    ).toLowerCase();
   });
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
     // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd").toLowerCase();
   });
 
   // Get the first `n` elements of a collection.
@@ -73,13 +73,13 @@ module.exports = function (eleventyConfig) {
     for (let item of collection) {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     }
-    return Array.from(tagSet);
+    return Array.from(tagSet).map(t => t.toLowerCase());
   });
 
   eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
     return (tags || []).filter(
       (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
-    );
+    ).map(t => t.toLowerCase());
   });
 
   eleventyConfig.addFilter("encode", (str) => encodeURIComponent(str));
