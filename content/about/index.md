@@ -1,10 +1,10 @@
 ---
 layout: layouts/post.njk
-title: About Me
+title: about me
 templateClass: tmpl-post
 date: 2023-11-24
 eleventyNavigation:
-  key: About Me
+  key: about me
   order: 4
 ---
 
