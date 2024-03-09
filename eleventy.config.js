@@ -73,13 +73,13 @@ module.exports = function (eleventyConfig) {
     for (let item of collection) {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     }
-    return Array.from(tagSet);
+    return Array.from(tagSet).map(t => t.toLowerCase());
   });
 
   eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
     return (tags || []).filter(
       (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
-    );
+    ).map(t => t.toLowerCase());
   });
 
   eleventyConfig.addFilter("encode", (str) => encodeURIComponent(str));
