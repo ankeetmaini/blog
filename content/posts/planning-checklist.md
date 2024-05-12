@@ -49,12 +49,16 @@ so i had to change, and below is what i put together after i got humiliated at a
 </tbody>
 </table>
 
+<div class="message-box">
+
 e.g. 
 - objective: improve the conversion funnel by 20% on our e-commerce app
 - key results:
   - reduce page load of product page from 6s → 3.5s
   - remove friction on payment page by showing up upi as the top payment mode
   - launch 1-click purchase from home to checkout for high value items like phones & appliances
+
+</div>
 
 ## 2. come up with initiatives for each key result (break-up & scope)
 
@@ -75,6 +79,7 @@ e.g.
 </tbody>
 </table>
 
+<div class="message-box">
 
 e.g.
 - key result: reduce page load of product page from 6s → 3.5s
@@ -87,6 +92,8 @@ e.g.
 
 > 🔺 means that the initiative needs refinement and is a fuzzy item. it will usually reqire an hld/lld/1-pager and would probably get executed as a spike item where concrete details would become clear after a deep-dive or a small poc.
 >> the staff+ engineers would also have to make a case as to why do they think the above initiative is needed with roi in mind as well because such fuzzy initiatives require greater engineering efforts and often run into risk during execution
+
+<div/>
 
 ## 3. prepare plan with sequencing, owners and known risks
 
@@ -119,6 +126,8 @@ l | 8 person weeks | needs a staff engineer to lead and constant architecture re
 xl | 16 person weeks | multi-quarter effort and needs a staff+ engineer to lead & deliver
 xxl | 20+ person weeks | multi-quarter effort and needs an architect to lead and breakdown
 
+<div class="message-box">
+
 next would be defining the owners, which usually is done by first talking to the owners and setting the expectations of leading a project.
 
 > i usually make them owners of the respective epic where they are responsible to updating it weekly with crisp status updates and highlighting risks which need leadership attention.
@@ -130,6 +139,8 @@ for. e.g if you have an xl item but no staff engineer; then if you can't get the
 at this point you'll have to escalate this to your leadership to take further calls on the next steps.
 
 *i've deliberately left covering the gantt chart in details as it's a standard item but may cover it in a future post.*
+
+<div/>
 
 ## 4. sprint grooming (bi-weekly before the sprint starts)
 
@@ -171,10 +182,10 @@ at this point you'll have to escalate this to your leadership to take further ca
 </tbody>
 </table>
 
-<hr/>
-
-*if you reached till here, then you can see **planning** is a whole team activity but there's a method to this madness. every person on the team comes into the exercise at different times and for different things.
+if you reached till here, then you can see **planning** is a whole team activity but there's a method to this madness. every person on the team comes into the exercise at different times and for different things.
 
 if as an engineering manager you just buckle up and tell the team to do x, y & z they'll never commit to it. you don't want to hire smart people and then do the thinking for them. let them come up with solutions and let them surprise you in a good way. 
 
-this is the only way to get 200% and pave the way for building a high-performing team which goes over & beyond not because you're pressurising them but because they like solving complex challenges and getting better at their craft*
+this is the only way to get 200% and pave the way for building a high-performing team which goes over & beyond not because you're pressurising them but because they like solving complex challenges and getting better at their craft
+
+*special thanks to [rahul](https://www.linkedin.com/in/rahulkrish/), [rajesh](https://www.linkedin.com/in/rnaik/), [deepanshu](https://www.linkedin.com/in/androiddeepanshu/), [sajan](https://www.linkedin.com/in/sajankedia/) for telling me how wrong i was at the absolute wrong time when i was having fun at a party in indiranagar 😭*
