@@ -34,11 +34,22 @@ so i had to change, and below is what i put together after i got humiliated at a
 
 ## 1. draft objectives & key results
 
-| who    | ems and pms should deliberate and debate on the most important problems and get leadership buy-in. some orgs have yearly okrs published by the ceo/cto's office which can be translated into okrs at your level which is nothing but matching your efforts to meet the company goals |
-|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| when   | 40 days before quarter starts (q - 40 days)                                                                                                                                                                                                                                          |
-| output | objectives & key results with impact                                                                                                                                                                                                                                                 |
-
+<table>
+<tbody>
+<tr>
+    <td>who</td>
+    <td>ems and pms should deliberate and debate on the most important problems and get leadership buy-in. some orgs have yearly okrs published by the ceo/cto's office which can be translated into okrs at your level which is nothing but matching your efforts to meet the company goals</td>
+  </tr>
+  <tr>
+    <td>when</td>
+    <td>40 days before quarter starts (q - 40 days)</td>
+  </tr>
+  <tr>
+    <td>output</td>
+    <td>objectives &amp; key results with impact</td>
+  </tr>
+</tbody>
+</table>
 e.g. 
 - objective: improve the conversion funnel by 20% on our e-commerce app
 - key results:
