@@ -132,7 +132,7 @@ lastly you need to surface up the known risks before you even begin the quarter.
 
 *for. e.g if you have an xl item but no staff engineer; then if you can't get the engineer by so & so date the initiative becomes no-go. similarly if you need an api from another team to build a feature but the dependent team hasn't prioritised then also your initiative will become a no-go*
 
-at this point you'll have to escalate this to your leadership to take further calls on the next steps.
+at this point you'll have to escalate the issue to your leadership to take further calls on the next steps.
 
 *i've deliberately left covering the gantt chart in details as it's a standard item but may cover it in a future post.*
 
