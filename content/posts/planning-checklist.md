@@ -134,7 +134,7 @@ lastly you need to surface up the known risks before you even begin the quarter.
 
 at this point you'll have to escalate the issue to your leadership to take further calls on the next steps.
 
-*i've deliberately left covering the gantt chart in details as it's a standard item but may cover it in a future post.*
+*i've deliberately left covering the gantt chart in detail as it's a standard item but i may cover it in a future post.*
 
 
 ## 4. sprint grooming (bi-weekly before sprint)
