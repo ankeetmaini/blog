@@ -111,7 +111,7 @@ e.g.
 </tbody>
 </table>
 
-tech leads & ems create a gantt chart like below at this point to see how much work is possible taking into account the t-shirt size estimations
+tech leads & ems create a gantt chart at this point to see how much work is possible taking into account the t-shirt size estimations & people's leaves.
 
 ### quick reference to t-shirt sizing & project recommendations
 
