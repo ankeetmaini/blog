@@ -186,4 +186,4 @@ if as an engineering manager you just buckle up and tell the team to do x, y & z
 
 this framework not only distributes the planning activity in the group but paves the way for building a high-performing team which goes over & beyond not because there's pressure but because the allure of solving something complex drives them and they see an opportunity to get better at their craft. 
 
-*special thanks to [rahul](https://www.linkedin.com/in/rahulkrish/), [rajesh](https://www.linkedin.com/in/rnaik/), [deepanshu](https://www.linkedin.com/in/androiddeepanshu/), and [sajan](https://www.linkedin.com/in/sajankedia/) for telling me how stupid i was at the absolute wrong time when i was having fun at a party in indiranagar 😭*
+*special thanks to [rahul](https://www.linkedin.com/in/rahulkrish/), [rajesh](https://www.linkedin.com/in/rnaik/), [deepanshu](https://www.linkedin.com/in/androiddeepanshu/), and [sajan](https://www.linkedin.com/in/sajankedia/) for telling me how stupid i was at the worst time when i was having fun at a party in indiranagar 😭*
