@@ -155,7 +155,7 @@ at this point you'll have to escalate the issue to your leadership to take furth
 </tbody>
 </table>
 
-*here the stories can be implementation tasks, or creation of hld, lld or a poc*
+here the stories can be implementation tasks, or creation of hld, lld or a poc. the entire activity is done by the aforementioned people to add details of the work that will be carried out by the team in the next sprint.
 
 ## 5. sprint planning (bi-weekly)
 <table>
@@ -175,6 +175,9 @@ at this point you'll have to escalate the issue to your leadership to take furth
 </tbody>
 </table>
 
+this would be a big team meeting where everyone would be present and the leads would walk through the tickets prepared for the sprint; and clarify doubts of the team. team members would then add the storypoints and share their understanding of the task so that everyone is on the same page.
+
+## conclusion
 if you reached till here, then you can see **planning** is a whole team activity but there's a method to this madness. every person on the team comes into the exercise at different times and for different things.
 
 if as an engineering manager you just buckle up and tell the team to do x, y & z they'll never commit to it. you don't want to hire smart people and then do the thinking for them. let them come up with solutions and let them surprise you in a good way. 
