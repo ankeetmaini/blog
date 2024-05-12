@@ -51,6 +51,18 @@ e.g.
 who | staff+ engineers breakdown the key result into solid activities which can be done by 1 person in about 2 weeks. in short they define the scope and breakdown big problem statements into short palatable stories for the team
 
 e.g.
+- key result: reduce page load of product page from 6s → 3.5s
+- initiatives
+  - reduce the javascript bundle size by 120kb to improve time to interactive
+    - remove lodash
+    - write a lighter implementation for the product page image component which is 100kb in size
+  - 🔺 enable edge caching for product listing to speed up the api response time
+  - 🔺 partial painting of product page reusing the state of homepage while the api call is in progress
+
+> 🔺 means that th
+## 3. 
+
+
 
 
 
