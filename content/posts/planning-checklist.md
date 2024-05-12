@@ -54,7 +54,7 @@ e.g.
 - objective: improve the conversion funnel by 20% on our e-commerce app
 - key results:
   - reduce page load of product page from 6s → 3.5s
-  - remove friction on payment page by showing up upi as the top payment mode
+  - remove friction on payment page by showing UPI as the top payment mode
   - launch 1-click purchase from home to checkout for high value items like phones & appliances
 
 </div>
