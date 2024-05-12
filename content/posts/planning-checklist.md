@@ -93,7 +93,7 @@ e.g.
 > 🔺 means that the initiative needs refinement and is a fuzzy item. it will usually reqire an hld/lld/1-pager and would probably get executed as a spike item where concrete details would become clear after a deep-dive or a small poc.
 >> the staff+ engineers would also have to make a case as to why do they think the above initiative is needed with roi in mind as well because such fuzzy initiatives require greater engineering efforts and often run into risk during execution
 
-<div/>
+</div>
 
 ## 3. prepare plan with sequencing, owners and known risks
 
