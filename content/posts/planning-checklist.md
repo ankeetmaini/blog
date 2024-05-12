@@ -32,6 +32,25 @@ earlier i'd have a meeting every two weeks, rethinking priorities and not just m
 
 so i had to change, and below is what i put together after i got humiliated at a party with my peers and bosses :P (no surprises there)
 
-## 1. write down draft objectives & key results
+## 1. draft objectives & key results
+
+who | ems and pms should deliberate and debate on the most important problems and get leadership buy-in. some orgs have yearly okrs published by the ceo/cto's office which can be translated into okrs at your level which is nothing but matching your efforts to meet the company goals
+----|--------－
+when | 40 days before quarter starts (q - 40) days
+output | objectives & key results with impact
+
+e.g. 
+- objective: improve the conversion funnel by 20% on our e-commerce app
+- key results:
+  - reduce page load of product page from 6s → 3.5s
+  - remove friction on payment page by showing up upi as the top payment mode
+  - launch 1-click purchase from home to checkout for high value items like phones & appliances
+
+## 2. come up with initiatives for each key result (break-up & scope)
+
+who | staff+ engineers breakdown the key result into solid activities which can be done by 1 person in about 2 weeks. in short they define the scope and breakdown big problem statements into short palatable stories for the team
+
+e.g.
+
 
 
