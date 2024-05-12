@@ -20,7 +20,7 @@ in real world, work happens around big projects and launches. and they have date
 
 so with above context, how do you decide what gets done in a quarter? what actually is **planning**?
 
-> we can wing it yolo style because life's too short to plan anything, because seriously who cares?
+> you can wing it yolo style because life's too short to plan anything, because seriously who cares?
 
 **actually you should, as if your life depends on it**
 
