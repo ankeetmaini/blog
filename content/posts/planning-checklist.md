@@ -36,7 +36,7 @@ so i had to change, and below is what i put together after i got humiliated at a
 
 who | ems and pms should deliberate and debate on the most important problems and get leadership buy-in. some orgs have yearly okrs published by the ceo/cto's office which can be translated into okrs at your level which is nothing but matching your efforts to meet the company goals
 ----|--------－
-when | 40 days before quarter starts (q - 40) days
+when | 40 days before quarter starts (q - 40 days)
 output | objectives & key results with impact
 
 e.g. 
@@ -49,6 +49,10 @@ e.g.
 ## 2. come up with initiatives for each key result (break-up & scope)
 
 who | staff+ engineers breakdown the key result into solid activities which can be done by 1 person in about 2 weeks. in short they define the scope and breakdown big problem statements into short palatable stories for the team
+-----|------－
+when | a month before the quarter start (q - 30 days)
+------|--------
+output | breakdown and scope definition of activities/tasks with t-shirt size (broad) estimates
 
 e.g.
 - key result: reduce page load of product page from 6s → 3.5s
@@ -59,8 +63,32 @@ e.g.
   - 🔺 enable edge caching for product listing to speed up the api response time
   - 🔺 partial painting of product page reusing the state of homepage while the api call is in progress
 
-> 🔺 means that th
-## 3. 
+> 🔺 means that the initiative needs refinement and is a fuzzy item. it will usually reqire an hld/lld/1-pager and would probably get executed as a spike item where concrete details would become clear after a deep-dive or a small poc.
+>> the staff+ engineers would also have to make a case as to why do they think the above initiative is needed with roi in mind as well because such fuzzy initiatives require greater engineering efforts and often run into risk during execution
+
+## 3. prepare plan with sequencing, owners and known risks
+
+who | tech leads and ems define the sequencing in a gantt chart to see what's landing when and if there's a scope for parallelisation. they also define the owners for each initiative and list down risks which needs to be under close watch
+-----|----－
+when | 2 weeks before quarter start (q - 15 days)
+----|------
+output | gantt chart, owners & risk table
+
+tech leads & ems create a gantt chart like below at this point to see how much work is possible taking into account the t-shirt size estimations
+
+*quick reference to t-shirt sizing & project recommendations*
+| 👕 | estimate in person weeks | notes
+-----| ------| -------
+s | 2 person weeks | can be lead & delivered by sde1/2
+-----| ------| -------
+m | 4 person weeks | needs at least a senior engineer to see it through
+-----| ------| -------
+l | 8 person weeks | needs a staff engineer to lead and constant architecture reviews
+-----| ------| -------
+xl | 16 person weeks | multi-quarter effort and needs a staff+ engineer to lead & deliver
+-----| ------| -------
+xxl | 20+ person weeks | multi-quarter effort and needs an architect to lead and breakdown
+
 
 
 
