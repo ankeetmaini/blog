@@ -31,7 +31,6 @@ earlier i'd have a meeting every two weeks, rethinking priorities and not just m
 so i had to change, and below is what i put together after i got humiliated at a party with my peers and bosses :P (no surprises there)
 
 ## 1. draft objectives & key results
-
 <table>
 <tbody>
 <tr>
@@ -61,7 +60,6 @@ e.g.
 </div>
 
 ## 2. come up with initiatives for each key result (break-up & scope)
-
 <table>
 <tbody>
 <tr>
@@ -96,7 +94,6 @@ e.g.
 </div>
 
 ## 3. prepare plan with sequencing, owners and known risks
-
 <table>
 <tbody>
 <tr>
@@ -141,7 +138,6 @@ at this point you'll have to escalate this to your leadership to take further ca
 
 
 ## 4. sprint grooming (bi-weekly before the sprint starts)
-
 <table>
 <tbody>
 <tr>
@@ -162,7 +158,6 @@ at this point you'll have to escalate this to your leadership to take further ca
 *here the stories can be implementation tasks, or creation of hld, lld or a poc*
 
 ## 5. sprint planning (bi-weekly)
-
 <table>
 <tbody>
 <tr>
