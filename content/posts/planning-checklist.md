@@ -173,7 +173,7 @@ at this point you'll have to escalate this to your leadership to take further ca
   </tr>
   <tr>
     <td>when</td>
-    <td>just before or on sprint start (s-2 days)</td>
+    <td>just before or on sprint start (s - 2 days)</td>
   </tr>
   <tr>
     <td>output</td>
