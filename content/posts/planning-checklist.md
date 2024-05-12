@@ -22,11 +22,11 @@ so with above context, how do you decide what gets done in a quarter? what actua
 
 > you can choose to wing it yolo style because life's too short to plan anything, because seriously who cares?
 
-**actually you should care, as if your life depends on it**
+**but you should care, as if your life depends on it**
 
 i've done it both ways (just don't tell my boss though), planned (roadmaps, sprints) on the fly and derived them meticulously by using the below framework. the difference was monumental in the quality of deliverables and the morale of the team!
 
-earlier i'd have a meeting every two weeks, rethinking priorities and not just me, my entire team. i thought having them on the call would give them visibility but all they saw was uncertainty and jitteriness. they felt as if nobody had any idea what exactly needed to be done, and the entire team was busy pitching things they would like to do instead which might not be in the best interest of the organisation. doesn’t make sense for everyone to work on reducing build times or trying out a new framework which came out yesterday!
+earlier i'd have a meeting every two weeks, rethinking priorities and not just me, my entire team. i thought having them on the call would give them visibility but all they saw was uncertainty and jitteriness. they felt as if nobody had any idea what exactly needed to be done, and the entire team was busy pitching things they would like to do instead which might not be in the best interest of the organisation. it doesn’t make sense for everyone to work on reducing build times or trying out a new framework which came out yesterday!
 
 so i had to change, and below is what i put together after i got humiliated at a party with my peers and bosses :P (no surprises there)
 
@@ -68,7 +68,7 @@ e.g.
   </tr>
   <tr>
     <td>when</td>
-    <td>a month before the quarter start (q - 30 days)</td>
+    <td>a month before the quarter starts (q - 30 days)</td>
   </tr>
   <tr>
     <td>output</td>
@@ -85,11 +85,11 @@ e.g.
   - reduce the javascript bundle size by 120kb to improve time to interactive
     - remove lodash
     - write a lighter implementation for the product page image component which is 100kb in size
-  - 🔺 enable edge caching for product listing to speed up the api response time
+  - 🔺 enable edge caching for product listing call to speed up the api response time
   - 🔺 partial painting of product page reusing the state of homepage while the api call is in progress
 
-> 🔺 means that the initiative needs refinement and is a fuzzy item. it will usually reqire an hld/lld/1-pager and would probably get executed as a spike item where concrete details would become clear after a deep-dive or a small poc.
->> the staff+ engineers would also have to make a case as to why do they think the above initiative is needed with roi in mind as well because such fuzzy initiatives require greater engineering efforts and often run into risk during execution
+> 🔺 means that the initiative needs refinement and is a fuzzy item. it will usually require an hld/lld/1-pager and would probably get executed as a spike item where concrete details would get added after a deep-dive or a small poc.
+>> the staff+ engineers would also have to make a case as to why do they think the above initiative is needed with roi in mind as well, because such fuzzy initiatives require greater engineering efforts and often run into risk during execution
 
 </div>
 
