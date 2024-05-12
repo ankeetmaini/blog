@@ -1,32 +1,30 @@
 ---
-title: quarterly planning checklist for engineering managers
-description: this post tries to add a method to madness which runs amok every 3 months and leaders run helter-skelter to put an exciting list of okrs together
+title: planning checklist for people in tech
+description: this post tries to add a method to madness which runs amok every 3 months and both leaders and teams run helter-skelter to put an exciting list of okrs together to executing them
 layout: layouts/post.njk
-date: 2024-05-07
+date: 2024-05-13
 tags:
   - leadership
-  - okr planning
+  - planning
 ---
 
 it's almost may and in just about a month a brand new quarter would start which comes with a possibility of endless opportunities in engg roadmap parlance. 
 
-we've come a long way from knowing what would get done years in advance, like a construction building, say a new mall. once the blueprint is finalised, you can usually estimate the multi-year work upfront at least on paper before you dive deep into execution. but who knew building software is even tougher or have we deliberately made it that way?
+we've come a long way from knowing what would get done years in advance, like a construction building, say a new mall for which once the blueprint is finalised, you can usually estimate the multi-year work upfront at least on paper before you dive deep into execution. but who knew building software is even tougher or have we deliberately made it that way?
 
 we work in sprints, we put our heads down for two weeks and then again and again. some teams decide within these two weeks what next to do and sort of groom their stories with no hints or indication of what lies ahead and coins words like agile :P
 
-but there's just too much flux in this way. there's so much extra time being spent deciding every two weeks what to do, whether something matters to us or can be pushed out?
+but there's just too much flux in this way. there's so much extra time being spent deciding every two weeks what to do. does it even matter right now or can be pushed out?
 
 in real world, work happens around big projects and launches. and they have dates or an expected date of launch. everything begins from there and you usually back calculate.
 
-so with above context, if you're an engineering manager, how do you decide what gets done in a quarter but it's easier said than done; and no heroics will bail you out (coming from a hero himself :P)
+so with above context, how do you decide what gets done in a quarter? what actually is **planning**?
 
-since this work happens once in a while and only 4 times an year, it's easy to just go with the flow and not put a method or perfect the art. 
-
-> because seriously who cares? 
+> we can wing it yolo style because life's too short to plan anything, because seriously who cares?
 
 **actually you should, as if your life depends on it**
 
-i've done it both ways (just don't tell my boss though), planned roadmaps, sprints on the fly and derived them by using the below framework. the difference was monumental in the quality of deliverables and the morale of the team!
+i've done it both ways (just don't tell my boss though), planned (roadmaps, sprints) on the fly and derived them meticulously by using the below framework. the difference was monumental in the quality of deliverables and the morale of the team!
 
 earlier i'd have a meeting every two weeks, rethinking priorities and not just me, my entire team. i thought having them on the call would give them visibility but all they saw was uncertainty and jitteriness. they felt as if nobody had any idea what exactly needed to be done, and everyone was busy pitching things they would like to do instead which might not be in the best interest of the organisation. like everyone can't work on reducing build times or trying out a new framework which came out yesterday!
 
@@ -111,7 +109,7 @@ e.g.
 
 tech leads & ems create a gantt chart like below at this point to see how much work is possible taking into account the t-shirt size estimations
 
-*quick reference to t-shirt sizing & project recommendations*
+### quick reference to t-shirt sizing & project recommendations*
 
 | 👕 | estimate in person weeks | notes
 |-----|-------|----
@@ -135,11 +133,48 @@ at this point you'll have to escalate this to your leadership to take further ca
 
 ## 4. sprint grooming (bi-weekly before the sprint starts)
 
+<table>
+<tbody>
+<tr>
+    <td>who</td>
+    <td>only tech leads, ems, pms and epic owners</td>
+  </tr>
+  <tr>
+    <td>when</td>
+    <td>1 week before sprint starts (s - 7 days)</td>
+  </tr>
+  <tr>
+    <td>output</td>
+    <td>stories with scope, exit criteria and context</td>
+  </tr>
+</tbody>
+</table>
 
+*here the stories can be implementation tasks, or creation of hld, lld or a poc*
 
+## 5. sprint planning (bi-weekly)
 
+<table>
+<tbody>
+<tr>
+    <td>who</td>
+    <td>entire team</td>
+  </tr>
+  <tr>
+    <td>when</td>
+    <td>just before or on sprint start (s-2 days)</td>
+  </tr>
+  <tr>
+    <td>output</td>
+    <td>stories assigned to people with story points assigned</td>
+  </tr>
+</tbody>
+</table>
 
+<hr/>
 
+*if you reached till here, then you can see **planning** is a whole team activity but there's a method to this madness. every person on the team comes into the exercise at different times and for different things.
 
+if as an engineering manager you just buckle up and tell the team to do x, y & z they'll never commit to it. you don't want to hire smart people and then do the thinking for them. let them come up with solutions and let them surprise you in a good way. 
 
-
+this is the only way to get 200% and pave the way for building a high-performing team which goes over & beyond not because you're pressurising them but because they like solving complex challenges and getting better at their craft*
