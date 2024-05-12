@@ -112,7 +112,9 @@ e.g.
 tech leads & ems create a gantt chart like below at this point to see how much work is possible taking into account the t-shirt size estimations
 
 *quick reference to t-shirt sizing & project recommendations*
+
 | 👕 | estimate in person weeks | notes
+|-----|-------|----
 s | 2 person weeks | can be lead & delivered by sde1/2
 m | 4 person weeks | needs at least a senior engineer to see it through
 l | 8 person weeks | needs a staff engineer to lead and constant architecture reviews
