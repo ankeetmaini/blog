@@ -38,7 +38,7 @@ so i had to change, and below is what i put together after i got humiliated at a
 <tbody>
 <tr>
     <td>who</td>
-    <td>ems and pms should deliberate and debate on the most important problems and get leadership buy-in. some orgs have yearly okrs published by the ceo/cto's office which can be translated into okrs at your level which is nothing but matching your efforts to meet the company goals</td>
+    <td>ems and pms should deliberate and debate on the most important problems and get leadership buy-in.<br><br>some orgs have yearly okrs published by the ceo/cto's office which can be translated into okrs at your level which is nothing but matching your efforts to meet the company goals</td>
   </tr>
   <tr>
     <td>when</td>
@@ -50,6 +50,7 @@ so i had to change, and below is what i put together after i got humiliated at a
   </tr>
 </tbody>
 </table>
+
 e.g. 
 - objective: improve the conversion funnel by 20% on our e-commerce app
 - key results:
@@ -59,10 +60,23 @@ e.g.
 
 ## 2. come up with initiatives for each key result (break-up & scope)
 
-who | staff+ engineers breakdown the key result into solid activities which can be done by 1 person in about 2 weeks. in short they define the scope and breakdown big problem statements into short palatable stories for the team
------|------－
-when | a month before the quarter start (q - 30 days)
-output | breakdown and scope definition of activities/tasks with t-shirt size (broad) estimates
+<table>
+<tbody>
+<tr>
+    <td>who</td>
+    <td>staff+ engineers breakdown the key result into solid activities which can be done by 1 person in about 2 weeks. <br><br>in short they define the scope and breakdown big problem statements into short palatable stories for the team</td>
+  </tr>
+  <tr>
+    <td>when</td>
+    <td>a month before the quarter start (q - 30 days)</td>
+  </tr>
+  <tr>
+    <td>output</td>
+    <td>breakdown and scope definition of activities/tasks with t-shirt size (broad) estimates</td>
+  </tr>
+</tbody>
+</table>
+
 
 e.g.
 - key result: reduce page load of product page from 6s → 3.5s
@@ -78,9 +92,22 @@ e.g.
 
 ## 3. prepare plan with sequencing, owners and known risks
 
-who | tech leads and ems define the sequencing in a gantt chart to see what's landing when and if there's a scope for parallelisation. they also define the owners for each initiative and list down risks which needs to be under close watch
-when | 2 weeks before quarter start (q - 15 days)
-output | gantt chart, owners & risk table
+<table>
+<tbody>
+<tr>
+    <td>who</td>
+    <td>tech leads and ems define the sequencing in a gantt chart to see what's landing when and if there's a scope for parallelisation. <br><br>they also define the owners for each initiative and list down risks which needs to be under close watch</td>
+  </tr>
+  <tr>
+    <td>when</td>
+    <td>2 weeks before quarter start (q - 15 days)</td>
+  </tr>
+  <tr>
+    <td>output</td>
+    <td>gantt chart, owners & risk table</td>
+  </tr>
+</tbody>
+</table>
 
 tech leads & ems create a gantt chart like below at this point to see how much work is possible taking into account the t-shirt size estimations
 
@@ -91,6 +118,8 @@ m | 4 person weeks | needs at least a senior engineer to see it through
 l | 8 person weeks | needs a staff engineer to lead and constant architecture reviews
 xl | 16 person weeks | multi-quarter effort and needs a staff+ engineer to lead & deliver
 xxl | 20+ person weeks | multi-quarter effort and needs an architect to lead and breakdown
+
+
 
 
 
