@@ -182,7 +182,7 @@ this is a big team meeting where everyone would be present and the leads would w
 ## conclusion
 if you reached till here, then you can see **planning** is a whole team activity but there's a method to this madness. every person on the team comes into the exercise at different times and for different things.
 
-if as an engineering manager you just buckle up and tell the team to do x, y & z they'll never commit to it. you don't hire smart people and then do the thinking for them. let them come up with solutions and let them surprise you in a good way.
+if as an engineering manager you just buckle up and tell the team to do x, y & z they'll never commit to it. you don't hire smart people and then do the thinking for them. let them come up with solutions and surprise you in a good way.
 
 this framework not only distributes the planning activity in the group but paves the way for building a high-performing team which goes over & beyond not because there's pressure but because the allure of solving something complex drives them and they see an opportunity to get better at their craft. 
 
