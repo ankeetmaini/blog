@@ -137,7 +137,7 @@ at this point you'll have to escalate this to your leadership to take further ca
 *i've deliberately left covering the gantt chart in details as it's a standard item but may cover it in a future post.*
 
 
-## 4. sprint grooming (bi-weekly before the sprint starts)
+## 4. sprint grooming (bi-weekly before sprint)
 <table>
 <tbody>
 <tr>
