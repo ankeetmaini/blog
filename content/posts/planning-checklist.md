@@ -26,7 +26,7 @@ so with above context, how do you decide what gets done in a quarter? what actua
 
 i've done it both ways (just don't tell my boss though), planned (roadmaps, sprints) on the fly and derived them meticulously by using the below framework. the difference was monumental in the quality of deliverables and the morale of the team!
 
-earlier i'd have a meeting every two weeks, rethinking priorities and not just me, my entire team. i thought having them on the call would give them visibility but all they saw was uncertainty and jitteriness. they felt as if nobody had any idea what exactly needed to be done, and everyone was busy pitching things they would like to do instead which might not be in the best interest of the organisation. like everyone can't work on reducing build times or trying out a new framework which came out yesterday!
+earlier i'd have a meeting every two weeks, rethinking priorities and not just me, my entire team. i thought having them on the call would give them visibility but all they saw was uncertainty and jitteriness. they felt as if nobody had any idea what exactly needed to be done, and the entire team was busy pitching things they would like to do instead which might not be in the best interest of the organisation. doesn’t make sense for everyone to work on reducing build times or trying out a new framework which came out yesterday!
 
 so i had to change, and below is what i put together after i got humiliated at a party with my peers and bosses :P (no surprises there)
 
