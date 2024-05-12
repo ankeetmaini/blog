@@ -12,7 +12,7 @@ it's almost may and in just about a month a brand new quarter would start which 
 
 we've come a long way from knowing what would get done years in advance, like a construction building, say a new mall for which once the blueprint is finalised, you can usually estimate the multi-year work upfront at least on paper before you dive deep into execution. but who knew building software on time is even tougher or have we deliberately made it that way?
 
-we work in sprints, we put our heads down for two weeks and then again and again. some teams decide within these two weeks what next to do and sort of groom their stories with no hints or indication of what lies ahead and coins words like agile :P
+we work in sprints, we put our heads down for two weeks and then again and again. some teams decide within these two weeks what next to do and sort of groom their stories with no hints or indication of what lies ahead and coin words like agile :P
 
 but there's just too much flux in this way. there's so much extra time being spent deciding every two weeks what to do. does it even matter right now or can be pushed out?
 
