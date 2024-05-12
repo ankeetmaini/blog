@@ -116,7 +116,7 @@ e.g.
 
 tech leads & ems create a gantt chart like below at this point to see how much work is possible taking into account the t-shirt size estimations
 
-### quick reference to t-shirt sizing & project recommendations*
+### quick reference to t-shirt sizing & project recommendations
 
 | 👕 | estimate in person weeks | notes
 |-----|-------|----
@@ -126,7 +126,6 @@ l | 8 person weeks | needs a staff engineer to lead and constant architecture re
 xl | 16 person weeks | multi-quarter effort and needs a staff+ engineer to lead & deliver
 xxl | 20+ person weeks | multi-quarter effort and needs an architect to lead and breakdown
 
-<div class="message-box">
 
 next would be defining the owners, which usually is done by first talking to the owners and setting the expectations of leading a project.
 
@@ -140,7 +139,6 @@ at this point you'll have to escalate this to your leadership to take further ca
 
 *i've deliberately left covering the gantt chart in details as it's a standard item but may cover it in a future post.*
 
-</div>
 
 ## 4. sprint grooming (bi-weekly before the sprint starts)
 
@@ -188,4 +186,4 @@ if as an engineering manager you just buckle up and tell the team to do x, y & z
 
 this is the only way to get 200% and pave the way for building a high-performing team which goes over & beyond not because you're pressurising them but because they like solving complex challenges and getting better at their craft
 
-*special thanks to [rahul](https://www.linkedin.com/in/rahulkrish/), [rajesh](https://www.linkedin.com/in/rnaik/), [deepanshu](https://www.linkedin.com/in/androiddeepanshu/), [sajan](https://www.linkedin.com/in/sajankedia/) for telling me how wrong i was at the absolute wrong time when i was having fun at a party in indiranagar 😭*
+*special thanks to [rahul](https://www.linkedin.com/in/rahulkrish/), [rajesh](https://www.linkedin.com/in/rnaik/), [deepanshu](https://www.linkedin.com/in/androiddeepanshu/), and [sajan](https://www.linkedin.com/in/sajankedia/) for telling me how stupid i was at the absolute wrong time when i was having fun at a party in indiranagar 😭*
