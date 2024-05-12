@@ -155,6 +155,8 @@ at this point you'll have to escalate the issue to your leadership to take furth
 </tbody>
 </table>
 
+the attendees refer to the gantt prepared at the beginning of the quarter as a reference and gauge the progress of the initiatives. they refine the tasks due for the current time period and convert them into stories.
+
 here the stories can be implementation tasks, or creation of hld, lld or a poc. the entire activity is done by the aforementioned people to add details of the work that will be carried out by the team in the next sprint.
 
 ## 5. sprint planning (bi-weekly)
@@ -175,7 +177,7 @@ here the stories can be implementation tasks, or creation of hld, lld or a poc. 
 </tbody>
 </table>
 
-this would be a big team meeting where everyone would be present and the leads would walk through the tickets prepared for the sprint; and clarify doubts of the team. team members would then add the storypoints and share their understanding of the task so that everyone is on the same page.
+this is a big team meeting where everyone would be present and the leads would walk-through the tickets prepared for the sprint; and clarify doubts of the team. members would then add the storypoints and share their understanding of the task so that everyone is on the same page.
 
 ## conclusion
 if you reached till here, then you can see **planning** is a whole team activity but there's a method to this madness. every person on the team comes into the exercise at different times and for different things.
