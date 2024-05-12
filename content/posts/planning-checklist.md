@@ -128,7 +128,7 @@ next would be defining the owners, which usually is done by first talking to the
 
 > i usually make them owners of the respective epic where they are responsible to updating it weekly with crisp status updates and highlighting risks which need leadership attention.
 
-lastly you need to surface up the known risks before you even begin in the quarter. the risks could range from resourcing or dependencies on other teams. each of the risks need a date by which it goes away or a date by which the initiative itself gets scrapped.
+lastly you need to surface up the known risks before you even begin the quarter. the risks could range from resourcing or dependencies on other teams. each of the risks need a date by which it goes away or a date by which the initiative itself gets scrapped.
 
 for. e.g if you have an xl item but no staff engineer; then if you can't get the engineer by so & so date the initiative becomes no-go. similarly if you need an api from another team to build a feature but the dependent team hasn't prioritised then also your initiative will become a no-go
 
