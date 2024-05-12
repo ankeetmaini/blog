@@ -93,7 +93,7 @@ e.g.
 
 </div>
 
-## 3. prepare plan with sequencing, owners and known risks
+## 3. prepare a plan with sequencing, owners and known risks
 <table>
 <tbody>
 <tr>
@@ -102,7 +102,7 @@ e.g.
   </tr>
   <tr>
     <td>when</td>
-    <td>2 weeks before quarter start (q - 15 days)</td>
+    <td>2 weeks before quarter starts (q - 15 days)</td>
   </tr>
   <tr>
     <td>output</td>
