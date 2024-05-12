@@ -16,7 +16,7 @@ we work in sprints, we put our heads down for two weeks and then again and again
 
 but there's just too much flux in this way. there's so much extra time being spent deciding every two weeks what to do. does it even matter right now or can be pushed out?
 
-in real world, work happens around big projects and launches. and they have dates or an expected date of launch. everything begins from there and you usually back calculate.
+in companies, work usually happens around big projects and launches. and they have dates or an expected date of launch. everything begins from there and you usually back calculate.
 
 so with above context, how do you decide what gets done in a quarter? what actually is **planning**?
 
