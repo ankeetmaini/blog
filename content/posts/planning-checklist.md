@@ -20,9 +20,9 @@ in companies, work usually happens around big projects and launches. and they ha
 
 so with above context, how do you decide what gets done in a quarter? what actually is **planning**?
 
-> you can wing it yolo style because life's too short to plan anything, because seriously who cares?
+> you can choose to wing it yolo style because life's too short to plan anything, because seriously who cares?
 
-**actually you should, as if your life depends on it**
+**actually you should care, as if your life depends on it**
 
 i've done it both ways (just don't tell my boss though), planned (roadmaps, sprints) on the fly and derived them meticulously by using the below framework. the difference was monumental in the quality of deliverables and the morale of the team!
 
