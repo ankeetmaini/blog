@@ -121,6 +121,21 @@ l | 8 person weeks | needs a staff engineer to lead and constant architecture re
 xl | 16 person weeks | multi-quarter effort and needs a staff+ engineer to lead & deliver
 xxl | 20+ person weeks | multi-quarter effort and needs an architect to lead and breakdown
 
+next would be defining the owners, which usually is done by first talking to the owners and setting the expectations of leading a project.
+
+> i usually make them owners of the respective epic where they are responsible to updating it weekly with crisp status updates and highlighting risks which need leadership attention.
+
+lastly you need to surface up the known risks before you even begin in the quarter. the risks could range from resourcing or dependencies on other teams. each of the risks need a date by which it goes away or a date by which the initiative itself gets scrapped.
+
+for. e.g if you have an xl item but no staff engineer; then if you can't get the engineer by so & so date the initiative becomes no-go. similarly if you need an api from another team to build a feature but the dependent team hasn't prioritised then also your initiative will become a no-go
+
+at this point you'll have to escalate this to your leadership to take further calls on the next steps.
+
+*i've deliberately left covering the gantt chart in details as it's a standard item but may cover it in a future post.*
+
+## 4. sprint grooming (bi-weekly before the sprint starts)
+
+
 
 
 
