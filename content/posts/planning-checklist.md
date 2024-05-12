@@ -10,7 +10,7 @@ tags:
 
 it's almost may and in just about a month a brand new quarter would start which comes with a possibility of endless opportunities in engg roadmap parlance. 
 
-we've come a long way from knowing what would get done years in advance, like a construction building, say a new mall for which once the blueprint is finalised, you can usually estimate the multi-year work upfront at least on paper before you dive deep into execution. but who knew building software is even tougher or have we deliberately made it that way?
+we've come a long way from knowing what would get done years in advance, like a construction building, say a new mall for which once the blueprint is finalised, you can usually estimate the multi-year work upfront at least on paper before you dive deep into execution. but who knew building software on time is even tougher or have we deliberately made it that way?
 
 we work in sprints, we put our heads down for two weeks and then again and again. some teams decide within these two weeks what next to do and sort of groom their stories with no hints or indication of what lies ahead and coins words like agile :P
 
