@@ -130,7 +130,7 @@ next would be defining the owners, which usually is done by first talking to the
 
 lastly you need to surface up the known risks before you even begin the quarter. the risks could range from resourcing or dependencies on other teams. each of the risks need a date by which it goes away or a date by which the initiative itself gets scrapped.
 
-for. e.g if you have an xl item but no staff engineer; then if you can't get the engineer by so & so date the initiative becomes no-go. similarly if you need an api from another team to build a feature but the dependent team hasn't prioritised then also your initiative will become a no-go
+*for. e.g if you have an xl item but no staff engineer; then if you can't get the engineer by so & so date the initiative becomes no-go. similarly if you need an api from another team to build a feature but the dependent team hasn't prioritised then also your initiative will become a no-go*
 
 at this point you'll have to escalate this to your leadership to take further calls on the next steps.
 
