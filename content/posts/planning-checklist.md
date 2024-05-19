@@ -93,6 +93,8 @@ e.g.
 > 🔺 means that the initiative needs refinement and is a fuzzy item. it will usually require an hld/lld/1-pager and would probably get executed as a spike item where concrete details would get added after a deep-dive or a small poc.
 >> the staff+ engineers would also have to make a case as to why do they think the above initiative is needed with roi in mind as well, because such fuzzy initiatives require greater engineering efforts and often run into risk during execution
 
+_on the off chance, if all of your items are fuzzy, then it means that the planning is broken and the team is just putting all eggs into a singe basket, basket of uncertainty. in that case, adjust your goals to collect more data/insights first before jumping to solve the problem_
+
 </div>
 
 ## 3. prepare a plan with sequencing, owners and known risks
@@ -188,4 +190,7 @@ if as an engineering manager you just buckle up and tell the team to do x, y & z
 
 this framework not only distributes the planning activity in the group but paves the way for building a high-performing team which goes over & beyond not because there's pressure but because the allure of solving something complex drives them and they see an opportunity to get better at their craft. 
 
-*special thanks to [rahul](https://www.linkedin.com/in/rahulkrish/), [rajesh](https://www.linkedin.com/in/rnaik/), [deepanshu](https://www.linkedin.com/in/androiddeepanshu/), and [sajan](https://www.linkedin.com/in/sajankedia/) for telling me how stupid i was at the worst time when i was having fun at a party in indiranagar 😭*
+*forced thanks to [rahul](https://www.linkedin.com/in/rahulkrish/), [rajesh](https://www.linkedin.com/in/rnaik/), [deepanshu](https://www.linkedin.com/in/androiddeepanshu/), and [sajan](https://www.linkedin.com/in/sajankedia/) for telling me how stupid i was at the worst time when i was having fun at a party in indiranagar 😭*
+
+*special thanks to [sid](https://www.linkedin.com/in/siddharthkp/), [bhavesh](https://www.linkedin.com/in/bhaveshraheja/) and [amit](https://www.linkedin.com/in/amit-kishore/) for really reviewing the blog and preventing me from putting out another blunder.
+
