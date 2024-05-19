@@ -197,5 +197,5 @@ this framework not only distributes the planning activity in the group but paves
 
 *forced thanks to [rahul](https://www.linkedin.com/in/rahulkrish/), [rajesh](https://www.linkedin.com/in/rnaik/), [deepanshu](https://www.linkedin.com/in/androiddeepanshu/), and [sajan](https://www.linkedin.com/in/sajankedia/) for telling me how stupid i was at the worst time when i was having fun at a party in indiranagar 😭*
 
-*special thanks to [sid](https://www.linkedin.com/in/siddharthkp/), [bhavesh](https://www.linkedin.com/in/bhaveshraheja/) and [amit](https://www.linkedin.com/in/amit-kishore/) for really reviewing the blog and preventing me from putting out another blunder.
+*special thanks to [sid](https://www.linkedin.com/in/siddharthkp/), [bhavesh](https://www.linkedin.com/in/bhaveshraheja/) and [amit](https://www.linkedin.com/in/amit-kishore/) for really reviewing the blog and preventing me from putting out another blunder.*
 
