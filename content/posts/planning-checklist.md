@@ -187,9 +187,9 @@ this is a big team meeting where everyone would be present and the leads would w
 if you reached till here, then you can see **planning** is a whole team activity but there's a method to this madness. every person on the team comes into the exercise at different times and for different things.
 
 if as an engineering manager you just buckle up and tell the team to do x, y & z; sooner or later you'd find that it just doesn't work
-- gone are the days where people could just muster up and dictate what should be done
+- gone are the days where leaders could just muster up and dictate what should be done
 - you want the team to be invested in the work; and that will only come if they think the solution comes from them
-- people want to do creative work and not just execute a bunch of dry tasks
+- people want to grow; but how can they if they are not allowed to rack their brains and just do the grunt work?
 - lastly, why would you want to hire smart people and then do the thinking for them?
 - let them think and surprise you (in a good way); this way you're building organsiation muscle memory and not becoming a bottleneck going forward
 
