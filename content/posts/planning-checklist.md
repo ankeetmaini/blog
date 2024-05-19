@@ -28,6 +28,8 @@ i've done it both ways (just don't tell my boss though), planned (roadmaps, spri
 
 earlier i'd have a meeting every two weeks, rethinking priorities and not just me, my entire team. i thought having them on the call would give them visibility but all they saw was uncertainty and jitteriness. they felt as if nobody had any idea what exactly needed to be done, and the entire team was busy pitching things they would like to do instead which might not be in the best interest of the organisation. it doesn’t make sense for everyone to work on reducing build times or trying out a new framework which came out yesterday!
 
+> as leaders it's our responsibility to lead and give the team direction; instead of just counting the votes and take the most populist item on the list
+
 so i had to change, and below is what i put together after i got humiliated at a party with my peers and bosses :P (no surprises there)
 
 ## 1. draft objectives & key results
