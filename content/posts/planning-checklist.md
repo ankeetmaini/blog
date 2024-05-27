@@ -36,7 +36,7 @@ so i had to change, and below is what i put together after i got humiliated at a
 
 > backstory: on a fateful evening last year when everyone decided to hit a cool spot on indiranagar 12th main, i out of habit of blowing my own trumpet started telling everyone how i do planning on the team, and it's the coolest thing on earth, when i noticed their raised eyebrows and faces filled with disgust. i realised, something's got to give. 😭
 
-*the framework*
+*so here's the framework, i practised, bettered, and almost perfected since that unfateful night*
 
 ## 1. draft objectives & key results
 <table>
