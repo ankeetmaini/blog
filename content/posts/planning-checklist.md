@@ -1,20 +1,20 @@
 ---
 title: planning checklist for people in tech
-description: this post tries to add a method to madness which runs amok every 3 months and both leaders and teams run helter-skelter to put an exciting list of okrs together to executing them
+description: this post tries to add a method to madness which runs amok every 3 months and both leaders and teams run helter-skelter to put an exciting list of okrs together to executing them. it draws a framework for planning from quarter down to bi-weekly sprints.
 layout: layouts/post.njk
-date: 2024-05-13
+date: 2024-05-27
 tags:
   - leadership
   - planning
 ---
 
-it's almost may and in just about a month a brand new quarter would start which comes with a possibility of endless opportunities in engg roadmap parlance. 
+it's almost june and in just about a month's time a brand new quarter would start which comes with a possibility of endless opportunities in engineering roadmap parlance. 
 
 we've come a long way from knowing what would get done years in advance, like a construction building, say a new mall for which once the blueprint is finalised, you can usually estimate the multi-year work upfront at least on paper before you dive deep into execution. but who knew building software on time is even tougher or have we deliberately made it that way?
 
 we work in sprints, we put our heads down for two weeks and then again and again. some teams decide within these two weeks what next to do and sort of groom their stories with no hints or indication of what lies ahead and coin words like agile :P
 
-but there's just too much flux in this way. there's so much extra time being spent deciding every two weeks what to do. does it even matter right now or can be pushed out?
+but there's just too much flux in this way. there's so much extra time being spent deciding every two weeks what to do. does this story even matter right now or can be pushed out?
 
 in companies, work usually happens around big projects and launches. and they have dates or an expected date of launch. everything begins from there and you usually back calculate.
 
@@ -26,11 +26,15 @@ so with above context, how do you decide what gets done in a quarter? what actua
 
 i've done it both ways (just don't tell my boss though), planned (roadmaps, sprints) on the fly and derived them meticulously by using the below framework. the difference was monumental in the quality of deliverables and the morale of the team!
 
-earlier i'd have a meeting every two weeks, rethinking priorities and not just me, my entire team. i thought having them on the call would give them visibility but all they saw was uncertainty and jitteriness. they felt as if nobody had any idea what exactly needed to be done, and the entire team was busy pitching things they would like to do instead which might not be in the best interest of the organisation. it doesn’t make sense for everyone to work on reducing build times or trying out a new framework which came out yesterday!
+earlier i'd have a meeting every two weeks, rethinking priorities and not just me, my entire team. i thought having them on the call would give them visibility but all they saw was uncertainty and jitteriness. they felt as if nobody had any idea what exactly needed to be done, and the entire team was busy pitching things they would like to do instead which might not be in the best interest of the organisation. 
+
+*like it doesn’t make sense for everyone to work on reducing build times or trying out a new framework which came out yesterday. i only hope my team doesn't hate me after reading this.*
 
 > as leaders it's our responsibility to lead and give the team direction; instead of just counting the votes and take the most popular item on the list
 
 so i had to change, and below is what i put together after i got humiliated at a party with my peers and bosses :P (no surprises there)
+
+> backstory: on a fateful evening last year when everyone decided to hit a cool spot on indiranagar 12th main, i out of habit of blowing my own trumpet started telling everyone how i do planning on the team, and it's the coolest thing on earth, when i noticed their raised eyebrows and faces filled with disgust. i realised, something's got to give. 😭
 
 ## 1. draft objectives & key results
 <table>
